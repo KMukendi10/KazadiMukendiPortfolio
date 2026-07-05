@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kazadi Mukendi | Projects</title>
+
+    <link rel="icon" href="./Assets/Kazadi Profile Pic.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./Assets/Kazadi Profile Pic.png" alt="Kazadi Mukendi">
+                <h2>Kazadi Mukendi</h2>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <button class="join-btn" onclick="window.location.href='contact.html'">Hire Me</button>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="programs-hero">
+            <div class="program-text">
+                <h1>Projects</h1>
+                <p>
+                    A collection of everything I've built and deployed so far — from static
+                    landing-page clones to interactive builds to a full team capstone project.
+                </p>
+                <button class="hero-btn" onclick="window.location.href='projects.html#case-studies'">Read the Case Studies</button>
+            </div>
+
+            <div class="programs-image">
+                <img src="./Assets/To-do-App.png" alt="To-do App preview">
+            </div>
+        </section>
+
+        <section class="fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">DEPLOYED PROJECTS</p>
+                    <h2>What I've built</h2>
+                </div>
+            </div>
+
+            <div class="card-slider">
+
+                <!-- TODO (Term 3): Slot your second deployed project here, leading the row — -->
+                <!-- something with more depth than a static clone (JS logic, an API, -->
+                <!-- data handling, or a real problem you solved end-to-end). -->
+
+                <div class="card featured-card">
+                    <img src="./Assets/To-do-App.png" alt="To-do App">
+                    <h3>To-do App <span class="badge">Featured</span></h3>
+                    <p>A To-do App built with HTML, CSS and JavaScript — currently my most functionally complete project, with real interactivity and state handling in the browser.</p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="https://github.com/KMukendi10/To-Do-App.git" target="_blank">View Repo</a>
+                    <a href="https://kmukendi10.github.io/To-Do-App/" target="_blank">Visit Page</a>
+                </div>
+
+                <div class="card">
+                    <img src="./Assets/NetflixLanding Page.png" alt="Netflix Landing Page">
+                    <h3>Netflix Landing Page</h3>
+                    <p>A clone of Netflix landing page built with HTML and CSS.</p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                    <a href="https://github.com/KMukendi10/netflixlandingpage.git" target="_blank">View Repo</a>
+                    <a href="https://kazadimoviesite.netlify.app/" target="_blank">Visit Page</a>
+                </div>
+
+                <div class="card">
+                    <img src="./Assets/Tesla-Project.png" alt="Tesla Landing Page">
+                    <h3>Tesla Landing Pages</h3>
+                    <p>A clone of Tesla's landing page built with HTML and CSS.</p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                    <a href="https://github.com/KMukendi10/TeslaLandingPage.git" target="_blank">View Repo</a>
+                    <a href="https://kazadicars.netlify.app/" target="_blank">Visit Page</a>
+                </div>
+
+                <div class="card">
+                    <img src="./Assets/YouTube.png" alt="YouTube Landing Page">
+                    <h3>YouTube Landing Page</h3>
+                    <p>A clone of YouTube landing page built with HTML and CSS.</p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                    <a href="https://github.com/KMukendi10/ZaioYouTubeLandingPage.git" target="_blank">View Repo</a>
+                    <a href="https://kazadiyoutubeclone.netlify.app/" target="_blank">Visit Page</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="coach-section fade-in">
+            <div class="coach-card">
+                <div>
+                    <h2>Team Capstone — iHub Africa Website Prototype</h2>
+                    <p>
+                        Built as a 6-person capstone project: a responsive multi-page site for iHub Africa,
+                        an innovation hub for young people entering the digital economy. I served as
+                        <strong>Git Manager</strong> — owning the repository workflow the rest of the team built on.
+                    </p>
+                    <div class="team-list">
+                        <span class="me">Kazadi Mukendi — Git Manager</span>
+                        <span>Project Lead</span>
+                        <span>Frontend Developer</span>
+                        <span>JavaScript Developer</span>
+                        <span>Designer</span>
+                        <span>QA Tester</span>
+                    </div>
+                    <p>
+                        <strong>My contribution:</strong> managed the shared GitHub repository, set up the
+                        feature-branch workflow, reviewed pull requests before merge, and resolved merge
+                        conflicts as five other people pushed changes to the same codebase.
+                    </p>
+                    <!-- TODO: add repo/live links once available — e.g.
+                    <a href="[repo link]" target="_blank" class="hero-btn" style="display:inline-block;">View Repo</a>
+                    <a href="[live link]" target="_blank" class="hero-btn-secondary" style="display:inline-block;">Visit Site</a>
+                    -->
+                </div>
+            </div>
+        </section>
+
+        <section class="fade-in" id="case-studies">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">CASE STUDIES</p>
+                    <h2>How I built it, and what I'd change</h2>
+                </div>
+            </div>
+
+            <div class="card-slider">
+                <div class="card2">
+                    <h3>Portfolio Website — Personal Site Architecture</h3>
+                    <h4>Problem</h4>
+                    <p>I needed a single site to hold every project, certificate, and case study I produce going forward — one that could grow term over term without a rebuild each time.</p>
+                    <h4>Approach</h4>
+                    <p>I split the site into independent pages (home, about, projects, contact) rather than one long scroll, so each area can be extended without touching the others. Projects and certificates use a horizontally scrollable card layout so new entries can be appended rather than requiring a redesign.</p>
+                    <h4>Trade-offs</h4>
+                    <p>I chose plain HTML/CSS over a framework or static site generator. That kept the build simple and dependency-free while I was still learning fundamentals, at the cost of manually duplicating markup (e.g. the header/footer on every page) instead of templating it.</p>
+                    <h4>Outcome & Next Step</h4>
+                    <p>The structure has held up across three terms of new content without needing a rewrite. The next improvement is reducing that markup duplication — likely by moving to a build tool or JS-rendered includes for shared header/footer.</p>
+                    <p><strong>Tools Used:</strong> HTML, CSS, JavaScript, Git, GitHub, Chrome DevTools</p>
+                </div>
+
+                <div class="card2">
+                    <h3>Netflix Landing Page — Recreating a Production Layout</h3>
+                    <h4>Problem</h4>
+                    <p>Static clones are useful for practice, but only if they force you to solve layout problems you can't shortcut. I picked Netflix's landing page because its hero section, feature grid, and FAQ accordion each needed a different layout technique.</p>
+                    <h4>Approach</h4>
+                    <p>I used CSS Grid for the feature section (fixed structure, predictable rows/columns) and Flexbox for the hero and footer (content that needs to grow/shrink with the viewport). Background images and overlay text were layered using absolute positioning inside a relatively positioned container.</p>
+                    <h4>Trade-offs</h4>
+                    <p>Matching the reference design pixel-for-pixel took longer than building something "close enough," but it forced me to understand why Grid and Flexbox each fit different parts of the layout, instead of defaulting to one for everything.</p>
+                    <h4>Outcome & Next Step</h4>
+                    <p>The layout holds up across breakpoints from mobile to desktop with no broken overlays. If I revisited it, I'd rebuild the FAQ section as an interactive accordion with JavaScript instead of a static list.</p>
+                    <p><strong>Tools Used:</strong> HTML, CSS, Git, GitHub, Chrome DevTools</p>
+                </div>
+
+                <div class="card2">
+                    <h3>Responsive Design — Consistent Layouts Across Breakpoints</h3>
+                    <h4>Problem</h4>
+                    <p>Every project in this portfolio needs to work on a phone as well as a desktop. Rather than treat this per-project, I standardized an approach I now reuse across all of them.</p>
+                    <h4>Approach</h4>
+                    <p>I use relative units (%, rem) over fixed pixel widths wherever content needs to flex, media queries to restructure layout (e.g. stacking a horizontal nav into a vertical one) rather than just shrinking it, and test at specific breakpoints rather than only resizing the browser window casually.</p>
+                    <h4>Trade-offs</h4>
+                    <p>Designing mobile-first would have caught some of these issues earlier; I built desktop-first and retrofitted breakpoints, which meant more rework on spacing and alignment than if I'd flipped the order.</p>
+                    <h4>Outcome & Next Step</h4>
+                    <p>All projects in this portfolio are usable from ~320px up. On the next project, I'm switching to a mobile-first build order to avoid the retrofit cost.</p>
+                    <p><strong>Tools Used:</strong> HTML, CSS, Media Queries, Flexbox, Chrome DevTools</p>
+                </div>
+
+                <div class="card2">
+                    <h3>Version Control with Git — Workflow, Not Just Backup</h3>
+                    <h4>Problem</h4>
+                    <p>Early on I was using Git purely as a backup tool — commit everything, push occasionally. That works until something breaks and there's no clear history to trace it back through, and it completely falls apart once more than one person is pushing to the same repo.</p>
+                    <h4>Approach</h4>
+                    <p>I moved to committing at logical checkpoints with descriptive messages, and on the iHub Africa capstone I managed a full feature-branch workflow for a 6-person team: branches per feature, pull requests before merge, and code review before approval.</p>
+                    <h4>Trade-offs</h4>
+                    <p>Enforcing PR review before merge slowed down how fast individual features landed, but it caught conflicting changes before they hit `main` instead of after — worth the trade-off once more than one person is touching the codebase.</p>
+                    <h4>Outcome & Next Step</h4>
+                    <p>The team shipped without a broken `main` branch at any point. Next, I want to get comfortable resolving merge conflicts from the command line instead of relying on a GUI tool.</p>
+                    <p><strong>Tools Used:</strong> Git, GitHub, Command Line, VS Code</p>
+                </div>
+
+                <div class="card2">
+                    <h3>Troubleshooting and Debugging — A Repeatable Process</h3>
+                    <h4>Problem</h4>
+                    <p>Early debugging for me meant randomly changing CSS values until something looked right, which was slow and didn't build any real understanding of the underlying issue.</p>
+                    <h4>Approach</h4>
+                    <p>I switched to a fixed process: reproduce the issue, inspect the actual computed styles in DevTools (not just what I wrote in the file), isolate the change to one property at a time, and verify the fix doesn't break another breakpoint before moving on.</p>
+                    <h4>Trade-offs</h4>
+                    <p>This is slower than trial-and-error for trivial fixes, but for anything non-obvious (e.g. an image not rendering because of a bad relative path, not a styling issue at all) it finds the actual cause instead of a workaround that resurfaces later.</p>
+                    <h4>Outcome & Next Step</h4>
+                    <p>Most layout bugs across this portfolio now get diagnosed in DevTools before I touch any code. Next, I want to get comfortable with the JavaScript console and breakpoints for debugging logic, not just layout.</p>
+                    <p><strong>Tools Used:</strong> HTML, CSS, Chrome DevTools, VS Code</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Project Gallery</h2>
+                    <p>A visual look at what's been built so far.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-card">
+                        <img src="./Assets/To-do-App.png" alt="To-do App">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="./Assets/NetflixLanding Page.png" alt="Netflix Landing Page">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="./Assets/Tesla-Project.png" alt="Tesla Landing Page">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="./Assets/YouTube.png" alt="YouTube Landing Page">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h2>Kazadi Mukendi</h2>
+                <p>Aspiring Full Stack Web Developer, building from the ground up.</p>
+                <small>© 2026 Kazadi Mukendi. All rights reserved.</small>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=kazadishadrackmukendi@gmail.com" style="color:#c7c7e6;">kazadishadrackmukendi@gmail.com</a></p>
+                <p><a href="tel:+27681252703" style="color:#c7c7e6;">+27 68 125 2703</a></p>
+                <div class="social-row">
+                    <a href="https://github.com/KMukendi10" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/kazadi-mukendi-a69122371" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/+27681252703" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://x.com/skm_shad00" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
