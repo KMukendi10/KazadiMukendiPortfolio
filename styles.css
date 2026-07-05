@@ -164,7 +164,7 @@ header {
     padding: 12px 26px;
     background: transparent;
     color: #efefef;
-    border: 1px solid #14143a;
+    border: 1px solid #efefef;
     border-radius: 8px;
     cursor: pointer;
     font-size: 14px;
@@ -172,7 +172,7 @@ header {
 }
 
 .hero-btn-secondary:hover {
-    background: #14143a;
+    background: rgba(255, 255, 255, 0.06);
     color: #fff;
 }
 
@@ -206,7 +206,6 @@ header {
     overflow: hidden;
 }
 
-/* Dark Overlay */
 .hero::before {
     content: "";
     position: absolute;
@@ -255,7 +254,7 @@ header {
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    border: 6px solid #fff;
+    border: 1px solid #fff;
     box-shadow: 0 10px 30px rgba(20,20,58,0.25);
 }
 
