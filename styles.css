@@ -1,8 +1,5 @@
 /* =========================================================
    Kazadi Mukendi Portfolio — styles.css
-   Structure inspired by the iHub Africa multi-page prototype:
-   header/nav -> hero -> content sections -> shared footer,
-   repeated per page.
 ========================================================= */
 
 * {
@@ -203,6 +200,7 @@ header {
     margin: 0 auto;
     padding: 70px 30px;
     flex-wrap: wrap;
+    background: url(./Assets/HeroImg.jpg);
 }
 
 .hero-text {
