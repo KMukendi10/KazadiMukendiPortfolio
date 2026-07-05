@@ -200,7 +200,7 @@ header {
     margin: 0 auto;
     padding: 70px 30px;
     flex-wrap: wrap;
-    background: url(./Assets/HeroImg.jpg);
+    background: url(./Assets/HeroImg.jpg) no-repeat center center/cover;
 }
 
 .hero-text {
@@ -265,7 +265,7 @@ header {
     letter-spacing: 0.5px;
 }
 
-/* ===================== CARD GRIDS (what-I-bring / values / info) ===================== */
+/* ============== CARD GRIDS (what-I-bring / values / info) =============== */
 .programs-grid,
 .values-grid,
 .founder-grid,
