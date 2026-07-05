@@ -163,7 +163,7 @@ header {
 .hero-btn-secondary {
     padding: 12px 26px;
     background: transparent;
-    color: #14143a;
+    color: #efefef;
     border: 1px solid #14143a;
     border-radius: 8px;
     cursor: pointer;
@@ -192,6 +192,7 @@ header {
 
 /* ===================== HOME: HERO ===================== */
 .hero {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -200,7 +201,24 @@ header {
     margin: 0 auto;
     padding: 70px 30px;
     flex-wrap: wrap;
-    background: url(./Assets/HeroImg.jpg) no-repeat center center/cover;
+    background: url("./Assets/HeroImg.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* Dark Overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+}
+
+/* Keep content above overlay */
+.hero-text, .hero-image {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-text {
@@ -209,13 +227,13 @@ header {
 
 .hero-text h1 {
     font-size: 44px;
-    color: #14143a;
+    color: #f5f5f6;
     margin-bottom: 18px;
     line-height: 1.2;
 }
 
 .hero-text p {
-    color: #555;
+    color: #dbdbdb;
     margin-bottom: 26px;
     max-width: 480px;
 }
