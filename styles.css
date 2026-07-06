@@ -20,7 +20,7 @@
     --timeline-bg: #f5f5ff;
     --icon-bg: #f5f5ff;
     --input-border: #ddd;
-    --shadow: rgba(0,0,0,0.8);
+    --shadow: rgba(0,0,0,0.08);
 }
 
 [data-theme="dark"] {
@@ -152,7 +152,7 @@ header {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 28px;
+    gap: 20px;
 }
 
 .nav-links a {
@@ -227,21 +227,6 @@ header {
 .hero-btn-secondary:hover {
     background: rgba(255, 255, 255, 0.06);
     color: #fff;
-}
-
-.btn-secondary {
-    padding: 12px 26px;
-    background: transparent;
-    color: #14143a;
-    border: 1px solid #14143a;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.btn-secondary:hover {
-    background: rgba(58, 58, 58, 0.2);
 }
 
 .btn-black {
@@ -375,7 +360,7 @@ header {
 .program-card:hover,
 .value-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.9);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 .program-card h3,
@@ -654,29 +639,26 @@ header {
     object-fit: cover;
 }
 
-/* ===================== CARD SLIDER (Projects / Certificates) ===================== */
-.card-slider {
-    display: flex;
+/* ===================== CARD GRID (Projects / Case Studies) ===================== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding-bottom: 10px;
     max-width: 1100px;
     margin: 0 auto;
     padding-left: 30px;
     padding-right: 30px;
 }
 
-.card-slider::-webkit-scrollbar { display: none; }
-.card-slider { scrollbar-width: none; -ms-overflow-style: none; }
+.case-grid {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
 
 .card {
-    min-width: 280px;
     background: var(--card-bg);
     border-radius: 12px;
     padding: 15px;
     box-shadow: 0 4px 12px var(--shadow);
-    flex-shrink: 0;
     transition: 0.3s;
     border: 1px solid var(--card-border);
 }
@@ -736,12 +718,10 @@ header {
 
 /* CASE STUDY CARDS */
 .card2 {
-    max-width: 800px;
     background: var(--card-bg);
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 4px 12px var(--shadow);
-    flex-shrink: 0;
     border: 1px solid var(--card-border);
 }
 
@@ -879,11 +859,6 @@ header {
     border-radius: 12px;
     box-shadow: 0 4px 12px var(--shadow);
     font-size: 13px;
-    cursor: pointer;
-}
-
-.icons i:hover {
-    transform: translateY(-5px);
 }
 
 /* ===================== FOOTER ===================== */
