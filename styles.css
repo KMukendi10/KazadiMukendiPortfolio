@@ -375,7 +375,7 @@ header {
 .program-card:hover,
 .value-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.9);
 }
 
 .program-card h3,
@@ -879,6 +879,11 @@ header {
     border-radius: 12px;
     box-shadow: 0 4px 12px var(--shadow);
     font-size: 13px;
+    cursor: pointer;
+}
+
+.icons i:hover {
+    transform: translateY(-5px);
 }
 
 /* ===================== FOOTER ===================== */
