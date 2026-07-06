@@ -520,14 +520,13 @@ header {
 }
 
 .community {
-    background: white;
     color: #fff;
     text-align: center;
     padding: 60px 30px;
 }
 
 .community p {
-    color: #c7c7e6;
+    color: #8888ce;
 }
 
 /* ===================== ABOUT HERO ===================== */
