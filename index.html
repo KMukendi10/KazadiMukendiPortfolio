@@ -8,6 +8,14 @@
     <link rel="icon" href="./Assets/Favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 <body>
 
@@ -26,6 +34,7 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
 
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
             <button class="join-btn" onclick="window.location.href='contact.html'">Hire Me</button>
 
             <button class="nav-toggle" aria-label="Toggle menu">
@@ -40,9 +49,9 @@
         <div class="hero-text">
             <h1>Building toward a career in Full Stack Web Development.</h1>
             <p>
-                I'm Kazadi Mukendi, an aspiring full stack web developer with a bit of a background in
+                I'm Kazadi Mukendi, an aspiring full stack developer with a background in
                 Mechanical Engineering. I bring structured problem-solving to every project
-                I build, and I'm currently deep into my web development journey.
+                I build, and I'm currently deep in Term 3 of my development journey.
             </p>
             <div class="hero-buttons">
                 <button class="hero-btn" onclick="window.location.href='projects.html'">View Projects</button>

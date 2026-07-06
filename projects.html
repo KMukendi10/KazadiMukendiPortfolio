@@ -8,6 +8,14 @@
     <link rel="icon" href="./Assets/Favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 <body>
 
@@ -25,6 +33,7 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
 
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
             <button class="join-btn" onclick="window.location.href='contact.html'">Hire Me</button>
             <button class="nav-toggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
@@ -59,9 +68,20 @@
 
             <div class="card-slider">
 
-                <!-- TODO (Term 3): Slot your second deployed project here, leading the row — -->
-                <!-- something with more depth than a static clone (JS logic, an API, -->
-                <!-- data handling, or a real problem you solved end-to-end). -->
+                <div class="card featured-card">
+                    <img src="./Assets/iHub-Africa-Placeholder.png" alt="iHub Africa Website Prototype">
+                    <h3>iHub Africa Website Prototype <span class="badge">Team Capstone</span></h3>
+                    <p>A responsive multi-page site built with a 6-person capstone team for iHub Africa, an innovation hub for young people entering the digital economy. I served as Git Manager, owning the repository workflow.</p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Git</span>
+                    </div>
+                    <!-- Placeholder links — replace with real repo/live URLs once available -->
+                    <a href="#" target="_blank">View Repo</a>
+                    <a href="#" target="_blank">Visit Page</a>
+                </div>
 
                 <div class="card featured-card">
                     <img src="./Assets/To-do-App.png" alt="To-do App">
@@ -137,10 +157,9 @@
                         feature-branch workflow, reviewed pull requests before merge, and resolved merge
                         conflicts as five other people pushed changes to the same codebase.
                     </p>
-                    <!-- TODO: add repo/live links once available — e.g.
-                    <a href="[repo link]" target="_blank" class="hero-btn" style="display:inline-block;">View Repo</a>
-                    <a href="[live link]" target="_blank" class="hero-btn-secondary" style="display:inline-block;">Visit Site</a>
-                    -->
+                    <!-- Placeholder links — replace with real repo/live URLs once available -->
+                    <a href="#" target="_blank" class="btn-black" style="display:inline-block; margin-right:10px;">View Repo</a>
+                    <a href="#" target="_blank" class="hero-btn-secondary" style="display:inline-block; color:#14143a; border-color:#14143a;">Visit Site</a>
                 </div>
             </div>
         </section>
@@ -205,19 +224,7 @@
                     <p>The team shipped without a broken `main` branch at any point. Next, I want to get comfortable resolving merge conflicts from the command line instead of relying on a GUI tool.</p>
                     <p><strong>Tools Used:</strong> Git, GitHub, Command Line, VS Code</p>
                 </div>
-
-                <div class="card2">
-                    <h3>Troubleshooting and Debugging — A Repeatable Process</h3>
-                    <h4>Problem</h4>
-                    <p>Early debugging for me meant randomly changing CSS values until something looked right, which was slow and didn't build any real understanding of the underlying issue.</p>
-                    <h4>Approach</h4>
-                    <p>I switched to a fixed process: reproduce the issue, inspect the actual computed styles in DevTools (not just what I wrote in the file), isolate the change to one property at a time, and verify the fix doesn't break another breakpoint before moving on.</p>
-                    <h4>Trade-offs</h4>
-                    <p>This is slower than trial-and-error for trivial fixes, but for anything non-obvious (e.g. an image not rendering because of a bad relative path, not a styling issue at all) it finds the actual cause instead of a workaround that resurfaces later.</p>
-                    <h4>Outcome & Next Step</h4>
-                    <p>Most layout bugs across this portfolio now get diagnosed in DevTools before I touch any code. Next, I want to get comfortable with the JavaScript console and breakpoints for debugging logic, not just layout.</p>
-                    <p><strong>Tools Used:</strong> HTML, CSS, Chrome DevTools, VS Code</p>
-                </div>
+                
             </div>
         </section>
 

@@ -10,7 +10,40 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavToggle();
     initScrollFade();
     initContactForm();
+    initThemeToggle();
 });
+
+/* -----------------------------------------
+   0. Dark Mode Toggle
+----------------------------------------- */
+function initThemeToggle() {
+    const toggle = document.getElementById('themeToggle');
+    if (!toggle) return;
+
+    const icon = toggle.querySelector('i');
+
+    const applyIcon = (theme) => {
+        if (!icon) return;
+        icon.classList.toggle('fa-moon', theme !== 'dark');
+        icon.classList.toggle('fa-sun', theme === 'dark');
+    };
+
+    applyIcon(document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+
+    toggle.addEventListener('click', () => {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const nextTheme = isDark ? 'light' : 'dark';
+
+        if (nextTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+        }
+
+        localStorage.setItem('theme', nextTheme);
+        applyIcon(nextTheme);
+    });
+}
 
 /* -----------------------------------------
    1. Mobile Nav Toggle

@@ -8,11 +8,64 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg: #f4f4f4;
+    --text: #333;
+    --card-bg: #fff;
+    --card-border: #eee;
+    --header-bg: #fff;
+    --heading: #14143a;
+    --muted: #555;
+    --section-alt-bg: #fff;
+    --timeline-bg: #f5f5ff;
+    --icon-bg: #f5f5ff;
+    --input-border: #ddd;
+    --shadow: rgba(0,0,0,0.08);
+}
+
+[data-theme="dark"] {
+    --bg: #14141f;
+    --text: #d8d8e6;
+    --card-bg: #1e1e2e;
+    --card-border: #2e2e42;
+    --header-bg: #1a1a28;
+    --heading: #f2f2fa;
+    --muted: #a8a8c0;
+    --section-alt-bg: #1a1a28;
+    --timeline-bg: #22223a;
+    --icon-bg: #22223a;
+    --input-border: #3a3a52;
+    --shadow: rgba(0,0,0,0.4);
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f4f4f4;
-    color: #333;
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ===================== THEME TOGGLE BUTTON ===================== */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--card-border);
+    background: var(--card-bg);
+    color: var(--heading);
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.theme-toggle:hover {
+    background: #6c63ff;
+    color: #fff;
+    border-color: #6c63ff;
 }
 
 .container {
@@ -48,12 +101,12 @@ img {
 
 .section-header h2 {
     font-size: 30px;
-    color: #14143a;
+    color: var(--heading);
     margin-bottom: 10px;
 }
 
 .section-header p {
-    color: #555;
+    color: var(--muted);
 }
 
 section, main > section {
@@ -65,8 +118,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    background: var(--header-bg);
+    box-shadow: 0 2px 10px var(--shadow);
 }
 
 .navbar {
@@ -93,7 +146,7 @@ header {
 
 .logo h2 {
     font-size: 18px;
-    color: #14143a;
+    color: var(--heading);
 }
 
 .nav-links {
@@ -103,7 +156,7 @@ header {
 }
 
 .nav-links a {
-    color: #333;
+    color: var(--text);
     font-size: 14px;
     font-weight: 500;
     transition: 0.3s;
@@ -296,11 +349,11 @@ header {
 .program-card,
 .value-card,
 .info-card {
-    background: #fff;
+    background: var(--card-bg);
     border-radius: 12px;
     padding: 28px 24px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    border: 1px solid #eee;
+    box-shadow: 0 4px 12px var(--shadow);
+    border: 1px solid var(--card-border);
     transition: 0.3s;
 }
 
@@ -313,12 +366,12 @@ header {
 .program-card h3,
 .value-card h3,
 .info-card h2 {
-    color: #14143a;
+    color: var(--heading);
     margin-bottom: 10px;
 }
 
 .what-section, .values, .mission-vision {
-    background: #fff;
+    background: var(--section-alt-bg);
 }
 
 .mission-vision {
@@ -332,7 +385,7 @@ header {
 
 /* ===================== FEATURED PROJECT SPOTLIGHT ===================== */
 .featured-project {
-    background: #fff;
+    background: var(--section-alt-bg);
 }
 
 .spotlight-card {
@@ -343,8 +396,8 @@ header {
     margin: 0 auto;
     padding: 0 30px;
     align-items: center;
-    background: #fff;
-    border: 2px solid #14143a;
+    background: var(--card-bg);
+    border: 2px solid var(--heading);
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(20,20,58,0.15);
     padding: 30px;
@@ -362,7 +415,7 @@ header {
 }
 
 .spotlight-text h3 {
-    color: #14143a;
+    color: var(--heading);
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -373,7 +426,7 @@ header {
 
 /* ===================== CTA SECTION ===================== */
 .cta-section {
-    background: #fff;
+    background: var(--section-alt-bg);
 }
 
 .cta-box {
@@ -409,31 +462,31 @@ header {
 }
 
 .timeline-card {
-    background: #f5f5ff;
+    background: var(--timeline-bg);
     border-left: 4px solid #6c63ff;
     border-radius: 8px;
     padding: 20px;
 }
 
 .timeline-card h3 {
-    color: #14143a;
+    color: var(--heading);
     font-size: 16px;
     margin-bottom: 6px;
 }
 
 .story, .founders {
-    background: #fff;
+    background: var(--section-alt-bg);
 }
 
 .story h2, .founders h2, .community h2 {
     text-align: center;
-    color: #14143a;
+    color: var(--heading);
     margin-bottom: 8px;
 }
 
 .story > p, .founders > p {
     text-align: center;
-    color: #555;
+    color: var(--muted);
     max-width: 600px;
     margin: 0 auto 30px;
 }
@@ -445,12 +498,12 @@ header {
 }
 
 .founder-card {
-    background: #fff;
-    border: 1px solid #eee;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 12px;
     padding: 15px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 12px var(--shadow);
 }
 
 .founder-card img {
@@ -495,7 +548,7 @@ header {
 }
 
 .about-content p, .program-text p, .contact-hero-content p {
-    color: #555;
+    color: var(--muted);
     margin-bottom: 20px;
 }
 
@@ -536,7 +589,7 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    background: #f5f5ff;
+    background: var(--timeline-bg);
     border-radius: 16px;
     padding: 40px;
     max-width: 1100px;
@@ -544,7 +597,7 @@ header {
 }
 
 .coach-card h2 {
-    color: #14143a;
+    color: var(--heading);
     margin-bottom: 8px;
 }
 
@@ -556,8 +609,8 @@ header {
 }
 
 .team-list span {
-    background: #fff;
-    border: 1px solid #ddd;
+    background: var(--card-bg);
+    border: 1px solid var(--input-border);
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 13px;
@@ -571,7 +624,7 @@ header {
 }
 
 .gallery-section {
-    background: #fff;
+    background: var(--section-alt-bg);
 }
 
 .gallery-card {
@@ -604,13 +657,13 @@ header {
 
 .card {
     min-width: 280px;
-    background: #fff;
+    background: var(--card-bg);
     border-radius: 12px;
     padding: 15px;
-    box-shadow: 0 4px 12px rgba(8, 7, 17, 0.1);
+    box-shadow: 0 4px 12px var(--shadow);
     flex-shrink: 0;
     transition: 0.3s;
-    border: 1px solid #eee;
+    border: 1px solid var(--card-border);
 }
 
 .card img {
@@ -621,7 +674,7 @@ header {
     margin-bottom: 15px;
 }
 
-.card h3 { margin-bottom: 10px; color: #14143a; }
+.card h3 { margin-bottom: 10px; color: var(--heading); }
 .card p { margin-bottom: 10px; }
 
 .card a {
@@ -669,15 +722,15 @@ header {
 /* CASE STUDY CARDS */
 .card2 {
     max-width: 800px;
-    background: #fff;
+    background: var(--card-bg);
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px var(--shadow);
     flex-shrink: 0;
-    border: 1px solid #eee;
+    border: 1px solid var(--card-border);
 }
 
-.card2 h3 { color: #14143a; margin-bottom: 6px; }
+.card2 h3 { color: var(--heading); margin-bottom: 6px; }
 
 .card2 h4 {
     margin-top: 14px;
@@ -707,10 +760,10 @@ header {
 
 .contact-form {
     flex: 1 1 380px;
-    background: #fff;
+    background: var(--card-bg);
     border-radius: 12px;
     padding: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px var(--shadow);
     display: flex;
     flex-direction: column;
 }
@@ -718,7 +771,7 @@ header {
 .contact-form label {
     font-size: 13px;
     font-weight: 600;
-    color: #14143a;
+    color: var(--heading);
     margin-top: 14px;
     margin-bottom: 6px;
 }
@@ -726,10 +779,12 @@ header {
 .contact-form input,
 .contact-form textarea {
     padding: 10px 12px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--input-border);
     border-radius: 8px;
     font-size: 14px;
     font-family: inherit;
+    background: var(--card-bg);
+    color: var(--text);
 }
 
 .error-message {
@@ -760,14 +815,14 @@ header {
 
 .contact-info {
     flex: 1 1 300px;
-    background: #fff;
+    background: var(--card-bg);
     border-radius: 12px;
     padding: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px var(--shadow);
 }
 
-.contact-info h2 { color: #14143a; margin-bottom: 16px; }
-.contact-info p { margin-bottom: 10px; color: #444; }
+.contact-info h2 { color: var(--heading); margin-bottom: 16px; }
+.contact-info p { margin-bottom: 10px; color: var(--muted); }
 
 .social-row {
     display: flex;
@@ -781,9 +836,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f5f5ff;
+    background: var(--icon-bg);
     border-radius: 50%;
-    color: #14143a;
+    color: var(--heading);
     transition: 0.3s;
 }
 
@@ -804,10 +859,10 @@ header {
 }
 
 .icons i {
-    background: #f5f5ff;
+    background: var(--icon-bg);
     padding: 18px 22px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px var(--shadow);
     font-size: 13px;
 }
 
@@ -885,14 +940,14 @@ footer {
         top: 64px;
         left: 0;
         right: 0;
-        background: #fff;
+        background: var(--header-bg);
         flex-direction: column;
         align-items: center;
         gap: 0;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+        box-shadow: 0 8px 15px var(--shadow);
     }
 
     .nav-links.open {
@@ -903,7 +958,7 @@ footer {
         width: 100%;
         text-align: center;
         padding: 14px 0;
-        border-top: 1px solid #f0f0f0;
+        border-top: 1px solid var(--card-border);
     }
 
     .nav-toggle { display: flex; }
