@@ -225,7 +225,7 @@ header {
 }
 
 .hero-btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.1);
     color: #fff;
 }
 
@@ -405,7 +405,7 @@ header {
 .program-card:hover,
 .value-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
 }
 
 .program-card h3,
@@ -447,15 +447,15 @@ header {
     margin: 0 auto;
     align-items: center;
     background: var(--card-bg);
-    border: 2px solid var(--heading);
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(20,20,58,0.15);
+    box-shadow: 0 10px 30px rgba(20,20,58,0.9);
     padding: 30px;
 }
 
 .spotlight-card img {
     flex: 1 1 320px;
     border-radius: 10px;
+    border: 2px solid var(--heading);
     max-height: 260px;
     object-fit: cover;
 }
@@ -617,10 +617,12 @@ header {
 
 .about-image, .programs-image {
     flex: 1 1 320px;
+    border: 1px solid var(--heading);
+    border-radius: 5px;
 }
 
 .about-image img, .programs-image img {
-    border-radius: 12px;
+    border-radius: 5px;
 }
 
 /* ===================== PROJECTS PAGE ===================== */
@@ -671,7 +673,7 @@ header {
 /* ===================== CARD GRID (Projects / Case Studies) ===================== */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 20px;
     max-width: 1240px;
     margin: 0 auto;
@@ -680,7 +682,8 @@ header {
 }
 
 .case-grid {
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px;
 }
 
 .card {
@@ -697,6 +700,7 @@ header {
     height: 170px;
     object-fit: cover;
     border-radius: 10px;
+    border: 1px solid var(--heading);
     margin-bottom: 15px;
 }
 
@@ -740,10 +744,8 @@ header {
     margin: 2px 2px 2px 0;
 }
 
-/* PROJECT CARDS (Bootstrap-based grid on the Projects page).
-   These classes weren't defined anywhere before, so they were falling back
-   to raw Bootstrap defaults (fixed white background, generic gray text,
-   unstyled buttons) which don't adapt to dark mode. */
+/* PROJECT CARDS (Bootstrap-based grid on the Projects page). */
+
 .project-card {
     background: var(--card-bg) !important;
     color: var(--text);
@@ -753,7 +755,7 @@ header {
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2) !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7) !important;
 }
 
 .card-img-wrap {
@@ -835,7 +837,7 @@ header {
 
 .card:hover, .card2:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
 }
 
 /* ===================== CONTACT PAGE ===================== */
