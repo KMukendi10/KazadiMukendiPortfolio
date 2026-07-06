@@ -20,7 +20,7 @@
     --timeline-bg: #f5f5ff;
     --icon-bg: #f5f5ff;
     --input-border: #ddd;
-    --shadow: rgba(0,0,0,0.08);
+    --shadow: rgba(0,0,0,0.8);
 }
 
 [data-theme="dark"] {
@@ -227,6 +227,21 @@ header {
 .hero-btn-secondary:hover {
     background: rgba(255, 255, 255, 0.06);
     color: #fff;
+}
+
+.btn-secondary {
+    padding: 12px 26px;
+    background: transparent;
+    color: #14143a;
+    border: 1px solid #14143a;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: rgba(58, 58, 58, 0.2);
 }
 
 .btn-black {
