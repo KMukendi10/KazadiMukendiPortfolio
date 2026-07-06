@@ -96,6 +96,19 @@
                 </div>
 
                 <div class="card2">
+                    <h3>Twitter/X Clone — Interactivity and State in the Browser</h3>
+                    <h4>Problem</h4>
+                    <p>Every project before this one was a static layout clone — good for CSS practice, but none of them needed to remember anything. I wanted a build that had to track state and respond to user actions in real time, closer to how a real product behaves.</p>
+                    <h4>Approach</h4>
+                    <p>I rebuilt the core Twitter/X feed interface with HTML and CSS for the layout, then used JavaScript to handle interactions — composing a post, updating counts, and reflecting state changes in the DOM immediately rather than reloading anything.</p>
+                    <h4>Trade-offs</h4>
+                    <p>I kept state in memory in the browser rather than wiring up a backend or persistence layer. That let me focus on getting the interaction logic and DOM updates right first, at the cost of nothing being saved between page reloads.</p>
+                    <h4>Outcome & Next Step</h4>
+                    <p>It's my most functionally complete project so far — real interactivity rather than a static clone. The next step is adding persistence, likely with local storage first and an API later, so state survives a refresh.</p>
+                    <p><strong>Tools Used:</strong> HTML, CSS, JavaScript, Git, GitHub, Chrome DevTools</p>
+                </div>
+
+                <div class="card2">
                     <h3>Version Control with Git — Workflow, Not Just Backup</h3>
                     <h4>Problem</h4>
                     <p>Early on I was using Git purely as a backup tool — commit everything, push occasionally. That works until something breaks and there's no clear history to trace it back through, and it completely falls apart once more than one person is pushing to the same repo.</p>
