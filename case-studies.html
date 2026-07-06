@@ -96,19 +96,6 @@
                 </div>
 
                 <div class="card2">
-                    <h3>Responsive Design — Consistent Layouts Across Breakpoints</h3>
-                    <h4>Problem</h4>
-                    <p>Every project in this portfolio needs to work on a phone as well as a desktop. Rather than treat this per-project, I standardized an approach I now reuse across all of them.</p>
-                    <h4>Approach</h4>
-                    <p>I use relative units (%, rem) over fixed pixel widths wherever content needs to flex, media queries to restructure layout (e.g. stacking a horizontal nav into a vertical one) rather than just shrinking it, and test at specific breakpoints rather than only resizing the browser window casually.</p>
-                    <h4>Trade-offs</h4>
-                    <p>Designing mobile-first would have caught some of these issues earlier; I built desktop-first and retrofitted breakpoints, which meant more rework on spacing and alignment than if I'd flipped the order.</p>
-                    <h4>Outcome & Next Step</h4>
-                    <p>All projects in this portfolio are usable from ~320px up. On the next project, I'm switching to a mobile-first build order to avoid the retrofit cost.</p>
-                    <p><strong>Tools Used:</strong> HTML, CSS, Media Queries, Flexbox, Chrome DevTools</p>
-                </div>
-
-                <div class="card2">
                     <h3>Version Control with Git — Workflow, Not Just Backup</h3>
                     <h4>Problem</h4>
                     <p>Early on I was using Git purely as a backup tool — commit everything, push occasionally. That works until something breaks and there's no clear history to trace it back through, and it completely falls apart once more than one person is pushing to the same repo.</p>
@@ -121,18 +108,6 @@
                     <p><strong>Tools Used:</strong> Git, GitHub, Command Line, VS Code</p>
                 </div>
 
-                <div class="card2">
-                    <h3>Troubleshooting and Debugging — A Repeatable Process</h3>
-                    <h4>Problem</h4>
-                    <p>Early debugging for me meant randomly changing CSS values until something looked right, which was slow and didn't build any real understanding of the underlying issue.</p>
-                    <h4>Approach</h4>
-                    <p>I switched to a fixed process: reproduce the issue, inspect the actual computed styles in DevTools (not just what I wrote in the file), isolate the change to one property at a time, and verify the fix doesn't break another breakpoint before moving on.</p>
-                    <h4>Trade-offs</h4>
-                    <p>This is slower than trial-and-error for trivial fixes, but for anything non-obvious (e.g. an image not rendering because of a bad relative path, not a styling issue at all) it finds the actual cause instead of a workaround that resurfaces later.</p>
-                    <h4>Outcome & Next Step</h4>
-                    <p>Most layout bugs across this portfolio now get diagnosed in DevTools before I touch any code. Next, I want to get comfortable with the JavaScript console and breakpoints for debugging logic, not just layout.</p>
-                    <p><strong>Tools Used:</strong> HTML, CSS, Chrome DevTools, VS Code</p>
-                </div>
             </div>
         </section>
 
