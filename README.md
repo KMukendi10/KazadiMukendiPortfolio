@@ -85,6 +85,14 @@ Term 3 is about curation as much as creation — surfacing my best work and show
 
 ---
 
+## 🩹 Changelog
+
+* **Fixed Home hero section responsiveness** — the hero previously used a fixed `height: 100vh` with `overflow: hidden`, which clipped the heading/copy/buttons on smaller screens. Switched to `min-height: 100vh`, added fluid heading sizing (`clamp()`), tightened padding at tablet/mobile breakpoints, disabled the fixed background attachment on mobile (a known iOS/Android rendering glitch), and made the buttons/profile image scale down properly.
+* **Fixed project/case-study grid overflow on narrow phones** — `.card-grid` and `.case-grid` enforced a minimum column width (380–400px) wider than many phone viewports, causing horizontal scrolling. Both now collapse to a single column below 480px.
+
+---
+
+
 ## ⚡ Running Locally
 
 Clone the repository:
