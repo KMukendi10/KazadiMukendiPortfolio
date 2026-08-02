@@ -804,7 +804,7 @@ header {
 
 .btn-proj-outline {
     background: transparent;
-    color: var(--heading) !important;
+    color: #fff !important;
     border: 1px solid var(--card-border);
     border-radius: 20px;
     transition: 0.3s;
