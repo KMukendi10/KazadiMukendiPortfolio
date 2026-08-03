@@ -102,13 +102,16 @@ function initContactForm() {
     const messageError = document.getElementById('messageError');
     const successMessage = document.getElementById('successMessage');
 
-    form.addEventListener('submit', (e) => {
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         nameError.textContent = '';
         emailError.textContent = '';
         messageError.textContent = '';
         successMessage.textContent = '';
+        successMessage.classList.remove('error');
 
         let isValid = true;
 
@@ -130,9 +133,36 @@ function initContactForm() {
             isValid = false;
         }
 
-        if (isValid) {
-            successMessage.textContent = "Thanks! Your message has been noted — I'll get back to you soon.";
-            form.reset();
+        if (!isValid) return;
+
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                successMessage.textContent = "Thanks! Your message has been sent — I'll get back to you soon.";
+                form.reset();
+            } else {
+                const data = await response.json().catch(() => null);
+                const detail = data && data.errors && data.errors.length
+                    ? data.errors.map((err) => err.message).join(' ')
+                    : 'Please try again in a moment.';
+                successMessage.textContent = `Something went wrong sending your message. ${detail}`;
+                successMessage.classList.add('error');
+            }
+        } catch (err) {
+            successMessage.textContent = 'Network error — please check your connection and try again.';
+            successMessage.classList.add('error');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
         }
     });
 }

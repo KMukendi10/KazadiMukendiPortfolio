@@ -894,6 +894,10 @@ header {
     margin-top: 10px;
 }
 
+.success-message.error {
+    color: #d9455f;
+}
+
 .primary-btn {
     margin-top: 16px;
     padding: 12px 26px;
