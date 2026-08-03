@@ -306,11 +306,11 @@ header {
 }
 
 .hero-image img {
-    width: 250px;
-    height: 250px;
+    width: 450px;
+    height: 450px;
     object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid #fff;
+    border-radius: 50px;
+    border: 0.01px solid #fff;
     box-shadow: 0 10px 30px rgba(20,20,58,0.25);
 }
 
@@ -619,7 +619,7 @@ header {
 }
 
 .about-image, .programs-image {
-    flex: 1 1 320px;
+    flex: 1 1 100px;
     border: 1px solid var(--heading);
     border-radius: 5px;
 }
