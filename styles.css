@@ -957,12 +957,12 @@ header {
     padding: 0 30px;
 }
 
-.icons i {
+.icons p {
     background: var(--icon-bg);
-    padding: 18px 22px;
+    padding: 14px 18px;
     border-radius: 12px;
     box-shadow: 0 4px 12px var(--shadow);
-    font-size: 13px;
+    font-size: 15px;
 }
 
 /* ===================== FOOTER ===================== */
