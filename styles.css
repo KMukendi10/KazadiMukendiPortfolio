@@ -203,7 +203,7 @@ header {
     background: #14143a;
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 14px;
     transition: 0.3s;
@@ -218,7 +218,7 @@ header {
     background: transparent;
     color: #efefef;
     border: 1px solid #efefef;
-    border-radius: 8px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 14px;
     transition: 0.3s;
@@ -231,16 +231,32 @@ header {
 
 .btn-black {
     display: inline-block;
-    padding: 12px 26px;
+    padding: 9px 20px;
     background: #14143a;
     color: #fff;
-    border-radius: 8px;
+    border-radius: 20px;
     font-size: 14px;
     transition: 0.3s;
 }
 
 .btn-black:hover {
     background: #6c63ff;
+}
+
+.btn-proj-outline {
+    display: inline-block;
+    padding: 9px 20px;
+    background: transparent;
+    color: var(--heading);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-proj-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
 }
 
 /* ===================== HOME: HERO ===================== */
@@ -611,21 +627,30 @@ header {
 
 .learn-btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 9px 20px;
     background: #14143a;
     color: #fff;
-    border-radius: 8px;
+    border-radius: 20px;
     font-size: 14px;
 }
 
-.about-image, .programs-image {
-    flex: 1 1 100px;
+.learn-btn:hover {
+    background: #6c63ff;
+}
+
+.about-image {
+    flex: 1 1 50px;
+    border-radius: 20px;
+}
+
+.programs-image {
+    flex: 1 1 340px;
     border: 1px solid var(--heading);
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .about-image img, .programs-image img {
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 /* ===================== PROJECTS PAGE ===================== */
