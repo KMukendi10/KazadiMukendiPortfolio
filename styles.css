@@ -214,6 +214,7 @@ header {
 }
 
 .hero-btn-secondary {
+    display: inline-block;
     padding: 12px 26px;
     background: transparent;
     color: #efefef;
@@ -623,6 +624,12 @@ header {
 .about-content p, .program-text p, .contact-hero-content p {
     color: var(--muted);
     margin-bottom: 20px;
+}
+
+.about-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
 }
 
 .learn-btn {
