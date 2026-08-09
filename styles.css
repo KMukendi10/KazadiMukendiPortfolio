@@ -255,11 +255,11 @@ header {
 }
 
 .btn-proj-outline:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: #6c63ff;
     color: #fff;
 }
 
-/* ===================== HOME: HERO ===================== */
+/* ===================== HERO ===================== */
 .hero {
     position: relative;
     display: flex;
@@ -829,7 +829,7 @@ header {
 
 .btn-icon-outline {
     background: transparent;
-    color: var(--heading) !important;
+    color: #fff !important;
     border: 1px solid var(--card-border);
     border-radius: 20px;
     transition: 0.3s;
@@ -988,6 +988,11 @@ header {
     border-radius: 12px;
     box-shadow: 0 4px 12px var(--shadow);
     font-size: 15px;
+}
+
+.icons p:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.8);
 }
 
 /* ===================== FOOTER ===================== */
