@@ -7,7 +7,8 @@
 =========================================== */
 
 // Mark that JS is actually running before anything else. CSS only hides
-// .fade-in content once this class is present
+// .fade-in content once this class is present, so a failed/blocked script
+// load can never leave whole sections permanently invisible.
 document.documentElement.classList.add('js-ready');
 
 document.addEventListener('DOMContentLoaded', () => {
