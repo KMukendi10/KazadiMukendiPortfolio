@@ -75,16 +75,55 @@
                 </div>
 
                 <div class="card2">
-                    <h3>Netflix Landing Page — Recreating a Production Layout</h3>
+                    <h3>Urban Threads — A Full Firebase E-Commerce App</h3>
                     <h4>Problem</h4>
-                    <p>Static clones are useful for practice, but only if they force you to solve layout problems you can't shortcut. I picked Netflix's landing page because its hero section, feature grid, and FAQ accordion each needed a different layout technique.</p>
+                    <p>Every project before this one either had no backend at all or leaned on localStorage. This assignment needed real accounts and a cart that actually persists — Firebase Authentication and Firestore, not hardcoded product data.</p>
                     <h4>Approach</h4>
-                    <p>I used CSS Grid for the feature section (fixed structure, predictable rows/columns) and Flexbox for the hero and footer (content that needs to grow/shrink with the viewport). Background images and overlay text were layered using absolute positioning inside a relatively positioned container.</p>
+                    <p>Products live in a Firestore <code>products</code> collection and load dynamically on the shop page. Each signed-in user's cart is stored under their own <code>users/&#123;uid&#125;/cart</code> subcollection rather than localStorage, so it follows them across devices instead of staying stuck in one browser.</p>
                     <h4>Trade-offs</h4>
-                    <p>Matching the reference design pixel-for-pixel took longer than building something "close enough," but it forced me to understand why Grid and Flexbox each fit different parts of the layout, instead of defaulting to one for everything.</p>
+                    <p>I let shoppers browse and search the whole catalog without an account, and only prompt for login at the moment they click "Add to Cart." That's more work than just gating the entire shop behind a login wall, but it matches how real stores behave — you don't need an account to window-shop.</p>
                     <h4>Outcome & Next Step</h4>
-                    <p>The layout holds up across breakpoints from mobile to desktop with no broken overlays. If I revisited it, I'd rebuild the FAQ section as an interactive accordion with JavaScript instead of a static list.</p>
-                    <p><strong>Tools Used:</strong> HTML, CSS, Git, GitHub, Chrome DevTools</p>
+                    <p>Fully working store with category filtering, search, and pagination on top of the base requirement. Next step is an admin panel so I can manage the product catalog from a form instead of typing documents into the Firebase console by hand.</p>
+                    <p><strong>Tools Used:</strong> HTML, CSS, JavaScript, Firebase Authentication, Firestore, Git, GitHub</p>
+                </div>
+
+                <div class="card2">
+                    <h3>Google Keep Clone (React) — Rebuilding with Component State</h3>
+                    <h4>Problem</h4>
+                    <p>I'd already built this as a vanilla JS clone. The React version had to prove I could actually structure an app with components and shared state instead of one long script — plus add one manual feature and one AI-assisted feature and be honest about which was which.</p>
+                    <h4>Approach</h4>
+                    <p>Every piece of state — notes, labels, theme, reminders — lives in one hook, <code>useKeepStore</code>, instead of scattered across components. Labels were the manual build; dark mode and drag-and-drop reordering were the AI-assisted features, where I used AI to help scaffold the logic and then verified every interaction by hand in the browser.</p>
+                    <h4>Trade-offs</h4>
+                    <p>Notes still persist to localStorage rather than a backend. That kept the assignment focused on component structure and state management rather than infrastructure, at the cost of notes not syncing between devices the way Urban Threads' cart does.</p>
+                    <h4>Outcome & Next Step</h4>
+                    <p>Masonry note grid, label filtering, archive/trash with a 7-day auto-purge, and reminders with due-date sorting all work. Next step is swapping localStorage for Firebase, the same pattern I already proved out on Urban Threads.</p>
+                    <p><strong>Tools Used:</strong> React, JavaScript, Vite, CSS, Git, GitHub</p>
+                </div>
+
+                <div class="card2">
+                    <h3>Book Library — Working With a Real API</h3>
+                    <h4>Problem</h4>
+                    <p>Every project so far used data I controlled — hardcoded, Firestore, or localStorage. This one needed a real third-party API, which meant handling failures and slow responses instead of assuming the data is always just there.</p>
+                    <h4>Approach</h4>
+                    <p>Book data comes from the Open Library API via <code>fetch</code>, with explicit loading and error states rather than a blank screen while the request is in flight or on failure. Search is submit-triggered rather than live-as-you-type, to avoid firing a request on every keystroke.</p>
+                    <h4>Trade-offs</h4>
+                    <p>Submit-triggered search costs a bit of the instant feedback a live search gives you, but it keeps request volume sane against a free public API with no key or rate-limit budget behind it.</p>
+                    <h4>Outcome & Next Step</h4>
+                    <p>Deployed to GitHub Pages — including tracking down a blank-page bug that turned out to be a missing <code>base: './'</code> in <code>vite.config.js</code>. Next step is adding pagination to the search results, the same way I added it to Urban Threads' product grid.</p>
+                    <p><strong>Tools Used:</strong> React, Vite, JavaScript, Open Library API, Git, GitHub</p>
+                </div>
+
+                <div class="card2">
+                    <h3>Quiz Widget — Scoring Logic, Not Just Display</h3>
+                    <h4>Problem</h4>
+                    <p>I wanted a small project focused purely on JavaScript logic — tracking a score and a question index correctly — rather than layout, which every earlier project had already covered.</p>
+                    <h4>Approach</h4>
+                    <p>Score and question index are tracked in JavaScript variables, not read back from the DOM, so the result is always computed rather than counted off whatever happens to be on screen. Answer buttons use event delegation on the container instead of a separate listener per button.</p>
+                    <h4>Trade-offs</h4>
+                    <p>Questions are hardcoded directly in the JS file rather than loaded from a separate JSON file or API. For a quiz this size that's the right call — pulling in a fetch layer for a dozen static questions would be complexity with no real payoff.</p>
+                    <h4>Outcome & Next Step</h4>
+                    <p>Instant feedback per question and a final score screen at the end. Next step is moving the question set into its own JSON file so I can add more questions without touching the scoring logic at all.</p>
+                    <p><strong>Tools Used:</strong> HTML, CSS, JavaScript, Git, GitHub</p>
                 </div>
 
                 <div class="card2">
