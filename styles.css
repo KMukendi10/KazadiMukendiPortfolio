@@ -833,6 +833,24 @@ header {
     object-fit: cover;
 }
 
+/* Taller variant for the iHub capstone card — its screenshot needs more
+   height than the 6-project grid above, and should show in full rather
+   than being cropped, matching the hero image treatment up top. */
+.card-img-wrap-tall {
+    height: 420px;
+    background: var(--card-bg);
+}
+
+.card-img-wrap-tall img {
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .card-img-wrap-tall {
+        height: 260px;
+    }
+}
+
 .project-card .card-title {
     color: var(--heading);
 }
