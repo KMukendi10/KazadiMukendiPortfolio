@@ -845,12 +845,6 @@ header {
     object-fit: contain;
 }
 
-@media (max-width: 768px) {
-    .card-img-wrap-tall {
-        height: 260px;
-    }
-}
-
 .project-card .card-title {
     color: var(--heading);
 }
@@ -1155,6 +1149,13 @@ html.js-ready .fade-in.visible {
     .case-grid {
         grid-template-columns: 1fr;
     }
+    .card-img-wrap-tall {
+        height: 190px;
+    }
+    .about-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1189,4 +1190,6 @@ html.js-ready .fade-in.visible {
     .join-btn { display: none; }
 
     .spotlight-card { flex-direction: column; }
+
+    .card-img-wrap-tall { height: 260px; }
 }
