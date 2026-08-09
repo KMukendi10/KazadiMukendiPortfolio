@@ -535,6 +535,13 @@ header {
     border-left: 4px solid #6c63ff;
     border-radius: 8px;
     padding: 20px;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: 0.3s;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
 }
 
 .timeline-card h3 {
