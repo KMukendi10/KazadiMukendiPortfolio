@@ -9,9 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <div id="preloader" aria-hidden="true">
+        <div class="preloader-inner">
+            <span class="preloader-percent">0%</span>
+            <p class="preloader-msg">// booting portfolio.exe</p>
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <div class="bg-fx"><span></span><span></span><span></span></div>
 
     <header>
         <nav class="navbar">
@@ -24,7 +37,6 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="case-studies.html">Case Studies</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
 
@@ -45,7 +57,7 @@
                     A collection of everything I've built and deployed so far — from a full-stack
                     Firebase e-commerce app to React builds, API integrations, and a team capstone project.
                 </p>
-                <button class="hero-btn" onclick="window.location.href='case-studies.html'">Read the Case Studies</button>
+                <button class="hero-btn" onclick="document.getElementById('project-grid').scrollIntoView({behavior:'smooth'})">Browse My Work</button>
             </div>
 
             <div class="programs-image">
@@ -58,163 +70,353 @@
                 <div class="section-header">
                     <p class="section-label">DEPLOYED PROJECTS</p>
                     <h2>What I've built</h2>
+                    <p class="section-hint">Click a project to open its full case study — the problem, my approach, trade-offs, and the links.</p>
                 </div>
             </div>
 
-            <div class="card-grid">
+            <div class="card-grid" id="project-grid">
+
+                <!-- Portfolio Website -->
+                <div class="col">
+                  <article class="project-card project-preview card border-0 shadow h-100 rounded-4 overflow-hidden" id="portfolio-website" data-case="portfolio-website" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-portfolio-website">
+                    <div class="card-img-wrap">
+                      <img src="./Assets/KazadiProfile.png" class="card-img-top" alt="Portfolio website preview" />
+                      <div class="preview-overlay">
+                        <span class="project-tag">HTML, CSS &amp; JavaScript</span>
+                        <h3>Portfolio Website</h3>
+                        <span class="preview-cta"><i class="fa-solid fa-magnifying-glass"></i> View Case Study</span>
+                      </div>
+                    </div>
+                    <div class="preview-caption"><h3>Portfolio Website</h3><i class="fa-solid fa-arrow-up-right-and-arrow-down-left-from-center"></i></div>
+                  </article>
+                </div>
 
                 <!-- Urban Threads -->
                 <div class="col">
-                  <article class="project-card card border-0 shadow h-100 rounded-4 overflow-hidden">
+                  <article class="project-card project-preview card border-0 shadow h-100 rounded-4 overflow-hidden" id="urban-threads" data-case="urban-threads" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-urban-threads">
                     <div class="card-img-wrap">
-                      <img src="./Assets/UrbanThreads.png"
-                           class="card-img-top" alt="Urban Threads e-commerce app screenshot" />
-                    </div>
-                    <div class="card-body d-flex flex-column p-4">
-                      <span class="project-tag mb-1">Built with HTML, CSS, JavaScript &amp; Firebase</span>
-                      <h3 class="card-title h5 fw-bold mb-1">Urban Threads</h3>
-                      <p class="card-text small text-muted flex-grow-1">
-                        A full e-commerce app for a fictional streetwear brand with Firebase Authentication, a Firestore-backed product catalog and cart, category filtering, search, and pagination.
-                      </p>
-                      <div class="d-flex gap-2 mt-3">
-                        <a href="https://urban-threads-online-store-puce.vercel.app/" target="_blank" rel="noopener noreferrer"
-                           class="btn btn-proj-primary btn-sm flex-grow-1">View Website</a>
-                        <a href="https://github.com/KMukendi10/UrbanThreadsOnlineStore.git" target="_blank" rel="noopener noreferrer"
-                           class="btn btn-icon-outline btn-sm" aria-label="Urban Threads source code">
-                          <i class="bi bi-code-slash"></i>
-                        </a>
+                      <img src="./Assets/UrbanThreads.png" class="card-img-top" alt="Urban Threads e-commerce app screenshot" />
+                      <div class="preview-overlay">
+                        <span class="project-tag">HTML, CSS, JavaScript &amp; Firebase</span>
+                        <h3>Urban Threads</h3>
+                        <span class="preview-cta"><i class="fa-solid fa-magnifying-glass"></i> View Case Study</span>
                       </div>
                     </div>
+                    <div class="preview-caption"><h3>Urban Threads</h3><i class="fa-solid fa-arrow-up-right-and-arrow-down-left-from-center"></i></div>
                   </article>
                 </div>
 
                 <!-- Google Keep Clone (React) -->
                 <div class="col">
-                  <article class="project-card card border-0 shadow h-100 rounded-4 overflow-hidden">
+                  <article class="project-card project-preview card border-0 shadow h-100 rounded-4 overflow-hidden" id="google-keep-react" data-case="google-keep-react" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-google-keep-react">
                     <div class="card-img-wrap">
-                      <img src="./Assets/GoogleKeepReact.png"
-                           class="card-img-top" alt="Google Keep Clone React app screenshot" />
-                    </div>
-                    <div class="card-body d-flex flex-column p-4">
-                      <span class="project-tag mb-1">Built with React, JavaScript &amp; Vite</span>
-                      <h3 class="card-title h5 fw-bold mb-1">Google Keep Clone (React)</h3>
-                      <p class="card-text small text-muted flex-grow-1">
-                        A React rebuild of the original Google Keep clone with masonry note grid, label tags, dark mode, drag-and-drop reordering, and an archive/trash flow with auto-purge.
-                      </p>
-                      <div class="d-flex gap-2 mt-3">
-                        <a href="https://google-keep-clone-react-gamma.vercel.app/" target="_blank" rel="noopener noreferrer"
-                           class="btn btn-proj-primary btn-sm flex-grow-1">View Website</a>
-                        <a href="https://github.com/KMukendi10/GoogleKeepCloneReact.git" target="_blank" rel="noopener noreferrer"
-                           class="btn btn-icon-outline btn-sm" aria-label="Google Keep Clone React source code">
-                          <i class="bi bi-code-slash"></i>
-                        </a>
+                      <img src="./Assets/GoogleKeepReact.png" class="card-img-top" alt="Google Keep Clone React app screenshot" />
+                      <div class="preview-overlay">
+                        <span class="project-tag">React, JavaScript &amp; Vite</span>
+                        <h3>Google Keep Clone (React)</h3>
+                        <span class="preview-cta"><i class="fa-solid fa-magnifying-glass"></i> View Case Study</span>
                       </div>
                     </div>
+                    <div class="preview-caption"><h3>Google Keep Clone</h3><i class="fa-solid fa-arrow-up-right-and-arrow-down-left-from-center"></i></div>
                   </article>
                 </div>
 
                 <!-- Book Library -->
                 <div class="col">
-                  <article class="project-card card border-0 shadow h-100 rounded-4 overflow-hidden">
+                  <article class="project-card project-preview card border-0 shadow h-100 rounded-4 overflow-hidden" id="book-library" data-case="book-library" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-book-library">
                     <div class="card-img-wrap">
-                      <img src="./Assets/BookLibrary.png"
-                           class="card-img-top" alt="Book Library app screenshot" />
-                    </div>
-                    <div class="card-body d-flex flex-column p-4">
-                      <span class="project-tag mb-1">Built with React, Vite &amp; the Open Library API</span>
-                      <h3 class="card-title h5 fw-bold mb-1">Book Library</h3>
-                      <p class="card-text small text-muted flex-grow-1">
-                        A book search app built on the Open Library API search, browse covers and details, with proper loading and error states instead of assuming every request succeeds.
-                      </p>
-                      <div class="d-flex gap-2 mt-3">
-                        <a href="https://kmukendi10.github.io/API-Intergratio-Book-Library/" target="_blank" rel="noopener noreferrer"
-                           class="btn btn-proj-primary btn-sm flex-grow-1">View Website</a>
-                        <a href="https://github.com/KMukendi10/API-Intergratio-Book-Library.git" target="_blank" rel="noopener noreferrer"
-                           class="btn btn-icon-outline btn-sm" aria-label="Book Library source code">
-                          <i class="bi bi-code-slash"></i>
-                        </a>
+                      <img src="./Assets/BookLibrary.png" class="card-img-top" alt="Book Library app screenshot" />
+                      <div class="preview-overlay">
+                        <span class="project-tag">React, Vite &amp; the Open Library API</span>
+                        <h3>Book Library</h3>
+                        <span class="preview-cta"><i class="fa-solid fa-magnifying-glass"></i> View Case Study</span>
                       </div>
                     </div>
+                    <div class="preview-caption"><h3>Book Library</h3><i class="fa-solid fa-arrow-up-right-and-arrow-down-left-from-center"></i></div>
                   </article>
                 </div>
-      
+
                 <!-- Quiz Widget -->
                 <div class="col">
-                  <article class="project-card card border-0 shadow h-100 rounded-4 overflow-hidden">
+                  <article class="project-card project-preview card border-0 shadow h-100 rounded-4 overflow-hidden" id="quiz-widget" data-case="quiz-widget" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-quiz-widget">
                     <div class="card-img-wrap">
-                      <img src="./Assets/QuizWidget.png"
-                           class="card-img-top" alt="Interactive quiz widget project screenshot" />
-                    </div>
-                    <div class="card-body d-flex flex-column p-4">
-                      <span class="project-tag mb-1">Built with HTML, CSS &amp; JavaScript</span>
-                      <h3 class="card-title h5 fw-bold mb-1">Quiz Widget</h3>
-                      <p class="card-text small text-muted flex-grow-1">
-                        An interactive quiz application built with HTML, CSS, and JavaScript that provides instant feedback and demonstrates DOM manipulation, event handling, and responsive design.
-                      </p>
-                      <div class="d-flex gap-2 mt-3">
-                        <a href="https://kmukendi10.github.io/quiz-widget-project/" target="_blank" rel="noopener noreferrer"
-                           class="btn btn-proj-primary btn-sm flex-grow-1">View Website</a>
-                        <a href="https://github.com/KMukendi10/quiz-widget-project.git" target="_blank" rel="noopener noreferrer"
-                           class="btn btn-icon-outline btn-sm" aria-label="Portfolio source code">
-                          <i class="bi bi-code-slash"></i>
-                        </a>
+                      <img src="./Assets/QuizWidget.png" class="card-img-top" alt="Interactive quiz widget project screenshot" />
+                      <div class="preview-overlay">
+                        <span class="project-tag">HTML, CSS &amp; JavaScript</span>
+                        <h3>Quiz Widget</h3>
+                        <span class="preview-cta"><i class="fa-solid fa-magnifying-glass"></i> View Case Study</span>
                       </div>
                     </div>
+                    <div class="preview-caption"><h3>Quiz Widget</h3><i class="fa-solid fa-arrow-up-right-and-arrow-down-left-from-center"></i></div>
                   </article>
                 </div>
-      
+
                 <!-- Twitter/X -->
                 <div class="col">
-                  <article class="project-card card border-0 shadow h-100 rounded-4 overflow-hidden">
+                  <article class="project-card project-preview card border-0 shadow h-100 rounded-4 overflow-hidden" id="twitter-clone" data-case="twitter-clone" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-twitter-clone">
                     <div class="card-img-wrap">
-                      <img src="./Assets/Twitter.png"
-                           class="card-img-top" alt="Twitter/X clone project screenshot" />
-                    </div>
-                    <div class="card-body d-flex flex-column p-4">
-                      <span class="project-tag mb-1">Built with HTML, CSS  &amp; JavaScript</span>
-                      <h3 class="card-title h5 fw-bold mb-1">Twitter/X</h3>
-                      <p class="card-text small text-muted flex-grow-1">
-                        A Twitter/X clone built with HTML, CSS, and JavaScript including functional features with real interactivity and state handling in the browser rather than a static layout clone.
-                      </p>
-                      <div class="d-flex gap-2 mt-3">
-                        <a href="https://twitter-landing-page-three.vercel.app/" target="_blank" rel="noopener noreferrer"
-                           class="btn btn-proj-primary btn-sm flex-grow-1">View Website</a>
-                        <a href="https://github.com/KMukendi10/TwitterLandingPage.git" target="_blank" rel="noopener noreferrer"
-                           class="btn btn-icon-outline btn-sm" aria-label="Twitter/X clone source code">
-                          <i class="bi bi-code-slash"></i>
-                        </a>
+                      <img src="./Assets/Twitter.png" class="card-img-top" alt="Twitter/X clone project screenshot" />
+                      <div class="preview-overlay">
+                        <span class="project-tag">HTML, CSS &amp; JavaScript</span>
+                        <h3>Twitter/X Clone</h3>
+                        <span class="preview-cta"><i class="fa-solid fa-magnifying-glass"></i> View Case Study</span>
                       </div>
                     </div>
+                    <div class="preview-caption"><h3>Twitter/X Clone</h3><i class="fa-solid fa-arrow-up-right-and-arrow-down-left-from-center"></i></div>
                   </article>
                 </div>
 
                 <!-- YouTube -->
                 <div class="col">
-                  <article class="project-card card border-0 shadow h-100 rounded-4 overflow-hidden">
+                  <article class="project-card project-preview card border-0 shadow h-100 rounded-4 overflow-hidden" id="youtube-clone" data-case="youtube-clone" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-youtube-clone">
                     <div class="card-img-wrap">
-                      <img src="./Assets/YouTube.png"
-                           class="card-img-top" alt="YouTube clone project screenshot" />
-                    </div>
-                    <div class="card-body d-flex flex-column p-4">
-                      <span class="project-tag mb-1">Built with HTML, CSS  &amp; JavaScript</span>
-                      <h3 class="card-title h5 fw-bold mb-1">YouTube</h3>
-                      <p class="card-text small text-muted flex-grow-1">
-                        A recreation of YouTube Landing Page including grid with sidebar, search bar, and a responsive video thumbnail layout.
-                      </p>
-                      <div class="d-flex gap-2 mt-3">
-                        <a href="https://youtube-clone.vercel.app/" target="_blank" rel="noopener noreferrer"
-                           class="btn btn-proj-primary btn-sm flex-grow-1">View Website</a>
-                        <a href="https://github.com/KMukendi10/YouTubeClone.git" target="_blank" rel="noopener noreferrer"
-                           class="btn btn-icon-outline btn-sm" aria-label="YouTube clone source code">
-                          <i class="bi bi-code-slash"></i>
-                        </a>
+                      <img src="./Assets/YouTube.png" class="card-img-top" alt="YouTube clone project screenshot" />
+                      <div class="preview-overlay">
+                        <span class="project-tag">HTML, CSS &amp; JavaScript</span>
+                        <h3>YouTube</h3>
+                        <span class="preview-cta"><i class="fa-solid fa-magnifying-glass"></i> View Case Study</span>
                       </div>
                     </div>
+                    <div class="preview-caption"><h3>YouTube</h3><i class="fa-solid fa-arrow-up-right-and-arrow-down-left-from-center"></i></div>
                   </article>
                 </div>
-      
+
             </div>
         </section>
+
+        <!-- Case study drawer (shared) -->
+        <div class="drawer-overlay" id="drawerOverlay"></div>
+
+        <aside class="case-drawer" id="case-portfolio-website" role="dialog" aria-label="Portfolio Website case study">
+            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-chevron-right"></i></button>
+            <img src="./Assets/KazadiProfile.png" alt="Portfolio site preview" class="case-drawer-thumb">
+            <span class="project-tag">HTML, CSS &amp; JavaScript</span>
+            <h3 class="case-drawer-title">Portfolio Website — Personal Site Architecture</h3>
+
+            <div class="case-section case-problem">
+                <h4><i class="fa-solid fa-circle-question"></i> Problem</h4>
+                <p>I needed a single site to hold every project and case study I produce going forward — one that could grow term over term without a rebuild each time.</p>
+            </div>
+            <div class="case-section case-approach">
+                <h4><i class="fa-solid fa-diagram-project"></i> Approach</h4>
+                <p>I split the site into independent pages (home, about, projects, contact) rather than one long scroll. Each project doubles as its own case study, opening in this slide-in panel so the grid stays a fast visual scan while the full write-up is one click away.</p>
+            </div>
+            <div class="case-section case-tradeoffs">
+                <h4><i class="fa-solid fa-scale-balanced"></i> Trade-offs</h4>
+                <p>I chose plain HTML/CSS over a framework or static site generator. That kept the build simple and dependency-free while I was still learning fundamentals, at the cost of manually duplicating markup (e.g. the header/footer on every page) instead of templating it.</p>
+            </div>
+            <div class="case-section case-outcome">
+                <h4><i class="fa-solid fa-flag-checkered"></i> Outcome &amp; Next Step</h4>
+                <p>The structure has held up across three terms of new content without needing a rewrite. The next improvement is reducing that markup duplication — likely by moving to a build tool or JS-rendered includes for shared header/footer.</p>
+            </div>
+
+            <div class="tools-chips">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span><span>GitHub</span><span>Chrome DevTools</span>
+            </div>
+
+            <div class="case-actions">
+                <a href="index.html" class="cs-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Website</a>
+                <a href="https://github.com/KMukendi10/KazadiMukendiPortfolio" target="_blank" rel="noopener noreferrer" class="cs-btn-outline"><i class="fa-brands fa-github"></i> View Code</a>
+            </div>
+        </aside>
+
+        <aside class="case-drawer" id="case-urban-threads" role="dialog" aria-label="Urban Threads case study">
+            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-chevron-right"></i></button>
+            <img src="./Assets/UrbanThreads.png" alt="Urban Threads preview" class="case-drawer-thumb">
+            <span class="project-tag">HTML, CSS, JavaScript &amp; Firebase</span>
+            <h3 class="case-drawer-title">Urban Threads — A Full Firebase E-Commerce App</h3>
+
+            <div class="case-section case-problem">
+                <h4><i class="fa-solid fa-circle-question"></i> Problem</h4>
+                <p>Every project before this one either had no backend at all or leaned on localStorage. This assignment needed real accounts and a cart that actually persists — Firebase Authentication and Firestore, not hardcoded product data.</p>
+            </div>
+            <div class="case-section case-approach">
+                <h4><i class="fa-solid fa-diagram-project"></i> Approach</h4>
+                <p>Products live in a Firestore <code>products</code> collection and load dynamically on the shop page. Each signed-in user's cart is stored under their own <code>users/&#123;uid&#125;/cart</code> subcollection rather than localStorage, so it follows them across devices instead of staying stuck in one browser.</p>
+            </div>
+            <div class="case-section case-tradeoffs">
+                <h4><i class="fa-solid fa-scale-balanced"></i> Trade-offs</h4>
+                <p>I let shoppers browse and search the whole catalog without an account, and only prompt for login at the moment they click "Add to Cart." That's more work than just gating the entire shop behind a login wall, but it matches how real stores behave — you don't need an account to window-shop.</p>
+            </div>
+            <div class="case-section case-outcome">
+                <h4><i class="fa-solid fa-flag-checkered"></i> Outcome &amp; Next Step</h4>
+                <p>Fully working store with category filtering, search, and pagination on top of the base requirement. Next step is an admin panel so I can manage the product catalog from a form instead of typing documents into the Firebase console by hand.</p>
+            </div>
+
+            <div class="tools-chips">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase Auth</span><span>Firestore</span><span>Git</span><span>GitHub</span>
+            </div>
+
+            <div class="case-actions">
+                <a href="https://urban-threads-online-store-puce.vercel.app/" target="_blank" rel="noopener noreferrer" class="cs-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Website</a>
+                <a href="https://github.com/KMukendi10/UrbanThreadsOnlineStore.git" target="_blank" rel="noopener noreferrer" class="cs-btn-outline"><i class="fa-brands fa-github"></i> View Code</a>
+            </div>
+        </aside>
+
+        <aside class="case-drawer" id="case-google-keep-react" role="dialog" aria-label="Google Keep Clone React case study">
+            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-chevron-right"></i></button>
+            <img src="./Assets/GoogleKeepReact.png" alt="Google Keep Clone React preview" class="case-drawer-thumb">
+            <span class="project-tag">React, JavaScript &amp; Vite</span>
+            <h3 class="case-drawer-title">Google Keep Clone (React) — Rebuilding with Component State</h3>
+
+            <div class="case-section case-problem">
+                <h4><i class="fa-solid fa-circle-question"></i> Problem</h4>
+                <p>I'd already built this as a vanilla JS clone. The React version had to prove I could actually structure an app with components and shared state instead of one long script — plus add one manual feature and one AI-assisted feature and be honest about which was which.</p>
+            </div>
+            <div class="case-section case-approach">
+                <h4><i class="fa-solid fa-diagram-project"></i> Approach</h4>
+                <p>Every piece of state — notes, labels, theme, reminders — lives in one hook, <code>useKeepStore</code>, instead of scattered across components. Labels were the manual build; dark mode and drag-and-drop reordering were the AI-assisted features, where I used AI to help scaffold the logic and then verified every interaction by hand in the browser.</p>
+            </div>
+            <div class="case-section case-tradeoffs">
+                <h4><i class="fa-solid fa-scale-balanced"></i> Trade-offs</h4>
+                <p>Notes still persist to localStorage rather than a backend. That kept the assignment focused on component structure and state management rather than infrastructure, at the cost of notes not syncing between devices the way Urban Threads' cart does.</p>
+            </div>
+            <div class="case-section case-outcome">
+                <h4><i class="fa-solid fa-flag-checkered"></i> Outcome &amp; Next Step</h4>
+                <p>Masonry note grid, label filtering, archive/trash with a 7-day auto-purge, and reminders with due-date sorting all work. Next step is swapping localStorage for Firebase, the same pattern I already proved out on Urban Threads.</p>
+            </div>
+
+            <div class="tools-chips">
+                <span>React</span><span>JavaScript</span><span>Vite</span><span>CSS</span><span>Git</span><span>GitHub</span>
+            </div>
+
+            <div class="case-actions">
+                <a href="https://google-keep-clone-react-gamma.vercel.app/" target="_blank" rel="noopener noreferrer" class="cs-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Website</a>
+                <a href="https://github.com/KMukendi10/GoogleKeepCloneReact.git" target="_blank" rel="noopener noreferrer" class="cs-btn-outline"><i class="fa-brands fa-github"></i> View Code</a>
+            </div>
+        </aside>
+
+        <aside class="case-drawer" id="case-book-library" role="dialog" aria-label="Book Library case study">
+            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-chevron-right"></i></button>
+            <img src="./Assets/BookLibrary.png" alt="Book Library preview" class="case-drawer-thumb">
+            <span class="project-tag">React, Vite &amp; the Open Library API</span>
+            <h3 class="case-drawer-title">Book Library — Working With a Real API</h3>
+
+            <div class="case-section case-problem">
+                <h4><i class="fa-solid fa-circle-question"></i> Problem</h4>
+                <p>Every project so far used data I controlled — hardcoded, Firestore, or localStorage. This one needed a real third-party API, which meant handling failures and slow responses instead of assuming the data is always just there.</p>
+            </div>
+            <div class="case-section case-approach">
+                <h4><i class="fa-solid fa-diagram-project"></i> Approach</h4>
+                <p>Book data comes from the Open Library API via <code>fetch</code>, with explicit loading and error states rather than a blank screen while the request is in flight or on failure. Search is submit-triggered rather than live-as-you-type, to avoid firing a request on every keystroke.</p>
+            </div>
+            <div class="case-section case-tradeoffs">
+                <h4><i class="fa-solid fa-scale-balanced"></i> Trade-offs</h4>
+                <p>Submit-triggered search costs a bit of the instant feedback a live search gives you, but it keeps request volume sane against a free public API with no key or rate-limit budget behind it.</p>
+            </div>
+            <div class="case-section case-outcome">
+                <h4><i class="fa-solid fa-flag-checkered"></i> Outcome &amp; Next Step</h4>
+                <p>Deployed to GitHub Pages — including tracking down a blank-page bug that turned out to be a missing <code>base: './'</code> in <code>vite.config.js</code>. Next step is adding pagination to the search results, the same way I added it to Urban Threads' product grid.</p>
+            </div>
+
+            <div class="tools-chips">
+                <span>React</span><span>Vite</span><span>JavaScript</span><span>Open Library API</span><span>Git</span><span>GitHub</span>
+            </div>
+
+            <div class="case-actions">
+                <a href="https://kmukendi10.github.io/API-Intergratio-Book-Library/" target="_blank" rel="noopener noreferrer" class="cs-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Website</a>
+                <a href="https://github.com/KMukendi10/API-Intergratio-Book-Library.git" target="_blank" rel="noopener noreferrer" class="cs-btn-outline"><i class="fa-brands fa-github"></i> View Code</a>
+            </div>
+        </aside>
+
+        <aside class="case-drawer" id="case-quiz-widget" role="dialog" aria-label="Quiz Widget case study">
+            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-chevron-right"></i></button>
+            <img src="./Assets/QuizWidget.png" alt="Quiz Widget preview" class="case-drawer-thumb">
+            <span class="project-tag">HTML, CSS &amp; JavaScript</span>
+            <h3 class="case-drawer-title">Quiz Widget — Scoring Logic, Not Just Display</h3>
+
+            <div class="case-section case-problem">
+                <h4><i class="fa-solid fa-circle-question"></i> Problem</h4>
+                <p>I wanted a small project focused purely on JavaScript logic — tracking a score and a question index correctly — rather than layout, which every earlier project had already covered.</p>
+            </div>
+            <div class="case-section case-approach">
+                <h4><i class="fa-solid fa-diagram-project"></i> Approach</h4>
+                <p>Score and question index are tracked in JavaScript variables, not read back from the DOM, so the result is always computed rather than counted off whatever happens to be on screen. Answer buttons use event delegation on the container instead of a separate listener per button.</p>
+            </div>
+            <div class="case-section case-tradeoffs">
+                <h4><i class="fa-solid fa-scale-balanced"></i> Trade-offs</h4>
+                <p>Questions are hardcoded directly in the JS file rather than loaded from a separate JSON file or API. For a quiz this size that's the right call — pulling in a fetch layer for a dozen static questions would be complexity with no real payoff.</p>
+            </div>
+            <div class="case-section case-outcome">
+                <h4><i class="fa-solid fa-flag-checkered"></i> Outcome &amp; Next Step</h4>
+                <p>Instant feedback per question and a final score screen at the end. Next step is moving the question set into its own JSON file so I can add more questions without touching the scoring logic at all.</p>
+            </div>
+
+            <div class="tools-chips">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span><span>GitHub</span>
+            </div>
+
+            <div class="case-actions">
+                <a href="https://kmukendi10.github.io/quiz-widget-project/" target="_blank" rel="noopener noreferrer" class="cs-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Website</a>
+                <a href="https://github.com/KMukendi10/quiz-widget-project.git" target="_blank" rel="noopener noreferrer" class="cs-btn-outline"><i class="fa-brands fa-github"></i> View Code</a>
+            </div>
+        </aside>
+
+        <aside class="case-drawer" id="case-twitter-clone" role="dialog" aria-label="Twitter/X Clone case study">
+            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-chevron-right"></i></button>
+            <img src="./Assets/Twitter.png" alt="Twitter/X clone preview" class="case-drawer-thumb">
+            <span class="project-tag">HTML, CSS &amp; JavaScript</span>
+            <h3 class="case-drawer-title">Twitter/X Clone — Interactivity and State in the Browser</h3>
+
+            <div class="case-section case-problem">
+                <h4><i class="fa-solid fa-circle-question"></i> Problem</h4>
+                <p>Every project before this one was a static layout clone — good for CSS practice, but none of them needed to remember anything. I wanted a build that had to track state and respond to user actions in real time, closer to how a real product behaves.</p>
+            </div>
+            <div class="case-section case-approach">
+                <h4><i class="fa-solid fa-diagram-project"></i> Approach</h4>
+                <p>I rebuilt the core Twitter/X feed interface with HTML and CSS for the layout, then used JavaScript to handle interactions — composing a post, updating counts, and reflecting state changes in the DOM immediately rather than reloading anything.</p>
+            </div>
+            <div class="case-section case-tradeoffs">
+                <h4><i class="fa-solid fa-scale-balanced"></i> Trade-offs</h4>
+                <p>I kept state in memory in the browser rather than wiring up a backend or persistence layer. That let me focus on getting the interaction logic and DOM updates right first, at the cost of nothing being saved between page reloads.</p>
+            </div>
+            <div class="case-section case-outcome">
+                <h4><i class="fa-solid fa-flag-checkered"></i> Outcome &amp; Next Step</h4>
+                <p>It's my most functionally complete project so far — real interactivity rather than a static clone. The next step is adding persistence, likely with local storage first and an API later, so state survives a refresh.</p>
+            </div>
+
+            <div class="tools-chips">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span><span>GitHub</span><span>Chrome DevTools</span>
+            </div>
+
+            <div class="case-actions">
+                <a href="https://twitter-landing-page-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="cs-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Website</a>
+                <a href="https://github.com/KMukendi10/TwitterLandingPage.git" target="_blank" rel="noopener noreferrer" class="cs-btn-outline"><i class="fa-brands fa-github"></i> View Code</a>
+            </div>
+        </aside>
+
+        <aside class="case-drawer" id="case-youtube-clone" role="dialog" aria-label="YouTube case study">
+            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-chevron-right"></i></button>
+            <img src="./Assets/YouTube.png" alt="YouTube clone preview" class="case-drawer-thumb">
+            <span class="project-tag">HTML, CSS &amp; JavaScript</span>
+            <h3 class="case-drawer-title">YouTube — Layout Precision at Scale</h3>
+
+            <div class="case-section case-problem">
+                <h4><i class="fa-solid fa-circle-question"></i> Problem</h4>
+                <p>YouTube's layout looks simple until you try to rebuild it — a fixed sidebar, a sticky top bar, and a video grid that has to reflow cleanly at every screen size. I wanted a layout exercise that would actually expose sloppy CSS.</p>
+            </div>
+            <div class="case-section case-approach">
+                <h4><i class="fa-solid fa-diagram-project"></i> Approach</h4>
+                <p>I built the sidebar, top search bar, and video grid as independent CSS Grid/Flexbox regions rather than one giant layout, so each piece could be reasoned about and fixed on its own. The thumbnail grid uses <code>auto-fill</code> with a minimum card width so it reflows on its own as the viewport shrinks, instead of hardcoded breakpoints for every screen size.</p>
+            </div>
+            <div class="case-section case-tradeoffs">
+                <h4><i class="fa-solid fa-scale-balanced"></i> Trade-offs</h4>
+                <p>The sidebar collapses to icons only below a certain width rather than hiding completely, which took more CSS than a simple "hide on mobile" rule — but it keeps navigation reachable instead of hidden behind a menu button, matching how the real site behaves.</p>
+            </div>
+            <div class="case-section case-outcome">
+                <h4><i class="fa-solid fa-flag-checkered"></i> Outcome &amp; Next Step</h4>
+                <p>A pixel-close, fully responsive recreation of the YouTube homepage layout. Next step would be wiring the thumbnails to a real API (like the YouTube Data API) instead of static placeholder content, the same shift Book Library already made.</p>
+            </div>
+
+            <div class="tools-chips">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span><span>GitHub</span>
+            </div>
+
+            <div class="case-actions">
+                <a href="https://youtube-clone.vercel.app/" target="_blank" rel="noopener noreferrer" class="cs-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Website</a>
+                <a href="https://github.com/KMukendi10/YouTubeClone.git" target="_blank" rel="noopener noreferrer" class="cs-btn-outline"><i class="fa-brands fa-github"></i> View Code</a>
+            </div>
+        </aside>
 
         <section class="coach-section fade-in">
             <div class="coach-card">
@@ -282,7 +484,6 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="case-studies.html">Case Studies</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
