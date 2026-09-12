@@ -164,6 +164,17 @@ function initCaseDrawers() {
     const triggers = document.querySelectorAll('[data-case]');
     const overlay = document.getElementById('drawerOverlay');
     if (!triggers.length || !overlay) return;
+    const caseNav = document.getElementById('caseNav');
+    const previousButton = document.getElementById('casePrev');
+    const nextButton = document.getElementById('caseNext');
+
+    const updateNavigation = (id) => {
+        if (!caseNav) return;
+        const index = Array.from(triggers).findIndex((trigger) => trigger.dataset.case === id);
+        caseNav.classList.add('active');
+        if (previousButton) previousButton.disabled = index <= 0;
+        if (nextButton) nextButton.disabled = index === triggers.length - 1;
+    };
 
     const openDrawer = (id) => {
         const drawer = document.getElementById(`case-${id}`);
@@ -172,6 +183,7 @@ function initCaseDrawers() {
         drawer.classList.add('active');
         overlay.classList.add('active');
         document.body.classList.add('drawer-open');
+        updateNavigation(id);
         history.replaceState(null, '', `#${id}`);
     };
 
@@ -179,6 +191,7 @@ function initCaseDrawers() {
         document.querySelectorAll('.case-drawer.active').forEach((d) => d.classList.remove('active'));
         overlay.classList.remove('active');
         document.body.classList.remove('drawer-open');
+        if (caseNav) caseNav.classList.remove('active');
     };
 
     triggers.forEach((trigger) => {
@@ -196,6 +209,17 @@ function initCaseDrawers() {
     });
 
     overlay.addEventListener('click', closeDrawer);
+
+    const moveToProject = (offset) => {
+        const activeDrawer = document.querySelector('.case-drawer.active');
+        if (!activeDrawer) return;
+        const currentIndex = Array.from(triggers).findIndex((trigger) => `case-${trigger.dataset.case}` === activeDrawer.id);
+        const nextTrigger = triggers[currentIndex + offset];
+        if (nextTrigger) openDrawer(nextTrigger.dataset.case);
+    };
+
+    previousButton?.addEventListener('click', () => moveToProject(-1));
+    nextButton?.addEventListener('click', () => moveToProject(1));
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeDrawer();

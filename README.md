@@ -20,7 +20,8 @@ This portfolio serves as a central place to showcase my projects, technical skil
 * Responsive design with mobile nav toggle
 * Featured project spotlight
 * Project showcase with case studies
-* Team capstone / peer collaboration section
+* Full-stack Airbnb Clone project with frontend, backend, and admin areas
+* Team capstone / peer collaboration evidence
 * Certificates section
 * Validated contact form
 * GitHub and LinkedIn links
@@ -32,6 +33,16 @@ This portfolio serves as a central place to showcase my projects, technical skil
 * HTML
 * CSS
 * JavaScript
+* React
+* Vite
+* Firebase Authentication
+* MongoDB
+* Firestore
+* Supabase
+* REST API integration
+* Local state and persistence
+* Responsive design
+* Git branches, pull requests, and code review
 * GitHub
 * GitHub Pages
 
@@ -58,24 +69,26 @@ KazadiMukendiPortfolio/
 
 Through building this portfolio, I improved my understanding of:
 
-* Responsive Web Design
-* CSS Layouts
-* Git & GitHub Workflows
-* Website Deployment
-* Professional Portfolio Development
+* Responsive Web Design and CSS layouts
+* JavaScript interaction, DOM updates, and event handling
+* React components and shared application state
+* REST API integration with loading and error states
+* Firebase Authentication
+* Local storage, persistence, search, filtering, and pagination
+* Frontend, backend, and admin application structure
+* Git branches, pull requests, code review, and merge conflict resolution
+* Website deployment and professional portfolio development
 
 ---
 
-## 🧭 Term 3 Roadmap
+## 🧭 Current Focus
 
-Term 3 is about curation as much as creation — surfacing my best work and showing depth, not just adding more projects.
+The portfolio now documents a progression from static layouts to interactive JavaScript, React applications, API integration, Firebase-backed data, and multi-part full-stack architecture.
 
-* [ ] **Second deployed project + case study** — something with more depth than a static landing-page clone (real JS logic, an API, or data handling), deployed and documented at the same case-study standard as the first.
-* [x] **Best work leading** — the To-do App (my most functionally complete project) is featured first on the Home and Projects pages.
-* [x] **Polished technical write-ups** — all case studies rewritten as problem → approach → trade-offs → outcome, instead of reflection-journal entries.
-* [x] **Peer contribution evidence** — added the iHub Africa capstone (Git Manager, 6-person team) to the Projects page.
-* [ ] **Mid-year portfolio draft** — this repo should be in a state I'd be comfortable sharing today; revisit before submitting.
-* [ ] **Repo/live links for the iHub capstone** — placeholder comment left in `projects.html`; add once available.
+* Keep the case studies aligned with the projects currently in the grid.
+* Continue developing the Airbnb Clone's guest, host, backend, and admin flows.
+* Add live deployment and setup documentation for the Airbnb Clone when available.
+* Continue improving accessibility, testing, and production-ready data handling.
 
 ## 📈 Future Improvements
 

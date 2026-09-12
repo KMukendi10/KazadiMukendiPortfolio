@@ -8,10 +8,9 @@
     <link rel="icon" href="./Assets/Favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -29,8 +28,10 @@
     <header>
         <nav class="navbar">
             <div class="logo">
+              <a href="index.html" class="logo-link" aria-label="Go to home">
                 <img src="./Assets/Favicon.png" alt="Kazadi Mukendi">
                 <h2>Kazadi Mukendi</h2>
+              </a>
             </div>
 
             <ul class="nav-links">
@@ -41,7 +42,6 @@
             </ul>
 
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
-            <button class="join-btn" onclick="window.location.href='contact.html'">Hire Me</button>
             <button class="nav-toggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -55,7 +55,8 @@
                 <h1>Projects</h1>
                 <p>
                     A collection of everything I've built and deployed so far — from a full-stack
-                    Firebase e-commerce app to React builds, API integrations, and a team capstone project.
+                    Airbnb platform and Firebase e-commerce app to React builds, API integrations,
+                    browser state work, and a team capstone project.
                 </p>
                 <button class="hero-btn" onclick="document.getElementById('project-grid').scrollIntoView({behavior:'smooth'})">Browse My Work</button>
             </div>
@@ -76,12 +77,35 @@
 
             <div class="card-grid" id="project-grid">
 
+                <!-- Airbnb Clone -->
+                <div class="col">
+                  <article class="project-card project-preview" id="airbnb-clone" data-case="airbnb-clone" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-airbnb-clone">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <div class="project-head-text">
+                          <span class="card-title title">Airbnb Clone</span>
+                          <p class="stacks m-0">JavaScript | CSS | Backend</p>
+                        </div>
+                        <a href="https://github.com/KMukendi10/Airbnb-Clone" target="_blank" rel="noopener noreferrer" class="visit-btn" onclick="event.stopPropagation()">Visit <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></a>
+                      </div>
+                    </div>
+                    <div class="description-container">
+                      <p class="description">A full-stack Airbnb-inspired platform organized into separate guest frontend, backend, and admin applications.</p>
+                    </div>
+                    <div class="card-img-wrap">
+                      <img src="https://opengraph.githubassets.com/1/KMukendi10/Airbnb-Clone" class="card-img-top" alt="Airbnb Clone GitHub project preview" />
+                      <div class="preview-overlay">
+                        <span class="preview-cta">Read More <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
                 <!-- Urban Threads -->
                 <div class="col">
                   <article class="project-card project-preview" id="urban-threads" data-case="urban-threads" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-urban-threads">
                     <div class="card-body">
                       <div class="d-flex align-items-center">
-                        <span class="project-icon project-icon-store" aria-hidden="true"><i class="fa-solid fa-bag-shopping"></i></span>
                         <div class="project-head-text">
                           <span class="card-title title">Urban Threads</span>
                           <p class="stacks m-0">HTML | CSS | JavaScript | Firebase</p>
@@ -101,37 +125,11 @@
                   </article>
                 </div>
 
-                <!-- Google Keep Clone (React) -->
-                <div class="col">
-                  <article class="project-card project-preview" id="google-keep-react" data-case="google-keep-react" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-google-keep-react">
-                    <div class="card-body">
-                      <div class="d-flex align-items-center">
-                        <span class="project-icon project-icon-notes" aria-hidden="true"><i class="fa-solid fa-note-sticky"></i></span>
-                        <div class="project-head-text">
-                          <span class="card-title title">Google Keep Clone</span>
-                          <p class="stacks m-0">React | JavaScript | Vite</p>
-                        </div>
-                        <a href="https://google-keep-clone-react-gamma.vercel.app/" target="_blank" rel="noopener noreferrer" class="visit-btn" onclick="event.stopPropagation()">Visit <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></a>
-                      </div>
-                    </div>
-                    <div class="description-container">
-                      <p class="description">A React rebuild of Google Keep with a masonry note grid, labels, dark mode, and drag-and-drop reordering.</p>
-                    </div>
-                    <div class="card-img-wrap">
-                      <img src="./Assets/GoogleKeepReact.png" class="card-img-top" alt="Google Keep Clone React app screenshot" />
-                      <div class="preview-overlay">
-                        <span class="preview-cta">Read More <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></span>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-
                 <!-- Book Library -->
                 <div class="col">
                   <article class="project-card project-preview" id="book-library" data-case="book-library" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-book-library">
                     <div class="card-body">
                       <div class="d-flex align-items-center">
-                        <span class="project-icon project-icon-books" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>
                         <div class="project-head-text">
                           <span class="card-title title">Book Library</span>
                           <p class="stacks m-0">React | Vite | Open Library API</p>
@@ -151,49 +149,23 @@
                   </article>
                 </div>
 
-                <!-- Quiz Widget -->
+                <!-- Google Keep Clone (React) -->
                 <div class="col">
-                  <article class="project-card project-preview" id="quiz-widget" data-case="quiz-widget" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-quiz-widget">
+                  <article class="project-card project-preview" id="google-keep-react" data-case="google-keep-react" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-google-keep-react">
                     <div class="card-body">
                       <div class="d-flex align-items-center">
-                        <span class="project-icon project-icon-quiz" aria-hidden="true"><i class="fa-solid fa-circle-question"></i></span>
                         <div class="project-head-text">
-                          <span class="card-title title">Quiz Widget</span>
-                          <p class="stacks m-0">HTML | CSS | JavaScript</p>
+                          <span class="card-title title">Google Keep Clone</span>
+                          <p class="stacks m-0">React | JavaScript | Vite</p>
                         </div>
-                        <a href="https://kmukendi10.github.io/quiz-widget-project/" target="_blank" rel="noopener noreferrer" class="visit-btn" onclick="event.stopPropagation()">Visit <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></a>
+                        <a href="https://google-keep-clone-react-gamma.vercel.app/" target="_blank" rel="noopener noreferrer" class="visit-btn" onclick="event.stopPropagation()">Visit <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></a>
                       </div>
                     </div>
                     <div class="description-container">
-                      <p class="description">An interactive quiz with instant feedback, built to focus purely on JavaScript scoring logic rather than layout.</p>
+                      <p class="description">A React rebuild of Google Keep with a masonry note grid, labels, dark mode, and drag-and-drop reordering.</p>
                     </div>
                     <div class="card-img-wrap">
-                      <img src="./Assets/QuizWidget.png" class="card-img-top" alt="Interactive quiz widget project screenshot" />
-                      <div class="preview-overlay">
-                        <span class="preview-cta">Read More <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></span>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-
-                <!-- Twitter/X -->
-                <div class="col">
-                  <article class="project-card project-preview" id="twitter-clone" data-case="twitter-clone" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-twitter-clone">
-                    <div class="card-body">
-                      <div class="d-flex align-items-center">
-                        <span class="project-icon project-icon-social" aria-hidden="true"><i class="fa-brands fa-x-twitter"></i></span>
-                        <div class="project-head-text">
-                          <span class="card-title title">Twitter/X Clone</span>
-                          <p class="stacks m-0">HTML | CSS | JavaScript</p>
-                        </div>
-                        <a href="https://twitter-landing-page-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="visit-btn" onclick="event.stopPropagation()">Visit <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></a>
-                      </div>
-                    </div>
-                    <div class="description-container">
-                      <p class="description">A Twitter/X feed clone with real interactivity — composing posts and updating state live in the browser.</p>
-                    </div>
-                    <div class="card-img-wrap">
-                      <img src="./Assets/Twitter.png" class="card-img-top" alt="Twitter/X clone project screenshot" />
+                      <img src="./Assets/GoogleKeepReact.png" class="card-img-top" alt="Google Keep Clone React app screenshot" />
                       <div class="preview-overlay">
                         <span class="preview-cta">Read More <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></span>
                       </div>
@@ -206,7 +178,6 @@
                   <article class="project-card project-preview" id="ihub-capstone" data-case="ihub-capstone" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-ihub-capstone">
                     <div class="card-body">
                       <div class="d-flex align-items-center">
-                        <span class="project-icon project-icon-team" aria-hidden="true"><i class="fa-solid fa-people-group"></i></span>
                         <div class="project-head-text">
                           <span class="card-title title">iHub Website Prototype</span>
                           <p class="stacks m-0">HTML | CSS | JavaScript | Git</p>
@@ -226,32 +197,88 @@
                   </article>
                 </div>
 
+                <!-- Twitter/X -->
+                <div class="col">
+                  <article class="project-card project-preview" id="twitter-clone" data-case="twitter-clone" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-twitter-clone">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <div class="project-head-text">
+                          <span class="card-title title">Twitter/X Clone</span>
+                          <p class="stacks m-0">HTML | CSS | JavaScript</p>
+                        </div>
+                        <a href="https://twitter-landing-page-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="visit-btn" onclick="event.stopPropagation()">Visit <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></a>
+                      </div>
+                    </div>
+                    <div class="description-container">
+                      <p class="description">A Twitter/X feed clone with real interactivity — composing posts and updating state live in the browser.</p>
+                    </div>
+                    <div class="card-img-wrap">
+                      <img src="./Assets/Twitter.png" class="card-img-top" alt="Twitter/X clone project screenshot" />
+                      <div class="preview-overlay">
+                        <span class="preview-cta">Read More <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- Quiz Widget -->
+                <div class="col">
+                  <article class="project-card project-preview" id="quiz-widget" data-case="quiz-widget" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-quiz-widget">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <div class="project-head-text">
+                          <span class="card-title title">Quiz Widget</span>
+                          <p class="stacks m-0">HTML | CSS | JavaScript</p>
+                        </div>
+                        <a href="https://kmukendi10.github.io/quiz-widget-project/" target="_blank" rel="noopener noreferrer" class="visit-btn" onclick="event.stopPropagation()">Visit <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></a>
+                      </div>
+                    </div>
+                    <div class="description-container">
+                      <p class="description">An interactive quiz with instant feedback, built to focus purely on JavaScript scoring logic rather than layout.</p>
+                    </div>
+                    <div class="card-img-wrap">
+                      <img src="./Assets/QuizWidget.png" class="card-img-top" alt="Interactive quiz widget project screenshot" />
+                      <div class="preview-overlay">
+                        <span class="preview-cta">Read More <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
             </div>
         </section>
 
         <!-- Case study drawer (shared) -->
         <div class="drawer-overlay" id="drawerOverlay"></div>
+        <div class="case-nav" id="caseNav" aria-label="Project navigation">
+          <button type="button" class="case-nav-btn" id="casePrev" aria-label="Previous project">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Previous
+          </button>
+          <button type="button" class="case-nav-btn" id="caseNext" aria-label="Next project">
+            Next <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
 
         <aside class="case-drawer" id="case-portfolio-website" role="dialog" aria-label="Portfolio Website case study">
-            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-xmark"></i></button>
             <img src="./Assets/KazadiProfile.png" alt="Portfolio site preview" class="case-drawer-thumb">
             <span class="project-tag">HTML, CSS &amp; JavaScript</span>
-            <h3 class="case-drawer-title">Portfolio Website — Personal Site Architecture</h3>
+            <h3 class="case-drawer-title">Built to Grow: My Portfolio System</h3>
 
             <div class="case-section case-problem">
-                <h4><i class="fa-solid fa-circle-question"></i> Problem</h4>
+                <h4>The Brief</h4>
                 <p>I needed a single site to hold every project and case study I produce going forward — one that could grow term over term without a rebuild each time.</p>
             </div>
             <div class="case-section case-approach">
-                <h4><i class="fa-solid fa-diagram-project"></i> Approach</h4>
+                <h4>The Build</h4>
                 <p>I split the site into independent pages (home, about, projects, contact) rather than one long scroll. Each project doubles as its own case study, opening in this slide-in panel so the grid stays a fast visual scan while the full write-up is one click away.</p>
             </div>
             <div class="case-section case-tradeoffs">
-                <h4><i class="fa-solid fa-scale-balanced"></i> Trade-offs</h4>
+                <h4>The Trade-off</h4>
                 <p>I chose plain HTML/CSS over a framework or static site generator. That kept the build simple and dependency-free while I was still learning fundamentals, at the cost of manually duplicating markup (e.g. the header/footer on every page) instead of templating it.</p>
             </div>
             <div class="case-section case-outcome">
-                <h4><i class="fa-solid fa-flag-checkered"></i> Outcome &amp; Next Step</h4>
+                <h4>The Result</h4>
                 <p>The structure has held up across three terms of new content without needing a rewrite. The next improvement is reducing that markup duplication — likely by moving to a build tool or JS-rendered includes for shared header/footer.</p>
             </div>
 
@@ -266,30 +293,30 @@
         </aside>
 
         <aside class="case-drawer" id="case-urban-threads" role="dialog" aria-label="Urban Threads case study">
-            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-xmark"></i></button>
             <img src="./Assets/UrbanThreads.png" alt="Urban Threads preview" class="case-drawer-thumb">
             <span class="project-tag">HTML, CSS, JavaScript &amp; Firebase</span>
-            <h3 class="case-drawer-title">Urban Threads — A Full Firebase E-Commerce App</h3>
+            <h3 class="case-drawer-title">From Catalog to Cart: Urban Threads</h3>
 
             <div class="case-section case-problem">
-                <h4><i class="fa-solid fa-circle-question"></i> Problem</h4>
-                <p>Every project before this one either had no backend at all or leaned on localStorage. This assignment needed real accounts and a cart that actually persists — Firebase Authentication and Firestore, not hardcoded product data.</p>
+                <h4>The Brief</h4>
+                <p>Every project before this one either had no backend at all or leaned on localStorage. This assignment needed real accounts and a cart that actually persists — Firebase Authentication and user-specific state, not hardcoded product data.</p>
             </div>
             <div class="case-section case-approach">
-                <h4><i class="fa-solid fa-diagram-project"></i> Approach</h4>
-                <p>Products live in a Firestore <code>products</code> collection and load dynamically on the shop page. Each signed-in user's cart is stored under their own <code>users/&#123;uid&#125;/cart</code> subcollection rather than localStorage, so it follows them across devices instead of staying stuck in one browser.</p>
+                <h4>The Build</h4>
+                <p>Products load dynamically on the shop page, while each signed-in user's cart is kept separate from the public catalog rather than relying only on localStorage.</p>
             </div>
             <div class="case-section case-tradeoffs">
-                <h4><i class="fa-solid fa-scale-balanced"></i> Trade-offs</h4>
+                <h4>The Trade-off</h4>
                 <p>I let shoppers browse and search the whole catalog without an account, and only prompt for login at the moment they click "Add to Cart." That's more work than just gating the entire shop behind a login wall, but it matches how real stores behave — you don't need an account to window-shop.</p>
             </div>
             <div class="case-section case-outcome">
-                <h4><i class="fa-solid fa-flag-checkered"></i> Outcome &amp; Next Step</h4>
+                <h4>The Result</h4>
                 <p>Fully working store with category filtering, search, and pagination on top of the base requirement. Next step is an admin panel so I can manage the product catalog from a form instead of typing documents into the Firebase console by hand.</p>
             </div>
 
             <div class="tools-chips">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase Auth</span><span>Firestore</span><span>Git</span><span>GitHub</span>
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase Auth</span><span>Git</span><span>GitHub</span>
             </div>
 
             <div class="case-actions">
@@ -299,25 +326,25 @@
         </aside>
 
         <aside class="case-drawer" id="case-google-keep-react" role="dialog" aria-label="Google Keep Clone React case study">
-            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-xmark"></i></button>
             <img src="./Assets/GoogleKeepReact.png" alt="Google Keep Clone React preview" class="case-drawer-thumb">
             <span class="project-tag">React, JavaScript &amp; Vite</span>
-            <h3 class="case-drawer-title">Google Keep Clone (React) — Rebuilding with Component State</h3>
+            <h3 class="case-drawer-title">Notes, Labels &amp; State: Google Keep Rebuilt</h3>
 
             <div class="case-section case-problem">
-                <h4><i class="fa-solid fa-circle-question"></i> Problem</h4>
+                <h4>The Brief</h4>
                 <p>I'd already built this as a vanilla JS clone. The React version had to prove I could actually structure an app with components and shared state instead of one long script — plus add one manual feature and one AI-assisted feature and be honest about which was which.</p>
             </div>
             <div class="case-section case-approach">
-                <h4><i class="fa-solid fa-diagram-project"></i> Approach</h4>
+                <h4>The Build</h4>
                 <p>Every piece of state — notes, labels, theme, reminders — lives in one hook, <code>useKeepStore</code>, instead of scattered across components. Labels were the manual build; dark mode and drag-and-drop reordering were the AI-assisted features, where I used AI to help scaffold the logic and then verified every interaction by hand in the browser.</p>
             </div>
             <div class="case-section case-tradeoffs">
-                <h4><i class="fa-solid fa-scale-balanced"></i> Trade-offs</h4>
+                <h4>The Trade-off</h4>
                 <p>Notes still persist to localStorage rather than a backend. That kept the assignment focused on component structure and state management rather than infrastructure, at the cost of notes not syncing between devices the way Urban Threads' cart does.</p>
             </div>
             <div class="case-section case-outcome">
-                <h4><i class="fa-solid fa-flag-checkered"></i> Outcome &amp; Next Step</h4>
+                <h4>The Result</h4>
                 <p>Masonry note grid, label filtering, archive/trash with a 7-day auto-purge, and reminders with due-date sorting all work. Next step is swapping localStorage for Firebase, the same pattern I already proved out on Urban Threads.</p>
             </div>
 
@@ -332,25 +359,25 @@
         </aside>
 
         <aside class="case-drawer" id="case-book-library" role="dialog" aria-label="Book Library case study">
-            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-xmark"></i></button>
             <img src="./Assets/BookLibrary.png" alt="Book Library preview" class="case-drawer-thumb">
             <span class="project-tag">React, Vite &amp; the Open Library API</span>
-            <h3 class="case-drawer-title">Book Library — Working With a Real API</h3>
+            <h3 class="case-drawer-title">From Query to Cover: Book Library</h3>
 
             <div class="case-section case-problem">
-                <h4><i class="fa-solid fa-circle-question"></i> Problem</h4>
-                <p>Every project so far used data I controlled — hardcoded, Firestore, or localStorage. This one needed a real third-party API, which meant handling failures and slow responses instead of assuming the data is always just there.</p>
+                <h4>The Brief</h4>
+                <p>Every project so far used data I controlled — hardcoded or localStorage. This one needed a real third-party API, which meant handling failures and slow responses instead of assuming the data is always just there.</p>
             </div>
             <div class="case-section case-approach">
-                <h4><i class="fa-solid fa-diagram-project"></i> Approach</h4>
+                <h4>The Build</h4>
                 <p>Book data comes from the Open Library API via <code>fetch</code>, with explicit loading and error states rather than a blank screen while the request is in flight or on failure. Search is submit-triggered rather than live-as-you-type, to avoid firing a request on every keystroke.</p>
             </div>
             <div class="case-section case-tradeoffs">
-                <h4><i class="fa-solid fa-scale-balanced"></i> Trade-offs</h4>
+                <h4>The Trade-off</h4>
                 <p>Submit-triggered search costs a bit of the instant feedback a live search gives you, but it keeps request volume sane against a free public API with no key or rate-limit budget behind it.</p>
             </div>
             <div class="case-section case-outcome">
-                <h4><i class="fa-solid fa-flag-checkered"></i> Outcome &amp; Next Step</h4>
+                <h4>The Result</h4>
                 <p>Deployed to GitHub Pages — including tracking down a blank-page bug that turned out to be a missing <code>base: './'</code> in <code>vite.config.js</code>. Next step is adding pagination to the search results, the same way I added it to Urban Threads' product grid.</p>
             </div>
 
@@ -365,25 +392,25 @@
         </aside>
 
         <aside class="case-drawer" id="case-quiz-widget" role="dialog" aria-label="Quiz Widget case study">
-            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-xmark"></i></button>
             <img src="./Assets/QuizWidget.png" alt="Quiz Widget preview" class="case-drawer-thumb">
             <span class="project-tag">HTML, CSS &amp; JavaScript</span>
-            <h3 class="case-drawer-title">Quiz Widget — Scoring Logic, Not Just Display</h3>
+            <h3 class="case-drawer-title">Making Every Answer Count: Quiz Widget</h3>
 
             <div class="case-section case-problem">
-                <h4><i class="fa-solid fa-circle-question"></i> Problem</h4>
+                <h4>The Brief</h4>
                 <p>I wanted a small project focused purely on JavaScript logic — tracking a score and a question index correctly — rather than layout, which every earlier project had already covered.</p>
             </div>
             <div class="case-section case-approach">
-                <h4><i class="fa-solid fa-diagram-project"></i> Approach</h4>
+                <h4>The Build</h4>
                 <p>Score and question index are tracked in JavaScript variables, not read back from the DOM, so the result is always computed rather than counted off whatever happens to be on screen. Answer buttons use event delegation on the container instead of a separate listener per button.</p>
             </div>
             <div class="case-section case-tradeoffs">
-                <h4><i class="fa-solid fa-scale-balanced"></i> Trade-offs</h4>
+                <h4>The Trade-off</h4>
                 <p>Questions are hardcoded directly in the JS file rather than loaded from a separate JSON file or API. For a quiz this size that's the right call — pulling in a fetch layer for a dozen static questions would be complexity with no real payoff.</p>
             </div>
             <div class="case-section case-outcome">
-                <h4><i class="fa-solid fa-flag-checkered"></i> Outcome &amp; Next Step</h4>
+                <h4>The Result</h4>
                 <p>Instant feedback per question and a final score screen at the end. Next step is moving the question set into its own JSON file so I can add more questions without touching the scoring logic at all.</p>
             </div>
 
@@ -398,25 +425,25 @@
         </aside>
 
         <aside class="case-drawer" id="case-twitter-clone" role="dialog" aria-label="Twitter/X Clone case study">
-            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-xmark"></i></button>
             <img src="./Assets/Twitter.png" alt="Twitter/X clone preview" class="case-drawer-thumb">
             <span class="project-tag">HTML, CSS &amp; JavaScript</span>
-            <h3 class="case-drawer-title">Twitter/X Clone — Interactivity and State in the Browser</h3>
+            <h3 class="case-drawer-title">A Feed That Remembers: Twitter/X Clone</h3>
 
             <div class="case-section case-problem">
-                <h4><i class="fa-solid fa-circle-question"></i> Problem</h4>
+                <h4>The Brief</h4>
                 <p>Every project before this one was a static layout clone — good for CSS practice, but none of them needed to remember anything. I wanted a build that had to track state and respond to user actions in real time, closer to how a real product behaves.</p>
             </div>
             <div class="case-section case-approach">
-                <h4><i class="fa-solid fa-diagram-project"></i> Approach</h4>
+                <h4>The Build</h4>
                 <p>I rebuilt the core Twitter/X feed interface with HTML and CSS for the layout, then used JavaScript to handle interactions — composing a post, updating counts, and reflecting state changes in the DOM immediately rather than reloading anything.</p>
             </div>
             <div class="case-section case-tradeoffs">
-                <h4><i class="fa-solid fa-scale-balanced"></i> Trade-offs</h4>
+                <h4>The Trade-off</h4>
                 <p>I kept state in memory in the browser rather than wiring up a backend or persistence layer. That let me focus on getting the interaction logic and DOM updates right first, at the cost of nothing being saved between page reloads.</p>
             </div>
             <div class="case-section case-outcome">
-                <h4><i class="fa-solid fa-flag-checkered"></i> Outcome &amp; Next Step</h4>
+                <h4>The Result</h4>
                 <p>It's my most functionally complete project so far — real interactivity rather than a static clone. The next step is adding persistence, likely with local storage first and an API later, so state survives a refresh.</p>
             </div>
 
@@ -431,25 +458,25 @@
         </aside>
 
         <aside class="case-drawer" id="case-ihub-capstone" role="dialog" aria-label="iHub Team Capstone case study">
-            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-xmark"></i></button>
             <img src="./Assets/iHubWebsite.png" alt="iHub Africa website prototype preview" class="case-drawer-thumb">
             <span class="project-tag">HTML, CSS &amp; JavaScript — 6-person team</span>
-            <h3 class="case-drawer-title">Team Capstone — iHub Africa Website Prototype</h3>
+            <h3 class="case-drawer-title">Six Builders, One Ship: iHub Capstone</h3>
 
             <div class="case-section case-problem">
-                <h4><i class="fa-solid fa-circle-question"></i> Problem</h4>
+                <h4>The Brief</h4>
                 <p>Every project before this one was solo — one person, one repo, no coordination needed. This capstone put six people on the same codebase at once, which meant the real challenge wasn't just building the site, it was making sure six people's work could merge without constantly breaking each other's changes.</p>
             </div>
             <div class="case-section case-approach">
-                <h4><i class="fa-solid fa-diagram-project"></i> Approach</h4>
+                <h4>The Build</h4>
                 <p>As Git Manager, I set up a feature-branch workflow — everyone worked on their own branch, opened a pull request, and I reviewed it before it merged into main. That gave me a single checkpoint to catch conflicts and layout regressions before they landed, instead of finding out after the fact.</p>
             </div>
             <div class="case-section case-tradeoffs">
-                <h4><i class="fa-solid fa-scale-balanced"></i> Trade-offs</h4>
+                <h4>The Trade-off</h4>
                 <p>Requiring review before every merge slowed us down compared to everyone pushing straight to main — but on a 6-person team touching the same pages, that checkpoint is what kept the site from breaking every other day. Slower and stable beat fast and broken for this team size.</p>
             </div>
             <div class="case-section case-outcome">
-                <h4><i class="fa-solid fa-flag-checkered"></i> Outcome &amp; Next Step</h4>
+                <h4>The Result</h4>
                 <p>Shipped a full multi-page site with zero unresolved merge conflicts reaching main. The role taught me more about Git itself — rebasing, resolving conflicts, protecting a branch — than any solo project had. Next step is applying the same branch-protection workflow to my own solo repos going forward.</p>
             </div>
 
@@ -466,6 +493,38 @@
                 <a href="https://github.com/KMukendi10/Client-Website-Prototype-iHub.git" target="_blank" rel="noopener noreferrer" class="cs-btn-outline"><i class="fa-brands fa-github"></i> View Code</a>
             </div>
         </aside>
+
+          <aside class="case-drawer" id="case-airbnb-clone" role="dialog" aria-label="Airbnb Clone case study">
+            <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-xmark"></i></button>
+            <img src="https://opengraph.githubassets.com/1/KMukendi10/Airbnb-Clone" alt="Airbnb Clone GitHub project preview" class="case-drawer-thumb">
+            <span class="project-tag">JavaScript, CSS &amp; full-stack architecture</span>
+            <h3 class="case-drawer-title">A Platform in Three Parts: Airbnb Clone</h3>
+
+            <div class="case-section case-problem">
+              <h4>The Brief</h4>
+              <p>The project needed more than a static landing page: it needed separate experiences for guests and hosts, plus an administration area for managing the platform.</p>
+            </div>
+            <div class="case-section case-approach">
+              <h4>The Build</h4>
+              <p>I organized the repository into independent frontend, backend, and admin applications so each part of the product has a clear responsibility and can evolve without turning the project into one large codebase.</p>
+            </div>
+            <div class="case-section case-tradeoffs">
+              <h4>The Trade-off</h4>
+              <p>Separating the applications adds setup and coordination overhead, but it reflects a more realistic product structure and keeps guest-facing, server, and administrative concerns isolated.</p>
+            </div>
+            <div class="case-section case-outcome">
+              <h4>The Result</h4>
+              <p>The repository now provides a foundation for a full Airbnb-style platform with guest, host, and admin flows. The next step is publishing a live deployment and documenting the API and setup process for contributors.</p>
+            </div>
+
+            <div class="tools-chips">
+              <span>JavaScript</span><span>CSS</span><span>Backend</span><span>Admin Dashboard</span><span>Git</span><span>GitHub</span>
+            </div>
+
+            <div class="case-actions">
+              <a href="https://github.com/KMukendi10/Airbnb-Clone" target="_blank" rel="noopener noreferrer" class="cs-btn"><i class="fa-brands fa-github"></i> View Repository</a>
+            </div>
+          </aside>
 
     </main>
 
