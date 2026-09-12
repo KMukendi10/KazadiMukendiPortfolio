@@ -1047,6 +1047,7 @@ header.header-hidden {
     color: var(--text);
     box-shadow: 0 4px 12px var(--shadow) !important;
     border-radius: 16px !important;
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     scroll-margin-top: 100px;
 }
@@ -1098,6 +1099,23 @@ header.header-hidden {
     gap: 10px;
 }
 
+.project-icon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    display: inline-grid;
+    place-items: center;
+    border-radius: 12px;
+    font-size: 18px;
+}
+
+.project-icon-store { color: #ef8354; background: rgba(239, 131, 84, 0.16); }
+.project-icon-notes { color: #f6bd60; background: rgba(246, 189, 96, 0.16); }
+.project-icon-books { color: #5cc8c5; background: rgba(92, 200, 197, 0.16); }
+.project-icon-quiz { color: #b084f5; background: rgba(176, 132, 245, 0.16); }
+.project-icon-social { color: #70c5e8; background: rgba(112, 197, 232, 0.16); }
+.project-icon-team { color: #f28482; background: rgba(242, 132, 130, 0.16); }
+
 .project-head-text {
     flex: 1;
     min-width: 0;
@@ -1141,32 +1159,23 @@ header.header-hidden {
 
 .visit-btn:hover { background: #14143a; }
 
+.action-arrow {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+}
+
 .description-container { padding: 0; }
 
 .description {
     font-size: 13px;
     color: var(--muted);
     margin: 0;
-}
-
-/* Taller variant for the iHub capstone card — its screenshot needs more
-   height than the 6-project grid above, and should show in full rather
-   than being cropped, matching the hero image treatment up top. */
-.card-img-wrap-tall {
-    height: 420px;
-    background: var(--card-bg);
-}
-
-/* This preview sits inside the already-boxed .coach-card panel, so
-   its own border/shadow is redundant here */
-#ihub-capstone {
-    border: none !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-}
-
-.card-img-wrap-tall img {
-    object-fit: contain;
 }
 
 .project-card .card-title {
@@ -1814,8 +1823,6 @@ html.js-ready .fade-in.visible {
 
     .spotlight-card { flex-direction: column; }
 
-    .card-img-wrap-tall { height: 260px; }
-
     section, main > section {
         padding: 40px 0;
     }
@@ -1857,9 +1864,6 @@ html.js-ready .fade-in.visible {
     .card-grid,
     .case-grid {
         grid-template-columns: 1fr;
-    }
-    .card-img-wrap-tall {
-        height: 190px;
     }
     .case-study-head {
         flex-wrap: wrap;
