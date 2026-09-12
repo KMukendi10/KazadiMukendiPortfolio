@@ -540,6 +540,7 @@ header.header-hidden {
 .hero-text p {
     color: #dbdbdb;
     max-width: 480px;
+    margin-bottom: 30px;
 }
 
 .hero-buttons {
