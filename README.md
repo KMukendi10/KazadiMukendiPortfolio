@@ -20,7 +20,7 @@ This portfolio serves as a central place to showcase my projects, technical skil
 * Responsive design with mobile nav toggle
 * Featured project spotlight
 * Project showcase with case studies
-* Full-stack Airbnb Clone project with frontend, backend, and admin areas
+* Full-stack Airbnb Clone project with separate frontend, backend, and admin areas
 * Team capstone / peer collaboration evidence
 * Certificates section
 * Validated contact form
@@ -87,7 +87,7 @@ The portfolio now documents a progression from static layouts to interactive Jav
 
 * Keep the case studies aligned with the projects currently in the grid.
 * Continue developing the Airbnb Clone's guest, host, backend, and admin flows.
-* Add live deployment and setup documentation for the Airbnb Clone when available.
+* Deploy and document the Airbnb Clone's frontend, backend, and admin services before presenting it as a live project.
 * Continue improving accessibility, testing, and production-ready data handling.
 
 ## 📈 Future Improvements
