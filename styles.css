@@ -358,7 +358,7 @@ header.header-hidden {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 32px;
     padding: 14px 30px;
 }
 
@@ -366,6 +366,7 @@ header.header-hidden {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-right: auto;
 }
 
 .logo img {
@@ -1069,6 +1070,8 @@ header.header-hidden {
     width: 100%;
     height: 180px;
     overflow: hidden;
+    border-radius: 12px;
+    margin-top: auto;
 }
 
 .card-img-wrap img {
@@ -1077,12 +1080,88 @@ header.header-hidden {
     object-fit: cover;
 }
 
+/* ============== PROJECT CARD HEADER (icon/title/stack/visit) ============== */
+.project-card {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+}
+
+.card-body { padding: 0; }
+
+.card-body .d-flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-head-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-head-text .title {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--heading);
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stacks {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.visit-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff !important;
+    background: #6c63ff;
+    padding: 8px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+}
+
+.visit-btn:hover { background: #14143a; }
+
+.description-container { padding: 0; }
+
+.description {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0;
+}
+
 /* Taller variant for the iHub capstone card — its screenshot needs more
    height than the 6-project grid above, and should show in full rather
    than being cropped, matching the hero image treatment up top. */
 .card-img-wrap-tall {
     height: 420px;
     background: var(--card-bg);
+}
+
+/* This preview sits inside the already-boxed .coach-card panel, so
+   its own border/shadow is redundant here */
+#ihub-capstone {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
 }
 
 .card-img-wrap-tall img {
@@ -1272,6 +1351,12 @@ header.header-hidden {
 /* ===================== PROJECT PREVIEW CARDS (click to open case study) ===================== */
 .project-preview { cursor: pointer; }
 
+/* Subtle glass/glow border, inspired by the reference portfolio's
+   project cards */
+.project-card {
+    box-shadow: 0 4px 12px var(--shadow), 0 0 0 1px rgba(108, 99, 255, 0.25) !important;
+}
+
 .project-preview .card-img-wrap {
     position: relative;
     overflow: hidden;
@@ -1284,19 +1369,16 @@ header.header-hidden {
 .project-preview:hover .card-img-top,
 .project-preview:focus-visible .card-img-top {
     transform: scale(1.08);
-    filter: brightness(0.55);
+    filter: brightness(0.5);
 }
 
 .preview-overlay {
     position: absolute;
     inset: 0;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    gap: 6px;
-    padding: 20px;
-    background: linear-gradient(to top, rgba(10,10,25,0.9) 0%, rgba(10,10,25,0.25) 55%, transparent 100%);
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 10, 25, 0.55);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -1306,20 +1388,34 @@ header.header-hidden {
     opacity: 1;
 }
 
-.preview-overlay h3 { color: #fff; font-size: 18px; margin: 0; }
-.preview-overlay .project-tag { color: #b9b4ff; }
-
 .preview-cta {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 12px;
+    gap: 8px;
+    font-size: 14px;
     font-weight: 700;
     color: #fff;
-    background: #6c63ff;
-    padding: 6px 14px;
-    border-radius: 20px;
-    margin-top: 4px;
+    background: rgba(108, 99, 255, 0.95);
+    padding: 10px 20px;
+    border-radius: 30px;
+    transform: translateY(8px) scale(0.95);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.project-preview:hover .preview-cta,
+.project-preview:focus-visible .preview-cta {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.preview-cta i {
+    font-size: 13px;
+}
+
+.project-preview:hover .preview-cta,
+.project-preview:focus-visible .preview-cta {
+    transform: scale(1);
 }
 
 .preview-caption {
@@ -1395,6 +1491,12 @@ header.header-hidden {
     color: var(--heading);
     font-size: 19px;
     margin: 6px 0 20px;
+}
+
+.case-drawer-team {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0 0 20px;
 }
 
 .drawer-close {
@@ -1544,27 +1646,55 @@ body.drawer-open { overflow: hidden; }
 
 /* ===================== SKILLS ===================== */
 .icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 16px;
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 30px;
 }
 
-.icons p {
+.icon-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     background: var(--icon-bg);
-    padding: 14px 18px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px var(--shadow);
-    font-size: 15px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px var(--shadow), 0 0 0 1px rgba(108, 99, 255, 0.25);
+    padding: 24px 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.icons p:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+.icon-tile:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3), 0 0 0 1px rgba(108, 99, 255, 0.4);
 }
+
+.icon-tile i {
+    font-size: 34px;
+}
+
+.icon-tile span {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--heading);
+    text-align: center;
+}
+
+/* Brand-ish colors so the common tech icons stay recognizable */
+.icon-tile .fa-html5 { color: #e34f26; }
+.icon-tile .fa-css3-alt { color: #1572b6; }
+.icon-tile .fa-square-js { color: #f0db4f; }
+.icon-tile .fa-react { color: #61dafb; }
+.icon-tile .fa-git-alt { color: #f05032; }
+.icon-tile .fa-github { color: var(--heading); }
+.icon-tile .fa-fire { color: #ffca28; }
+.icon-tile .fa-plug,
+.icon-tile .fa-bolt,
+.icon-tile .fa-lightbulb,
+.icon-tile .fa-mobile-screen { color: #6c63ff; }
 
 /* ===================== FOOTER ===================== */
 footer {
