@@ -1365,7 +1365,7 @@ header.header-hidden {
 .drawer-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(8, 8, 18, 0.68);
+    background: rgba(8, 8, 18, 0.78);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
