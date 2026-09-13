@@ -1812,13 +1812,13 @@ footer {
 
 .footer-column ul li {
     margin-bottom: 8px;
-    padding-left: 0;
 }
 
 .footer-column ul a {
     position: relative;
     display: inline-block;
     color: #c7c7e6;
+    font-size: 14px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
