@@ -183,8 +183,9 @@ h1, h2, h3, h4, h5, h6, .logo h2 {
     inset: 0;
     z-index: 5;
     pointer-events: none;
-    mix-blend-mode: soft-light;
-    background: radial-gradient(650px circle at var(--gx, 50%) var(--gy, 20%), rgba(108, 99, 255, 0.6), transparent 62%);
+    /* A soft sky-blue spotlight remains visible on light surfaces. */
+    mix-blend-mode: multiply;
+    background: radial-gradient(650px circle at var(--gx, 50%) var(--gy, 20%), rgba(14, 116, 144, 0.24), transparent 62%);
 }
 
 [data-theme="dark"] .page-glow {
