@@ -395,15 +395,45 @@ header.header-hidden {
 }
 
 .nav-links a {
+    position: relative;
+    display: inline-block;
     color: var(--text);
     font-size: 14px;
     font-weight: 500;
-    transition: 0.3s;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a::after,
+.footer-column ul a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
     color: #6c63ff;
+}
+
+.nav-links a:hover,
+.footer-column ul a:hover {
+    transform: translateY(-2px) scale(1.08);
+}
+
+.nav-links a:hover::after,
+.footer-column ul a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-links a.active::after {
+    transform: scaleX(1);
 }
 
 .nav-toggle {
@@ -1761,8 +1791,10 @@ footer {
 }
 
 .footer-column ul a {
+    position: relative;
+    display: inline-block;
     color: #c7c7e6;
-    transition: 0.3s;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-column ul a:hover { color: #fff; }
