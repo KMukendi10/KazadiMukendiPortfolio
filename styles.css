@@ -1514,9 +1514,12 @@ header.header-hidden {
 }
 
 .drawer-close {
-    position: absolute;
+    /* Keep the close control visible while the case-study drawer scrolls. */
+    position: sticky;
     top: 14px;
-    right: 14px;
+    left: calc(100% - 40px);
+    margin-top: -16px;
+    margin-bottom: -24px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -1597,9 +1600,11 @@ body.drawer-open { overflow: hidden; }
     }
     .drawer-close {
         top: 14px;
-        right: 14px;
+        left: calc(100% - 38px);
         width: 38px;
         height: 38px;
+        margin-top: -12px;
+        margin-bottom: -26px;
     }
     .drawer-close:hover { transform: scale(1.08); }
     .case-nav { bottom: 14px; padding: 0 12px; }
