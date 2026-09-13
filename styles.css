@@ -40,7 +40,7 @@ html {
 
 .preloader-percent {
     display: block;
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-family: 'Manrope', Arial, Helvetica, sans-serif;
     font-size: 56px;
     font-weight: 700;
     color: var(--heading);
@@ -49,7 +49,7 @@ html {
 
 .preloader-msg {
     margin-top: 10px;
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-family: 'Manrope', Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #6c63ff;
     min-height: 20px;
@@ -108,7 +108,7 @@ html {
 
 body {
     position: relative;
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-family: 'Manrope', Arial, Helvetica, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
@@ -116,7 +116,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .logo h2 {
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-family: 'Manrope', Arial, Helvetica, sans-serif;
 }
 
 /* ===================== AMBIENT BACKGROUND FX ===================== */
@@ -467,6 +467,17 @@ header.header-hidden {
     background: #6c63ff;
 }
 
+/* Home-page project calls to action match the featured website button. */
+.hero .hero-btn,
+.cta-section .btn-black {
+    background: #6c63ff;
+}
+
+.hero .hero-btn:hover,
+.cta-section .btn-black:hover {
+    background: #14143a;
+}
+
 .hero-btn-secondary {
     display: inline-block;
     padding: 12px 26px;
@@ -753,8 +764,8 @@ header.header-hidden {
     margin-bottom: 10px;
 }
 
-.spotlight-text .tags span {
-    margin-right: 6px;
+.spotlight-text .stacks {
+    margin: -4px 0 12px;
 }
 
 /* ===================== CTA SECTION ===================== */
@@ -984,8 +995,8 @@ header.header-hidden {
 
 .badge {
     display: inline-block;
-    background: #14143a;
-    color: #fff;
+    background: var(--icon-bg);
+    color: var(--heading);
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -1306,6 +1317,27 @@ header.header-hidden {
 }
 
 .cs-btn:hover { background: #6c63ff; border-color: #6c63ff; }
+
+/* Match the featured project's website action to the project-card Visit button. */
+.spotlight-card .cs-btn {
+    background: #6c63ff;
+    border-color: #6c63ff;
+}
+
+.spotlight-card .cs-btn:hover {
+    background: #14143a;
+    border-color: #14143a;
+}
+
+.spotlight-card .cs-btn-outline:hover {
+    background: #14143a;
+    border-color: #14143a;
+    color: #fff;
+}
+
+.spotlight-card .case-actions {
+    margin-top: 18px;
+}
 
 .cs-btn-outline {
     background: transparent;

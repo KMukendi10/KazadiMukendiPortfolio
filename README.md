@@ -18,6 +18,7 @@ This portfolio serves as a central place to showcase my projects, technical skil
 
 * Multi-page structure (Home / About / Projects / Contact)
 * Responsive design with mobile nav toggle
+* Manrope typography across every portfolio page
 * Featured project spotlight
 * Project showcase with case studies
 * Full-stack Airbnb Clone project with separate frontend, backend, and admin areas
@@ -42,6 +43,7 @@ This portfolio serves as a central place to showcase my projects, technical skil
 * REST API integration
 * Local state and persistence
 * Responsive design
+* Manrope (Google Fonts)
 * Git branches, pull requests, and code review
 * GitHub
 * GitHub Pages
@@ -100,6 +102,8 @@ The portfolio now documents a progression from static layouts to interactive Jav
 
 ## 🩹 Changelog
 
+* **Refined the home-page project calls to action** — the featured Airbnb Clone skills now use the same plain stack treatment as project cards, action buttons share a consistent purple-and-navy interaction style, and the Featured badge matches the skill-icon background.
+* **Updated site typography** — replaced Inter with Manrope across the Home, About, Projects, and Contact pages for a cleaner, more contemporary visual system.
 * **Fixed Home hero section responsiveness** — the hero previously used a fixed `height: 100vh` with `overflow: hidden`, which clipped the heading/copy/buttons on smaller screens. Switched to `min-height: 100vh`, added fluid heading sizing (`clamp()`), tightened padding at tablet/mobile breakpoints, disabled the fixed background attachment on mobile (a known iOS/Android rendering glitch), and made the buttons/profile image scale down properly.
 * **Fixed project/case-study grid overflow on narrow phones** — `.card-grid` and `.case-grid` enforced a minimum column width (380–400px) wider than many phone viewports, causing horizontal scrolling. Both now collapse to a single column below 480px.
 
