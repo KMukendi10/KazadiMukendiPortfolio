@@ -41,7 +41,7 @@ html {
 .preloader-percent {
     display: block;
     font-family: 'Caveat', cursive;
-    font-size: 56px;
+    font-size: 57px;
     font-weight: 700;
     color: var(--heading);
     letter-spacing: 1px;
@@ -50,7 +50,7 @@ html {
 .preloader-msg {
     margin-top: 10px;
     font-family: 'Caveat', cursive;
-    font-size: 14px;
+    font-size: 15px;
     color: #6c63ff;
     min-height: 20px;
 }
@@ -287,7 +287,7 @@ h1, h2, h3, h4, h5, h6, .logo h2 {
     background: var(--card-bg);
     color: var(--heading);
     cursor: pointer;
-    font-size: 15px;
+    font-size: 16px;
     transition: 0.3s;
 }
 
@@ -316,7 +316,7 @@ img {
 .section-label {
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     color: #6c63ff;
     margin-bottom: 8px;
@@ -329,7 +329,7 @@ img {
 }
 
 .section-header h2 {
-    font-size: clamp(22px, 5vw, 30px);
+    font-size: clamp(23px, 5vw, 31px);
     color: var(--heading);
     margin-bottom: 10px;
 }
@@ -387,7 +387,7 @@ header.header-hidden {
 }
 
 .logo h2 {
-    font-size: 18px;
+    font-size: 19px;
     color: var(--heading);
 }
 
@@ -401,7 +401,7 @@ header.header-hidden {
     position: relative;
     display: inline-block;
     color: var(--text);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -464,7 +464,7 @@ header.header-hidden {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 19px;
     transition: 0.3s;
 }
 
@@ -492,14 +492,18 @@ header.header-hidden {
     border: 1px solid #efefef;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 17px;
     transition: 0.3s;
 }
 
 /* Keep the two short hero actions aligned with the resume button. */
 button.hero-btn-secondary {
     min-width: 152px;
-    font-size: 18px;
+    font-size: 19px;
+}
+
+a.hero-btn-secondary {
+    font-size: 16px;
 }
 
 .hero-btn-secondary:hover {
@@ -513,7 +517,7 @@ button.hero-btn-secondary {
     background: #14143a;
     color: #fff;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 15px;
     transition: 0.3s;
 }
 
@@ -528,7 +532,7 @@ button.hero-btn-secondary {
     color: var(--heading);
     border: 1px solid var(--card-border);
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 15px;
     transition: 0.3s;
 }
 
@@ -576,7 +580,7 @@ button.hero-btn-secondary {
 }
 
 .hero-text h1 {
-    font-size: clamp(24px, 7vw, 44px);
+    font-size: clamp(25px, 7vw, 45px);
     color: #f5f5f6;
     margin-bottom: 18px;
     line-height: 1.2;
@@ -623,7 +627,7 @@ button.hero-btn-secondary {
     padding:8px 16px;
     border-radius:50px;
     border:1px solid #ddd;
-    font-size:0.9rem;
+    font-size: calc(0.9rem + 1px);
     font-weight:600;
     transition:0.3s;
 }
@@ -639,7 +643,7 @@ button.hero-btn-secondary {
     gap:10px;
     margin-bottom:2rem;
     color:#dbdbdb;
-    font-size:0.95rem;
+    font-size: calc(0.95rem + 1px);
 }
 
 .status-dot{
@@ -664,13 +668,13 @@ button.hero-btn-secondary {
 }
 
 .stats div h2 {
-    font-size: 32px;
+    font-size: 33px;
     color: #fff;
 }
 
 .stats div p {
     color: #c7c7e6;
-    font-size: 13px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -772,7 +776,7 @@ button.hero-btn-secondary {
 
 .spotlight-text h3 {
     color: var(--heading);
-    font-size: 24px;
+    font-size: 25px;
     margin-bottom: 10px;
 }
 
@@ -832,7 +836,7 @@ button.hero-btn-secondary {
 
 .timeline-card h3 {
     color: var(--heading);
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 6px;
 }
 
@@ -915,7 +919,7 @@ button.hero-btn-secondary {
 }
 
 .about-content h1, .program-text h1, .contact-hero-content h1 {
-    font-size: clamp(26px, 6vw, 36px);
+    font-size: clamp(27px, 6vw, 37px);
     color: var(--heading);
     margin-bottom: 16px;
 }
@@ -937,7 +941,7 @@ button.hero-btn-secondary {
     background: #14143a;
     color: #fff;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .learn-btn:hover {
@@ -999,7 +1003,7 @@ button.hero-btn-secondary {
     background: #14143a;
     color: #f1f1f1;
     border-radius: 20px;
-    font-size: 13px;
+    font-size: 14px;
     transition: 0.3s;
 }
 
@@ -1009,7 +1013,7 @@ button.hero-btn-secondary {
     display: inline-block;
     background: var(--icon-bg);
     color: var(--heading);
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.5px;
     padding: 3px 9px;
@@ -1023,7 +1027,7 @@ button.hero-btn-secondary {
     color: white;
     padding: 5px 10px;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 13px;
     display: inline-block;
     margin: 2px 2px 2px 0;
 }
@@ -1094,7 +1098,7 @@ button.hero-btn-secondary {
 
 .project-head-text .title {
     display: block;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
     color: var(--heading);
     text-decoration: none;
@@ -1121,7 +1125,7 @@ button.hero-btn-secondary {
 }
 
 .stacks {
-    font-size: 11px;
+    font-size: 12px;
     color: var(--muted);
     margin-top: 2px;
     white-space: nowrap;
@@ -1134,7 +1138,7 @@ button.hero-btn-secondary {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     color: #fff !important;
     background: #6c63ff;
@@ -1161,7 +1165,7 @@ button.hero-btn-secondary {
 .description-container { padding: 0; }
 
 .description {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--muted);
     margin: 0;
 }
@@ -1176,7 +1180,7 @@ button.hero-btn-secondary {
 
 .project-tag {
     display: inline-block;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -1219,14 +1223,14 @@ button.hero-btn-secondary {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     color: #6c63ff;
     text-decoration: none;
     transition: gap 0.2s ease, color 0.2s ease;
 }
 
-.case-link i { font-size: 11px; transition: transform 0.2s ease; }
+.case-link i { font-size: 12px; transition: transform 0.2s ease; }
 
 .case-link:hover { color: #14143a; gap: 9px; }
 [data-theme="dark"] .case-link:hover { color: #fff; }
@@ -1267,7 +1271,7 @@ button.hero-btn-secondary {
 
 .case-study-head h3 {
     color: var(--heading);
-    font-size: 18px;
+    font-size: 19px;
     margin-top: 4px;
 }
 
@@ -1279,7 +1283,7 @@ button.hero-btn-secondary {
 
 .case-section h4 {
     text-align: center;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 700;
     text-transform: none;
     letter-spacing: 0;
@@ -1299,7 +1303,7 @@ button.hero-btn-secondary {
     background: var(--section-alt-bg);
     border: 1px solid var(--card-border);
     color: var(--muted);
-    font-size: 12px;
+    font-size: 13px;
     padding: 4px 10px;
     border-radius: 20px;
 }
@@ -1316,7 +1320,7 @@ button.hero-btn-secondary {
     gap: 6px;
     padding: 9px 18px;
     border-radius: 20px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     transition: 0.3s;
     border: 1px solid transparent;
@@ -1422,7 +1426,7 @@ button.hero-btn-secondary {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     color: #fff;
     background: rgba(108, 99, 255, 0.95);
@@ -1440,7 +1444,7 @@ button.hero-btn-secondary {
 }
 
 .preview-cta i {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .project-preview:hover .preview-cta,
@@ -1512,7 +1516,7 @@ button.hero-btn-secondary {
 
 .case-drawer-title {
     color: var(--heading);
-    font-size: 25px;
+    font-size: 26px;
     font-weight: 700;
     line-height: 1.2;
     margin: 8px 0 26px;
@@ -1520,7 +1524,7 @@ button.hero-btn-secondary {
 }
 
 .case-drawer-team {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--muted);
     margin: 0 0 20px;
 }
@@ -1585,7 +1589,7 @@ body.drawer-open { overflow: hidden; }
     background: var(--card-bg);
     color: var(--heading);
     font: inherit;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     cursor: pointer;
     box-shadow: 0 8px 24px rgba(0,0,0,0.25);
@@ -1650,7 +1654,7 @@ body.drawer-open { overflow: hidden; }
 }
 
 .contact-form label {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--heading);
     margin-top: 14px;
@@ -1662,7 +1666,7 @@ body.drawer-open { overflow: hidden; }
     padding: 10px 12px;
     border: 1px solid var(--input-border);
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 15px;
     font-family: inherit;
     background: var(--card-bg);
     color: var(--text);
@@ -1670,13 +1674,13 @@ body.drawer-open { overflow: hidden; }
 
 .error-message {
     color: #d9455f;
-    font-size: 12px;
+    font-size: 13px;
     min-height: 16px;
 }
 
 .success-message {
     color: #2a9d5c;
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 10px;
 }
 
@@ -1692,7 +1696,7 @@ body.drawer-open { overflow: hidden; }
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 15px;
     transition: 0.3s;
 }
 
@@ -1757,7 +1761,7 @@ body.drawer-open { overflow: hidden; }
     min-height: 42px;
     margin-bottom: 20px;
     color: var(--heading);
-    font-size: 18px;
+    font-size: 19px;
 }
 
 .skill-group h3 > i {
@@ -1769,7 +1773,7 @@ body.drawer-open { overflow: hidden; }
     border-radius: 10px;
     background: var(--icon-bg);
     color: var(--heading);
-    font-size: 20px;
+    font-size: 21px;
 }
 
 .skill-items {
@@ -1787,7 +1791,7 @@ body.drawer-open { overflow: hidden; }
     border-radius: 9px;
     background: var(--icon-bg);
     color: var(--muted);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -1841,11 +1845,11 @@ footer {
 .footer-column h2, .footer-column h3 {
     color: #fff;
     margin-bottom: 12px;
-    font-size: 21px;
+    font-size: 22px;
 }
 
 .footer-brand h2 {
-    font-size: 20px;
+    font-size: 21px;
     margin-bottom: 0;
 }
 
@@ -1869,7 +1873,7 @@ footer {
     position: relative;
     display: inline-block;
     color: #c7c7e6;
-    font-size: 14px;
+    font-size: 15px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -1981,7 +1985,7 @@ html.js-ready .fade-in.visible {
         height: min(200px, 60vw);
     }
     .hero-skills span {
-        font-size: 0.8rem;
+        font-size: calc(0.8rem + 1px);
         padding: 6px 12px;
     }
     .hero-buttons {
