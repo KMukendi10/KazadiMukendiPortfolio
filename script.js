@@ -345,7 +345,7 @@ function initScrollFade() {
                 entry.target.classList.remove('visible');
             }
         });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.15, rootMargin: '0px 0px -15% 0px' });
 
     items.forEach((item) => observer.observe(item));
 }
