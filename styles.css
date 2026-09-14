@@ -552,7 +552,7 @@ a.hero-btn-secondary {
     margin: 0 auto;
     padding: 80px;
     flex-wrap: wrap;
-    background: url("./Assets/PortfolioHero.jpg");
+    background: url("./Assets/HeaderBackground.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
