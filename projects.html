@@ -102,6 +102,30 @@
                   </article>
                 </div>
 
+                <!-- Tic Tac Toe -->
+                <div class="col">
+                  <article class="project-card project-preview" id="tic-tac-toe" data-case="tic-tac-toe" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-tic-tac-toe">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <div class="project-head-text">
+                          <span class="project-title"><img src="./Assets/TicTacToeFavicon.png" class="project-logo-icon" alt=""><span class="card-title title">Tic Tac Toe</span></span>
+                          <p class="stacks m-0"><span class="stack-tag">React</span><span class="stack-tag">JavaScript</span><span class="stack-tag">Vite</span></p>
+                        </div>
+                        <a href="https://kazadi-tic-tac-toe.vercel.app/" target="_blank" rel="noopener noreferrer" class="visit-btn" onclick="event.stopPropagation()">Visit <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></a>
+                      </div>
+                    </div>
+                    <div class="description-container">
+                      <p class="description">A reducer-driven 3x3 Tic Tac Toe with a persistent scoreboard and a move-history panel that lets you jump back to any past turn.</p>
+                    </div>
+                    <div class="card-img-wrap">
+                      <img src="./Assets/TicTacToe.png" class="card-img-top" alt="Tic Tac Toe game screenshot" />
+                      <div class="preview-overlay">
+                        <span class="preview-cta">Read More <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
                 <!-- Urban Threads -->
                 <div class="col">
                   <article class="project-card project-preview" id="urban-threads" data-case="urban-threads" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-urban-threads">
@@ -335,30 +359,6 @@
                     </div>
                     <div class="card-img-wrap">
                       <img src="./Assets/QuizWidget.png" class="card-img-top" alt="Interactive quiz widget project screenshot" />
-                      <div class="preview-overlay">
-                        <span class="preview-cta">Read More <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></span>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-
-                <!-- YouTube Landing Page -->
-                <div class="col">
-                  <article class="project-card project-preview" id="youtube-landing-page" data-case="youtube-landing-page" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="case-youtube-landing-page">
-                    <div class="card-body">
-                      <div class="d-flex align-items-center">
-                        <div class="project-head-text">
-                          <span class="project-title"><img src="./Assets/YouTubeFavicon.ico" class="project-logo-icon" alt=""><span class="card-title title">YouTube Landing Page</span></span>
-                          <p class="stacks m-0"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span></p>
-                        </div>
-                        <a href="https://you-tube-landing-page-chi.vercel.app/" target="_blank" rel="noopener noreferrer" class="visit-btn" onclick="event.stopPropagation()">Visit <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></a>
-                      </div>
-                    </div>
-                    <div class="description-container">
-                      <p class="description">A responsive YouTube-inspired homepage with search, sidebar navigation, category filters, video cards, theme switching, and interactive browser state.</p>
-                    </div>
-                    <div class="card-img-wrap">
-                      <img src="./Assets/YouTube.png" class="card-img-top" alt="YouTube Landing Page project preview" />
                       <div class="preview-overlay">
                         <span class="preview-cta">Read More <svg class="action-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7"></path></svg></span>
                       </div>
@@ -685,36 +685,36 @@
             </div>
           </aside>
 
-          <aside class="case-drawer" id="case-youtube-landing-page" role="dialog" aria-label="YouTube Landing Page case study">
+          <aside class="case-drawer" id="case-tic-tac-toe" role="dialog" aria-label="Tic Tac Toe case study">
             <button class="drawer-close" aria-label="Close case study"><i class="fa-solid fa-xmark"></i></button>
-            <img src="./Assets/YouTube.png" alt="YouTube Landing Page preview" class="case-drawer-thumb">
-            <span class="project-tag">HTML, CSS &amp; JavaScript</span>
-            <h3 class="case-drawer-title">A Familiar Feed, Rebuilt: YouTube Landing Page</h3>
+            <img src="./Assets/TicTacToe.png" alt="Tic Tac Toe game screenshot" class="case-drawer-thumb">
+            <span class="project-tag">React &amp; useReducer</span>
+            <h3 class="case-drawer-title">One Reducer, Every Move: Tic Tac Toe</h3>
 
             <div class="case-section case-problem">
               <h4>The Brief</h4>
-              <p>The goal was to recreate the structure and feel of a modern video platform homepage while keeping the layout responsive and the interface useful beyond a static screenshot.</p>
+              <p>Build a 3x3 Tic Tac Toe with clean win/draw detection, one manual feature built without AI assistance, and one advanced feature on top, all driven by a single, traceable source of state.</p>
             </div>
             <div class="case-section case-approach">
               <h4>The Build</h4>
-              <p>I built the navigation, sidebar, search interaction, category filters, responsive video grid, embedded media, and light/dark mode behavior with HTML, CSS, and JavaScript.</p>
+              <p>All game state lives in one useReducer hook with four actions — MAKE_MOVE, JUMP_TO_MOVE, NEW_GAME, and RESET_SCORES — so every change to the board, scoreboard, or history runs through the same predictable path.</p>
             </div>
             <div class="case-section case-tradeoffs">
               <h4>The Trade-off</h4>
-              <p>The project focuses on the frontend experience and browser interactions rather than a real video backend, which kept the scope manageable while leaving room for a future API-driven catalog.</p>
+              <p>Routing every interaction through one reducer took more upfront action-design work than scattering useState calls across components, but it kept the scoreboard, move history, and board state consistent as features were added.</p>
             </div>
             <div class="case-section case-outcome">
               <h4>The Result</h4>
-              <p>A responsive YouTube-inspired interface with search, filters, hover states, theme switching, and a video-first layout that works across desktop and mobile screens.</p>
+              <p>A scoreboard that persists across new games and resets on demand, plus a move-history panel where clicking any past move jumps the board back to that state. Making a new move from a jumped-back point branches off and discards the old future, matching the official React tutorial's time-travel behaviour.</p>
             </div>
 
             <div class="tools-chips">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span><span>Theme Switching</span>
+              <span>React</span><span>Vite</span><span>useReducer</span><span>State Management</span>
             </div>
 
             <div class="case-actions">
-              <a href="https://you-tube-landing-page-chi.vercel.app/" target="_blank" rel="noopener noreferrer" class="cs-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Website</a>
-              <a href="https://github.com/KMukendi10/YouTubeLandingPage" target="_blank" rel="noopener noreferrer" class="cs-btn-outline"><i class="fa-brands fa-github"></i> View Code</a>
+              <a href="https://kazadi-tic-tac-toe.vercel.app/" target="_blank" rel="noopener noreferrer" class="cs-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Website</a>
+              <a href="https://github.com/KMukendi10/KazadiTicTacToe" target="_blank" rel="noopener noreferrer" class="cs-btn-outline"><i class="fa-brands fa-github"></i> View Code</a>
             </div>
           </aside>
 
