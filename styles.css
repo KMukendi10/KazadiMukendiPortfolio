@@ -456,7 +456,7 @@ header.header-hidden {
 
 /* ===================== BUTTONS ===================== */
 .hero-btn {
-    padding: 12px 26px;
+    padding: 14px 30px;
     font-family: inherit;
     min-width: 152px;
     background: #14143a;
@@ -464,7 +464,7 @@ header.header-hidden {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 18px;
     transition: 0.3s;
 }
 
@@ -485,20 +485,21 @@ header.header-hidden {
 
 .hero-btn-secondary {
     display: inline-block;
-    padding: 12px 26px;
+    padding: 14px 30px;
     font-family: inherit;
     background: transparent;
     color: #efefef;
     border: 1px solid #efefef;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     transition: 0.3s;
 }
 
 /* Keep the two short hero actions aligned with the resume button. */
 button.hero-btn-secondary {
     min-width: 152px;
+    font-size: 18px;
 }
 
 .hero-btn-secondary:hover {
