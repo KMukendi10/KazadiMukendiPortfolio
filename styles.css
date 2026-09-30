@@ -1953,6 +1953,9 @@ html.js-ready .fade-in-tall .card-grid > .col.visible {
     }
     .skill-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .timeline-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    /* Contact hero is a column here, so its "flex: 1 1 400px" meant a 400px
+       TALL box. Let it size to its content instead. */
+    .contact-hero-content { flex: 0 0 auto; }
 }
 
 @media (max-width: 768px) {
