@@ -337,15 +337,23 @@ function initScrollFade() {
     const items = document.querySelectorAll('.fade-in');
     if (!items.length) return;
 
+    // No IntersectionObserver (very old browsers): just show everything.
+    if (!('IntersectionObserver' in window)) {
+        items.forEach((item) => item.classList.add('visible'));
+        return;
+    }
+
+    // threshold: 0 -> reveal as soon as ANY part enters the viewport.
+    // A ratio like 0.15 never fires on tall sections (e.g. the projects grid
+    // on mobile), because 15% of the section is taller than the screen.
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-            } else {
-                entry.target.classList.remove('visible');
+                observer.unobserve(entry.target); // reveal once, never hide again
             }
         });
-    }, { threshold: 0.15, rootMargin: '0px 0px -15% 0px' });
+    }, { threshold: 0, rootMargin: '0px 0px -5% 0px' });
 
     items.forEach((item) => observer.observe(item));
 }
