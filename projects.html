@@ -388,19 +388,19 @@
 
             <div class="case-section case-problem">
                 <h4>The Brief</h4>
-                <p>I needed a single site to hold every project and case study I produce going forward — one that could grow term over term without a rebuild each time.</p>
+                <p>Hiring managers and clients skim. A CV that only lists skills gives them nothing to verify, and a portfolio that is one long page of screenshots gives them nothing to read. I needed one fast-to-scan home for all my work, where someone could judge my ability in a couple of minutes and then go deeper on any project that caught their eye, and where adding next term's projects wouldn't mean rebuilding the whole site.</p>
             </div>
             <div class="case-section case-approach">
                 <h4>The Build</h4>
-                <p>I split the site into independent pages (home, about, projects, contact) rather than one long scroll. Each project doubles as its own case study, opening in this slide-in panel so the grid stays a fast visual scan while the full write-up is one click away.</p>
+                <p>I split the site into independent pages (home, about, projects, contact) instead of one long scroll, so each visitor goes straight to what they came for. The projects page is a visual grid for quick scanning, and every project opens its own case study in this slide-in panel, organised as the problem, the build, the trade-off, and the result, so the thinking behind the work is visible and not just the finished screen. A dark/light theme, a responsive layout, and a contact form connected to a real form service round it out.</p>
             </div>
             <div class="case-section case-tradeoffs">
                 <h4>The Trade-off</h4>
-                <p>I chose plain HTML/CSS over a framework or static site generator. That kept the build simple and dependency-free while I was still learning fundamentals, at the cost of manually duplicating markup (e.g. the header/footer on every page) instead of templating it.</p>
+                <p>I chose plain HTML, CSS, and JavaScript over a framework or static site generator. That kept the build dependency-free and let me focus on fundamentals, and the site deploys to Vercel with no build step. The cost is duplicated markup: the header and footer are repeated on every page, so changing the navigation means editing every file and risks the pages drifting apart.</p>
             </div>
             <div class="case-section case-outcome">
                 <h4>The Result</h4>
-                <p>The structure has held up across three terms of new content without needing a rewrite. The next improvement is reducing that markup duplication — likely by moving to a build tool or JS-rendered includes for shared header/footer.</p>
+                <p>The site now works as a live record of my progress. The structure has held up across three terms of new content without a rewrite, and every project is reachable, explained, and linked to its code. For anyone evaluating me, that turns &ldquo;trust me, I can build&rdquo; into something they can open and check for themselves. The next improvement is removing the markup duplication, likely with a build tool or JS-rendered includes for the shared header and footer.</p>
             </div>
 
             <div class="tools-chips">
@@ -421,19 +421,19 @@
 
             <div class="case-section case-problem">
                 <h4>The Brief</h4>
-                <p>Every project before this one either had no backend at all or leaned on localStorage. This assignment needed real accounts and a cart that actually persists — Firebase Authentication and user-specific state, not hardcoded product data.</p>
+                <p>A small fashion brand can't sell online with a catalogue alone. Shoppers need accounts, and their cart has to survive a refresh, a closed tab, or a switch to another device, otherwise they abandon it and the sale is lost. Earlier projects of mine either had no backend or kept everything in localStorage, which can't do that. Urban Threads tackles the real situation of a shopper who finds something they like, signs in, and expects the cart to still be there when they come back. The assignment asked for Firebase Authentication and user-specific state instead of hardcoded product data.</p>
             </div>
             <div class="case-section case-approach">
                 <h4>The Build</h4>
-                <p>Products load dynamically on the shop page, while each signed-in user's cart is kept separate from the public catalog rather than relying only on localStorage.</p>
+                <p>Products load dynamically on the shop page instead of being hardcoded in the HTML, so the catalogue can change without touching the code. Firebase Authentication handles sign-up and login, and each signed-in user's cart is kept against their own account, separate from the public catalogue, rather than relying only on localStorage. On top of the core requirement I added category filtering, search, and pagination so a larger catalogue stays usable, plus toast notifications, a profile dropdown, and a dark mode built on CSS custom properties.</p>
             </div>
             <div class="case-section case-tradeoffs">
                 <h4>The Trade-off</h4>
-                <p>I let shoppers browse and search the whole catalog without an account, and only prompt for login at the moment they click "Add to Cart." That's more work than just gating the entire shop behind a login wall, but it matches how real stores behave — you don't need an account to window-shop.</p>
+                <p>I let shoppers browse and search the whole catalogue without an account and only prompt for login at the moment they click &ldquo;Add to Cart.&rdquo; That is more work than putting the whole shop behind a login wall, because every action has to handle both signed-in and signed-out states. It matches how real stores behave, though: forcing sign-up before someone can even look at the products is a well-known way to lose them.</p>
             </div>
             <div class="case-section case-outcome">
                 <h4>The Result</h4>
-                <p>Fully working store with category filtering, search, and pagination on top of the base requirement. Next step is an admin panel so I can manage the product catalog from a form instead of typing documents into the Firebase console by hand.</p>
+                <p>A fully working store where a visitor can browse, filter, and search products, sign in, and build a cart that belongs to them. For a small retailer, this kind of build means customers can shop without friction and are only asked for an account once they've shown buying intent, which is the point where sign-up actually makes sense. The next step is an admin panel so the catalogue can be managed from a form instead of typing documents into the Firebase console by hand. That is the change that would let a non-technical shop owner run the store themselves.</p>
             </div>
 
             <div class="tools-chips">
@@ -454,19 +454,19 @@
 
             <div class="case-section case-problem">
                 <h4>The Brief</h4>
-                <p>I'd already built this as a vanilla JS clone. The React version had to prove I could actually structure an app with components and shared state instead of one long script — plus add one manual feature and one AI-assisted feature and be honest about which was which.</p>
+                <p>People capture ideas faster than they organise them. Quick thoughts, to-dos, and reminders pile up in one place until nothing can be found, so a notes app has to make capture instant and finding things later easy, through labels, archiving, reminders, and a trash that forgives mistakes. I'd already built this as a vanilla JS clone, so the question this time was whether the same product could be structured so it keeps growing features without turning into one tangled script. The assignment also required one manual feature and one AI-assisted feature, and honesty about which was which.</p>
             </div>
             <div class="case-section case-approach">
                 <h4>The Build</h4>
-                <p>Every piece of state — notes, labels, theme, reminders — lives in one hook, <code>useKeepStore</code>, instead of scattered across components. Labels were the manual build; dark mode and drag-and-drop reordering were the AI-assisted features, where I used AI to help scaffold the logic and then verified every interaction by hand in the browser.</p>
+                <p>Every piece of shared state (notes, labels, theme, and reminders) lives in one hook, <code>useKeepStore</code>, instead of being scattered across components, so every component reads and updates the same source of truth. The interface is split into focused components, including a masonry note grid. Labels were the manual build; dark mode and drag-and-drop reordering were the AI-assisted features, where I used AI to help scaffold the logic and then verified every interaction by hand in the browser.</p>
             </div>
             <div class="case-section case-tradeoffs">
                 <h4>The Trade-off</h4>
-                <p>Notes still persist to localStorage rather than a backend. That kept the assignment focused on component structure and state management rather than infrastructure, at the cost of notes not syncing between devices the way Urban Threads' cart does.</p>
+                <p>Notes still persist to localStorage rather than a backend. That kept the project focused on component structure and state management instead of infrastructure, but it means notes live in one browser and don't sync between devices, which is something a real notes app can't get away with. Urban Threads' cart already shows the fix, and it is the obvious next step.</p>
             </div>
             <div class="case-section case-outcome">
                 <h4>The Result</h4>
-                <p>Masonry note grid, label filtering, archive/trash with a 7-day auto-purge, and reminders with due-date sorting all work. Next step is swapping localStorage for Firebase, the same pattern I already proved out on Urban Threads.</p>
+                <p>A fully working notes app with a masonry grid, label filtering, archive and trash with a 7-day auto-purge, reminders sorted by due date, dark mode, and drag-to-reorder. The lesson for a real product is that a productivity tool lives or dies on trust: people only keep using a notes app if they believe it won't lose their notes, which is why archive, trash, and reminders matter as much as the editor itself. The next step is swapping localStorage for Firebase, the same pattern I already proved out on Urban Threads, so notes follow the user across devices.</p>
             </div>
 
             <div class="tools-chips">
@@ -487,19 +487,19 @@
 
             <div class="case-section case-problem">
                 <h4>The Brief</h4>
-                <p>Every project so far used data I controlled — hardcoded or localStorage. This one needed a real third-party API, which meant handling failures and slow responses instead of assuming the data is always just there.</p>
+                <p>Readers need a fast way to find a book and see what it is without knowing exactly what they're looking for. The data to do that already exists in open catalogues, but it lives on someone else's server, so a real app has to cope with slow responses, failed requests, and searches that return nothing. Every project I'd built before this used data I controlled. This one needed a live third-party API and an interface that stays useful when the network doesn't cooperate.</p>
             </div>
             <div class="case-section case-approach">
                 <h4>The Build</h4>
-                <p>Book data comes from the Open Library API via <code>fetch</code>, with explicit loading and error states rather than a blank screen while the request is in flight or on failure. Search is submit-triggered rather than live-as-you-type, to avoid firing a request on every keystroke.</p>
+                <p>Book data comes from the Open Library API via <code>fetch</code>, with explicit loading and error states so the user sees what is happening, instead of a blank screen, while the request is in flight or after it fails. Results show cover art alongside the book details so a reader can recognise a book at a glance. Search is submit-triggered rather than live-as-you-type, to avoid firing a request on every keystroke.</p>
             </div>
             <div class="case-section case-tradeoffs">
                 <h4>The Trade-off</h4>
-                <p>Submit-triggered search costs a bit of the instant feedback a live search gives you, but it keeps request volume sane against a free public API with no key or rate-limit budget behind it.</p>
+                <p>Submit-triggered search costs a bit of the instant feedback a live search gives, but it keeps request volume sane against a free public API with no key and no rate-limit budget behind it. It is the same instinct a production team applies when an external service has usage limits: protect the dependency you don't control.</p>
             </div>
             <div class="case-section case-outcome">
                 <h4>The Result</h4>
-                <p>Deployed to GitHub Pages — including tracking down a blank-page bug that turned out to be a missing <code>base: './'</code> in <code>vite.config.js</code>. Next step is adding pagination to the search results, the same way I added it to Urban Threads' product grid.</p>
+                <p>A deployed search app that turns a query into a browsable set of books and recovers gracefully when the API is slow or down. Getting it live on GitHub Pages meant tracking down a blank-page bug that turned out to be a missing <code>base: './'</code> in <code>vite.config.js</code>, which taught me that &ldquo;works on my machine&rdquo; and &ldquo;works in production&rdquo; are two different checks. The broader takeaway is that a product can be built on a third-party data source without running its own database. The next step is adding pagination to the search results, the same way I added it to Urban Threads' product grid.</p>
             </div>
 
             <div class="tools-chips">
@@ -520,19 +520,19 @@
 
             <div class="case-section case-problem">
                 <h4>The Brief</h4>
-                <p>I wanted a small project focused purely on JavaScript logic — tracking a score and a question index correctly — rather than layout, which every earlier project had already covered.</p>
+                <p>Quizzes are how schools, trainers, and onboarding programmes check that people have actually understood something, so the scoring has to be trustworthy. If a score can be thrown off by a double-click or a re-render, the result means nothing. I wanted a small project focused purely on that logic, tracking which question you're on and how many you've got right, correctly every time, without layout work getting in the way, since every earlier project had already covered layout.</p>
             </div>
             <div class="case-section case-approach">
                 <h4>The Build</h4>
-                <p>Score and question index are tracked in JavaScript variables, not read back from the DOM, so the result is always computed rather than counted off whatever happens to be on screen. Answer buttons use event delegation on the container instead of a separate listener per button.</p>
+                <p>Score and question index are tracked in JavaScript variables, not read back from the DOM, so the result is always computed instead of counted off whatever happens to be on screen. Answer buttons use event delegation on the container instead of a separate listener per button, which keeps the code short and works no matter how many answers a question has. Each answer gets instant feedback, and a final screen reports the score.</p>
             </div>
             <div class="case-section case-tradeoffs">
                 <h4>The Trade-off</h4>
-                <p>Questions are hardcoded directly in the JS file rather than loaded from a separate JSON file or API. For a quiz this size that's the right call — pulling in a fetch layer for a dozen static questions would be complexity with no real payoff.</p>
+                <p>Questions are hardcoded directly in the JS file rather than loaded from a separate JSON file or API. For a quiz this size that is the right call, because pulling in a fetch layer for a dozen static questions would add complexity with no real payoff. The cost is that adding or editing a question means editing the JavaScript, which a non-developer such as a teacher or trainer couldn't do.</p>
             </div>
             <div class="case-section case-outcome">
                 <h4>The Result</h4>
-                <p>Instant feedback per question and a final score screen at the end. Next step is moving the question set into its own JSON file so I can add more questions without touching the scoring logic at all.</p>
+                <p>A self-contained quiz with instant feedback per question and a final score screen. Because the scoring logic is separate from the content, it is the core of something a school, trainer, or onboarding programme could reuse with their own questions. The next step is moving the question set into its own JSON file so questions can be added without touching the scoring logic at all, which is the change that would let a non-developer maintain it.</p>
             </div>
 
             <div class="tools-chips">
@@ -553,19 +553,19 @@
 
             <div class="case-section case-problem">
                 <h4>The Brief</h4>
-                <p>Every project before this one was a static layout clone — good for CSS practice, but none of them needed to remember anything. I wanted a build that had to track state and respond to user actions in real time, closer to how a real product behaves.</p>
+                <p>Social products succeed or fail on how immediate they feel: you post, the feed updates, the like count moves, and nothing reloads. A static mock-up hides the hard part, which is keeping what's on screen in sync with what the user just did. Every project I'd built before this was a static layout clone, good for CSS practice but none of them needed to remember anything. I wanted a build that had to track state and respond to user actions in real time, closer to how a real product behaves.</p>
             </div>
             <div class="case-section case-approach">
                 <h4>The Build</h4>
-                <p>I rebuilt the core Twitter/X feed interface with HTML and CSS for the layout, then used JavaScript to handle interactions — composing a post, updating counts, and reflecting state changes in the DOM immediately rather than reloading anything.</p>
+                <p>I rebuilt the core Twitter/X feed interface with HTML and CSS for the layout, then used JavaScript to handle interactions: composing a post, updating counts, and reflecting every state change in the DOM immediately instead of reloading anything. Around the feed I added a compose modal, a trending sidebar, an Explore page, and dark mode so it behaves like a small product and not a single screen.</p>
             </div>
             <div class="case-section case-tradeoffs">
                 <h4>The Trade-off</h4>
-                <p>I kept state in memory in the browser rather than wiring up a backend or persistence layer. That let me focus on getting the interaction logic and DOM updates right first, at the cost of nothing being saved between page reloads.</p>
+                <p>I kept state in memory in the browser instead of wiring up a backend or persistence layer. That let me focus on getting the interaction logic and DOM updates right first, but nothing is saved between page reloads, and a real social product would lose every post on refresh. This is a prototype of the interface, not of the data layer.</p>
             </div>
             <div class="case-section case-outcome">
                 <h4>The Result</h4>
-                <p>It's my most functionally complete project so far — real interactivity rather than a static clone. The next step is adding persistence, likely with local storage first and an API later, so state survives a refresh.</p>
+                <p>It is my most functionally complete project so far: a feed that responds instantly to what the user does, which is the core experience any social or community product has to get right before anything else matters. It shows I can manage interface state without a framework. The next step is adding persistence, likely local storage first and an API later, so state survives a refresh.</p>
             </div>
 
             <div class="tools-chips">
@@ -586,19 +586,19 @@
 
             <div class="case-section case-problem">
                 <h4>The Brief</h4>
-                <p>Every project before this one was solo — one person, one repo, no coordination needed. This capstone put six people on the same codebase at once, which meant the real challenge wasn't just building the site, it was making sure six people's work could merge without constantly breaking each other's changes.</p>
+                <p>When several developers work on one codebase, the expensive failures are rarely about code quality. They are about coordination: two people edit the same page, one merge overwrites the other, and the site breaks days before hand-over. Every project before this was solo, with one person, one repo, and no coordination needed. This capstone put six people on the same multi-page client website prototype at once, so the real problem was delivering a working site while keeping six people's changes from constantly breaking each other.</p>
             </div>
             <div class="case-section case-approach">
                 <h4>The Build</h4>
-                <p>As Git Manager, I helped keep the team aligned through clear communication and a feature-branch workflow — everyone worked on their own branch, opened a pull request, and I reviewed it before it merged into main. That gave me a single checkpoint to catch conflicts and layout regressions before they landed, instead of finding out after the fact.</p>
+                <p>As Git Manager, I helped keep the team aligned through clear communication and a feature-branch workflow. Everyone worked on their own branch, opened a pull request, and I reviewed it before it merged into main. That gave us a single checkpoint to catch conflicts and layout regressions before they landed, instead of finding out after the fact, and it gave teammates one predictable way to get their work into the shared site.</p>
             </div>
             <div class="case-section case-tradeoffs">
                 <h4>The Trade-off</h4>
-                <p>Requiring review before every merge slowed us down compared to everyone pushing straight to main — but on a 6-person team touching the same pages, that checkpoint is what kept the site from breaking every other day. Slower and stable beat fast and broken for this team size.</p>
+                <p>Requiring review before every merge slowed us down compared to everyone pushing straight to main, since a teammate's work couldn't go live until it had been looked at. But on a 6-person team touching the same pages, that checkpoint is what kept the site from breaking every other day. Slower and stable beat fast and broken for this team size, and it is the same trade-off engineering teams accept with code review and protected branches.</p>
             </div>
             <div class="case-section case-outcome">
                 <h4>The Result</h4>
-                <p>Shipped a full multi-page site with zero unresolved merge conflicts reaching main. The role taught me more about Git itself — rebasing, resolving conflicts, protecting a branch — than any solo project had. Next step is applying the same branch-protection workflow to my own solo repos going forward.</p>
+                <p>Shipped a full multi-page site with zero unresolved merge conflicts reaching main. For a client, that means a prototype that arrives intact instead of breaking at the last minute, and for the team it meant a repeatable way of working together. The role taught me more about Git itself (rebasing, resolving conflicts, protecting a branch) than any solo project had. The next step is applying the same branch-protection workflow to my own solo repos going forward.</p>
             </div>
 
             <div class="tools-chips">
@@ -623,19 +623,19 @@
 
             <div class="case-section case-problem">
               <h4>The Brief</h4>
-              <p>As a group project, the goal was to turn a simple button into a more expressive interaction using CSS motion, without adding JavaScript or a heavy component library.</p>
+              <p>Buttons are where a website asks for something: sign up, buy, send. When a button gives no feedback, users hesitate and wonder whether they clicked it. The problem was to make a button feel responsive and worth clicking using only CSS, with no JavaScript and no heavy component library to slow the page down or get in the way of reuse. As a group project, we aimed for a component small enough that any team could drop it into their own site.</p>
             </div>
             <div class="case-section case-approach">
               <h4>The Build</h4>
-              <p>Our group used layered CSS shapes and hover transitions to create the wave effect, keeping the markup small and the interaction easy to reuse.</p>
+              <p>Our group used layered CSS shapes and hover transitions to create the wave effect, keeping the markup small and the interaction easy to reuse. Because the motion is pure CSS, the button works anywhere plain HTML does with nothing to install, and the live demo is responsive across screen sizes.</p>
             </div>
             <div class="case-section case-tradeoffs">
               <h4>The Trade-off</h4>
-              <p>A focused animation keeps the component fast and portable, but it also means the effect needs careful timing and contrast choices to stay readable across themes and screen sizes.</p>
+              <p>A focused animation keeps the component fast and portable, but motion has to earn its place. A wave that is too slow or too busy becomes an annoyance, and low-contrast text on a moving background is hard to read. It needs careful timing and contrast choices to stay readable across themes and screen sizes.</p>
             </div>
             <div class="case-section case-outcome">
               <h4>The Result</h4>
-              <p>The result is a live, responsive button experiment that demonstrates collaborative delivery, attention to interaction details, and polished motion built with core CSS.</p>
+              <p>A live, responsive button experiment that shows how much personality and feedback a call-to-action can carry with core CSS alone. For a business, small interaction details like this are what make a site feel polished and trustworthy, at almost no cost in page weight or dependencies. It also demonstrated collaborative delivery: several people contributing to one small, well-scoped component.</p>
             </div>
 
             <div class="tools-chips">
@@ -656,19 +656,19 @@
 
             <div class="case-section case-problem">
               <h4>The Brief</h4>
-              <p>Our group needed to replace a plain Page Not Found message with a responsive 404 experience that felt intentional, animated, and useful to visitors.</p>
+              <p>Every site eventually sends someone to a page that doesn't exist, through a broken link, a mistyped address, or a removed page. A plain &ldquo;Page Not Found&rdquo; is a dead end, and visitors who hit one often just leave. Our group set out to turn that moment into one that still feels intentional and, more importantly, gives the visitor a clear way back: a responsive 404 page that is animated, on-brand, and useful.</p>
             </div>
             <div class="case-section case-approach">
               <h4>The Build</h4>
-              <p>We combined semantic HTML, responsive CSS, keyframe animations, and JavaScript with requestAnimationFrame() to animate the flying paper plane and connect the home and reload actions.</p>
+              <p>We combined semantic HTML, responsive CSS, and keyframe animations for the glowing typography, and used JavaScript with <code>requestAnimationFrame()</code> to animate the flying paper plane smoothly. Two clear recovery actions, going home and reloading, connect the personality of the page to something the visitor can actually do next.</p>
             </div>
             <div class="case-section case-tradeoffs">
               <h4>The Trade-off</h4>
-              <p>Motion gives the error state more personality, but it also needs restraint so the message and recovery actions stay clear on smaller screens.</p>
+              <p>Motion gives the error state more personality, but it needs restraint: on smaller screens the message and the recovery buttons must stay clear, and the animation shouldn't compete with them. The priority was that the page is a working error page first and a showpiece second.</p>
             </div>
             <div class="case-section case-outcome">
               <h4>The Result</h4>
-              <p>A live, responsive error page with animated typography, a flying paper plane, and clear recovery buttons. The project also gave me practice collaborating across a shared frontend build.</p>
+              <p>A live, responsive error page with animated typography, a flying paper plane, and clear recovery buttons. For a business, a good 404 page is a small but real retention tool, because it gives a lost visitor a reason and a route to stay on the site. The project also gave me practice collaborating across a shared frontend build.</p>
             </div>
 
             <div class="tools-chips">
@@ -693,19 +693,19 @@
 
             <div class="case-section case-problem">
               <h4>The Brief</h4>
-              <p>Build a 3x3 Tic Tac Toe with clean win/draw detection, one manual feature built without AI assistance, and one advanced feature on top, all driven by a single, traceable source of state.</p>
+              <p>Most bugs in interactive apps come from state that is changed in many places at once, so nobody can say how the screen got into its current condition. The same problem shows up in shopping carts, forms, and dashboards, and it gets worse with every feature added. This project uses a simple game to practise the fix: all state in one place, and every change going through one predictable path. The requirements were a 3x3 Tic Tac Toe with clean win/draw detection, one manual feature built without AI assistance, and one advanced feature on top.</p>
             </div>
             <div class="case-section case-approach">
               <h4>The Build</h4>
-              <p>All game state lives in one useReducer hook with four actions — MAKE_MOVE, JUMP_TO_MOVE, NEW_GAME, and RESET_SCORES — so every change to the board, scoreboard, or history runs through the same predictable path.</p>
+              <p>All game state lives in one <code>useReducer</code> hook with four actions (MAKE_MOVE, JUMP_TO_MOVE, NEW_GAME, and RESET_SCORES), so every change to the board, scoreboard, or history runs through the same predictable path. Because every change is a named action, any bug can be traced back to the exact action that caused it, and adding a feature means adding an action instead of touching logic scattered across components.</p>
             </div>
             <div class="case-section case-tradeoffs">
               <h4>The Trade-off</h4>
-              <p>Routing every interaction through one reducer took more upfront action-design work than scattering useState calls across components, but it kept the scoreboard, move history, and board state consistent as features were added.</p>
+              <p>Routing every interaction through one reducer took more upfront action-design work than scattering useState calls across components. The payoff is that it kept the scoreboard, move history, and board state consistent as features were added, which is the trade that matters in any app expected to keep growing.</p>
             </div>
             <div class="case-section case-outcome">
               <h4>The Result</h4>
-              <p>A scoreboard that persists across new games and resets on demand, plus a move-history panel where clicking any past move jumps the board back to that state. Making a new move from a jumped-back point branches off and discards the old future, matching the official React tutorial's time-travel behaviour.</p>
+              <p>A scoreboard that persists across new games and resets on demand, plus a move-history panel where clicking any past move jumps the board back to that state. Making a new move from a jumped-back point branches off and discards the old future, matching the official React tutorial's time-travel behaviour. Beyond the game, it is a small proof that I can design state so it stays debuggable as an app grows, which is what keeps maintenance costs down in real product work.</p>
             </div>
 
             <div class="tools-chips">
@@ -726,19 +726,19 @@
 
             <div class="case-section case-problem">
               <h4>The Brief</h4>
-              <p>Our group needed to build a responsive shopping experience with a live product catalog, filtering, pagination, a cart, and checkout behavior that felt like one connected application.</p>
+              <p>Online shoppers abandon purchases when the experience feels disjointed: the cart doesn't match what they picked, the price changes at checkout, or there's no clear view of the total. For a South African audience there is extra complexity, because prices involve VAT, delivery costs, different payment methods, and instalment plans. Our group needed to build a responsive shopping experience (a live product catalogue, filtering, pagination, a cart, and checkout) that behaves like one connected application and shows honest, local pricing.</p>
             </div>
             <div class="case-section case-approach">
               <h4>The Build</h4>
-              <p>We used React Context providers to share product and cart state across the navigation, catalog, product cards, pagination, and checkout drawer. Products come from DummyJSON with a fallback list for failed requests, while pricing handles South African VAT, delivery, payment methods, and installment plans.</p>
+              <p>We used React Context providers to share product and cart state across the navigation, catalogue, product cards, pagination, and checkout drawer, so every part of the app agrees on what's in the cart. Products come from DummyJSON, with a fallback list for failed requests so the shop never shows an empty page. Pricing handles South African VAT, delivery, payment methods, and instalment plans inside a multi-step checkout.</p>
             </div>
             <div class="case-section case-tradeoffs">
               <h4>The Trade-off</h4>
-              <p>Context kept the shared state understandable for this project and avoided adding Redux setup, but the growing application still depends on clear provider boundaries and disciplined component responsibilities.</p>
+              <p>Context kept the shared state understandable for a six-person group and avoided adding Redux setup, but the growing application still depends on clear provider boundaries and disciplined component responsibilities. If components start reaching into state they don't own, re-renders spread and bugs get harder to trace, so the group had to agree on who owns what.</p>
             </div>
             <div class="case-section case-outcome">
               <h4>The Result</h4>
-              <p>A deployed, responsive online mall with catalog search, categories, pagination, theme persistence, cart calculations, and a multi-step checkout experience built as a group.</p>
+              <p>A deployed, responsive online mall with catalogue search, categories, pagination, theme persistence, cart calculations, and a multi-step checkout, built as a group. For a retailer, the value is a storefront where customers can see the real cost of an order before they commit, including VAT and delivery, which removes a common reason shoppers abandon a cart at the last step. Building it in a six-person team also meant sharing one codebase and agreeing on structure.</p>
             </div>
 
             <div class="tools-chips">
@@ -763,19 +763,19 @@
 
             <div class="case-section case-problem">
               <h4>The Brief</h4>
-              <p>The project needed to go beyond a static note layout and support the everyday actions a note board needs: creating, editing, searching, archiving, restoring, and deleting notes.</p>
+              <p>People jot things down constantly, whether tasks, ideas, or things to remember, and a notes tool that is awkward or that loses what you wrote quickly stops being used. A useful board has to cover the everyday actions of creating, editing, searching, archiving, restoring, and deleting notes, and it should forgive mistakes. The project needed to go beyond a static note layout and support that whole lifecycle without an account, a server, or an install.</p>
             </div>
             <div class="case-section case-approach">
               <h4>The Build</h4>
-              <p>I built the note board in vanilla HTML, CSS, and JavaScript, with a single state model rendered into the board and persisted to localStorage. The interface also includes color selection, tooltips, a responsive sidebar, and an undo window after deletion.</p>
+              <p>I built the note board in vanilla HTML, CSS, and JavaScript, with a single state model rendered into the board and persisted to localStorage. The interface also includes colour selection so notes can be told apart at a glance, tooltips, a responsive sidebar, and an undo window after deletion so an accidental delete isn't permanent.</p>
             </div>
             <div class="case-section case-tradeoffs">
               <h4>The Trade-off</h4>
-              <p>Keeping the app fully static makes it simple to deploy and run without a backend, but localStorage means notes remain tied to the current browser instead of syncing across devices.</p>
+              <p>Keeping the app fully static makes it simple to deploy and run without a backend, but localStorage means notes remain tied to the current browser instead of syncing across devices. That is acceptable for a lightweight personal tool, and it is the first thing I would change if more than one device mattered.</p>
             </div>
             <div class="case-section case-outcome">
               <h4>The Result</h4>
-              <p>A live, responsive note-taking app that demonstrates practical state management, persistence, filtering, and interaction design without a framework or build step.</p>
+              <p>A live, responsive note-taking app that covers the whole note lifecycle and demonstrates practical state management, persistence, filtering, and interaction design without a framework or build step. Because it needs no backend or sign-up, it is usable the moment it loads, which is a real advantage for lightweight tools where friction kills adoption. The obvious improvement is syncing notes across devices.</p>
             </div>
 
             <div class="tools-chips">
@@ -796,19 +796,19 @@
 
             <div class="case-section case-problem">
               <h4>The Brief</h4>
-              <p>The project needed more than a static landing page: it needed separate experiences for guests and hosts, plus an administration area for managing the platform.</p>
+              <p>A short-term rental marketplace serves three different people at once: guests who want to find and book a place, hosts who list it, and operators who keep the platform running. A single landing page can't serve any of them. This project addresses what it takes to build a product where each group gets its own experience and only the right people can do the right things, such as an admin managing listings that guests should never be able to touch.</p>
             </div>
             <div class="case-section case-approach">
               <h4>The Build</h4>
-              <p>I organized the repository into independent frontend, backend, and admin applications so each part of the product has a clear responsibility and can evolve without turning the project into one large codebase.</p>
+              <p>I organised the repository into independent frontend, backend, and admin applications so each part of the product has a clear responsibility and can evolve without turning the project into one large codebase. The guest frontend and the admin dashboard are React apps built to match Figma designs, including filter pills that filter listings on the client, and they talk to a Node.js/Express backend with MongoDB for the data. The backend handles authentication with user roles and image uploads, so what a person sees and can do depends on who they are.</p>
             </div>
             <div class="case-section case-tradeoffs">
               <h4>The Trade-off</h4>
-              <p>Separating the applications adds setup and coordination overhead, but it reflects a more realistic product structure and keeps guest-facing, server, and administrative concerns isolated.</p>
+              <p>Separating the applications adds setup and coordination overhead: three things to run locally, separate environment variables, and cross-origin configuration (I had to resolve CORS issues to get the apps talking to each other). In return it reflects a more realistic product structure and keeps guest-facing, server, and administrative concerns isolated, so each can be deployed and secured on its own terms.</p>
             </div>
             <div class="case-section case-outcome">
               <h4>The Result</h4>
-              <p>The repository now provides a foundation for a full Airbnb-style platform with guest, host, and admin flows. The key walkthrough is the architectural decision to keep those concerns in separate applications: it makes ownership and deployment boundaries clear, even though it adds setup overhead. The guest frontend is deployed on Render; backend and admin deployment links will be added once those services are hosted and their environment variables are configured.</p>
+              <p>The repository now provides a foundation for a full Airbnb-style platform with guest, host, and admin flows. For a marketplace business, that separation is what lets the public booking experience, the management tools, and the data layer each be owned, scaled, and secured independently. The guest frontend is deployed on Render; backend and admin deployment links will be added once those services are hosted and their environment variables are configured.</p>
             </div>
 
             <div class="tools-chips">
@@ -852,7 +852,8 @@
                 <div class="social-row">
                     <a href="https://github.com/KMukendi10" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/kazadi-mukendi-a69122371" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="http://instagram.com/skm_shad" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/+27681252703" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://x.com/skm_shad00" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
 
