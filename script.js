@@ -343,19 +343,27 @@ function initScrollFade() {
         return;
     }
 
-    // threshold: 0 -> reveal as soon as ANY part enters the viewport.
-    // A ratio like 0.15 never fires on tall sections (e.g. the projects grid
-    // on mobile), because 15% of the section is taller than the screen.
-    const observer = new IntersectionObserver((entries) => {
+    // Normal sections (all pages): original behaviour — fade in when 15%
+    // is visible, fade out when they leave.
+    const normalObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // reveal once, never hide again
-            }
+            entry.target.classList.toggle('visible', entry.isIntersecting);
         });
-    }, { threshold: 0, rootMargin: '0px 0px -5% 0px' });
+    }, { threshold: 0.15, rootMargin: '0px 0px -15% 0px' });
 
-    items.forEach((item) => observer.observe(item));
+    // Tall sections (.fade-in-tall, e.g. the projects grid): a ratio-based
+    // threshold can never fire on a section taller than the screen, so use
+    // threshold 0. It shows as soon as ANY part is on screen and only fades
+    // out once the whole section has scrolled out of view.
+    const tallObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            entry.target.classList.toggle('visible', entry.isIntersecting);
+        });
+    }, { threshold: 0 });
+
+    items.forEach((item) => {
+        (item.classList.contains('fade-in-tall') ? tallObserver : normalObserver).observe(item);
+    });
 }
 
 /* -----------------------------------------
