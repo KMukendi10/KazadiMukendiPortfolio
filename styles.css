@@ -1913,6 +1913,24 @@ html.js-ready .fade-in.visible {
     transform: translateY(0);
 }
 
+/* Tall sections (projects grid): the section itself never fades; each card
+   fades in individually instead (see initScrollFade in script.js). */
+html.js-ready .fade-in.fade-in-tall {
+    opacity: 1;
+    transform: none;
+}
+
+html.js-ready .fade-in-tall .card-grid > .col {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+html.js-ready .fade-in-tall .card-grid > .col.visible {
+    opacity: 1;
+    transform: none;
+}
+
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 900px) {
     .hero, .about-hero, .programs-hero, .contact-hero {

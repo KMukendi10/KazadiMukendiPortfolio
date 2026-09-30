@@ -351,18 +351,34 @@ function initScrollFade() {
         });
     }, { threshold: 0.15, rootMargin: '0px 0px -15% 0px' });
 
-    // Tall sections (.fade-in-tall, e.g. the projects grid): a ratio-based
-    // threshold can never fire on a section taller than the screen, so use
-    // threshold 0. It shows as soon as ANY part is on screen and only fades
-    // out once the whole section has scrolled out of view.
-    const tallObserver = new IntersectionObserver((entries) => {
+    // Tall sections (.fade-in-tall, e.g. the projects grid): fading the whole
+    // section can never look right because it is taller than the screen.
+    // Instead the section stays put and each card (.col) fades in on its own
+    // as it scrolls into view. Cards stay visible while you scroll up/down
+    // through the grid, and only reset once the WHOLE grid has scrolled out
+    // of view, so they fade in again next time you come back to it.
+    const cardObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-            entry.target.classList.toggle('visible', entry.isIntersecting);
+            if (entry.isIntersecting) entry.target.classList.add('visible');
         });
-    }, { threshold: 0 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
 
     items.forEach((item) => {
-        (item.classList.contains('fade-in-tall') ? tallObserver : normalObserver).observe(item);
+        if (!item.classList.contains('fade-in-tall')) {
+            normalObserver.observe(item);
+            return;
+        }
+
+        const cards = item.querySelectorAll('.card-grid > .col');
+        cards.forEach((card) => cardObserver.observe(card));
+
+        new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    cards.forEach((card) => card.classList.remove('visible'));
+                }
+            });
+        }, { threshold: 0 }).observe(item);
     });
 }
 
