@@ -4,7 +4,7 @@ A personal portfolio website showcasing my skills, projects, certifications, and
 
 ## 🚀 Live Demo
 
-🔗 [View Portfolio](https://kmukendi10.github.io/KazadiMukendiPortfolio/)
+🔗 [View Portfolio](https://kazadi-mukendi-portfolio.vercel.app)
 
 ---
 
@@ -16,7 +16,7 @@ This portfolio serves as a central place to showcase my projects, technical skil
 
 ## ✨ Features
 
-* Multi-page structure (Home / About / Projects / Contact)
+* Multi-page structure (Home / About / Projects / Contact) using the Next.js App Router
 * Responsive design with mobile nav toggle
 * Manrope typography across every portfolio page
 * Featured project spotlight
@@ -31,10 +31,11 @@ This portfolio serves as a central place to showcase my projects, technical skil
 
 ## 🛠️ Built With
 
+* Next.js (App Router)
+* React
 * HTML
 * CSS
 * JavaScript
-* React
 * Vite
 * Firebase Authentication
 * MongoDB
@@ -46,7 +47,7 @@ This portfolio serves as a central place to showcase my projects, technical skil
 * Manrope (Google Fonts)
 * Git branches, pull requests, and code review
 * GitHub
-* GitHub Pages
+* Vercel
 
 ---
 
@@ -55,14 +56,22 @@ This portfolio serves as a central place to showcase my projects, technical skil
 ```text
 KazadiMukendiPortfolio/
 │
-├── index.html        (Home)
-├── about.html
-├── projects.html      (Projects + Case Studies + Collaboration)
-├── contact.html
-├── styles.css
-├── script.js
-├── Assets/
-└── README.md
+├── public/
+│   └── Assets/              (images, icons, CV — served at /Assets/...)
+├── src/
+│   ├── app/
+│   │   ├── layout.js        (fonts, metadata, theme no-flash script, shared shell)
+│   │   ├── globals.css      (all site styles — the old styles.css)
+│   │   ├── bootstrap-scoped.css (Bootstrap, scoped to /projects only — generated)
+│   │   ├── page.js          (Home)
+│   │   ├── about/page.js
+│   │   ├── projects/page.js (Projects + Case Studies)
+│   │   └── contact/page.js
+│   ├── components/          (Header, Footer, Preloader, ProjectsSection, ContactForm, ...)
+│   └── data/                (projects.js case studies, site.js nav/contact/skills, assets.js)
+├── scripts/scope-bootstrap.mjs
+├── next.config.mjs          (redirects from the old .html URLs)
+└── package.json
 ```
 
 ---
@@ -102,6 +111,7 @@ The portfolio now documents a progression from static layouts to interactive Jav
 
 ## 🩹 Changelog
 
+* **Migrated the portfolio from plain HTML/CSS/JavaScript to Next.js (App Router)** — same pages, styles and content, now built from React components. The header, footer and preloader live once in the root layout instead of being copied into four HTML files, the case studies are data in `src/data/projects.js`, images go through `next/image`, and Bootstrap is scoped to the Projects page like before. Old `*.html` URLs redirect to the new routes.
 * **Refined the home-page project calls to action** — the featured Airbnb Clone skills now use the same plain stack treatment as project cards, action buttons share a consistent purple-and-navy interaction style, and the Featured badge matches the skill-icon background.
 * **Updated site typography** — replaced Inter with Manrope across the Home, About, Projects, and Contact pages for a cleaner, more contemporary visual system.
 * **Fixed Home hero section responsiveness** — the hero previously used a fixed `height: 100vh` with `overflow: hidden`, which clipped the heading/copy/buttons on smaller screens. Switched to `min-height: 100vh`, added fluid heading sizing (`clamp()`), tightened padding at tablet/mobile breakpoints, disabled the fixed background attachment on mobile (a known iOS/Android rendering glitch), and made the buttons/profile image scale down properly.
@@ -115,10 +125,25 @@ The portfolio now documents a progression from static layouts to interactive Jav
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+git clone https://github.com/KMukendi10/KazadiMukendiPortfolio.git
+cd KazadiMukendiPortfolio
 ```
 
-Open the project folder and launch `index.html` in your browser.
+Install dependencies and start the dev server:
+
+```bash
+npm install
+npm run dev
+```
+
+Open http://localhost:3000.
+
+Production build:
+
+```bash
+npm run build
+npm start
+```
 
 ---
 

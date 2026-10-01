@@ -1,3 +1,5 @@
+@import "./bootstrap-scoped.css";
+
 /* =========================================================
    Kazadi Mukendi Portfolio — styles.css
 ========================================================= */
@@ -6,6 +8,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* next/image adds width/height attributes; keep the natural aspect ratio unless a class sets a size */
+img {
+    height: auto;
 }
 
 html {
@@ -552,7 +559,7 @@ a.hero-btn-secondary {
     margin: 0 auto;
     padding: 80px;
     flex-wrap: wrap;
-    background: url("./Assets/HeaderBackground.png");
+    background: url("/Assets/HeaderBackground.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
