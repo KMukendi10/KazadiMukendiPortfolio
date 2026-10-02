@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
-      <body suppressHydrationWarning>
+      <body>
         <Shell>{children}</Shell>
       </body>
     </html>
