@@ -37,12 +37,6 @@ This portfolio serves as a central place to showcase my projects, technical skil
 * CSS
 * JavaScript
 * Vite
-* Firebase Authentication
-* MongoDB
-* Firestore
-* Supabase
-* REST API integration
-* Local state and persistence
 * Responsive design
 * Manrope (Google Fonts)
 * Git branches, pull requests, and code review
