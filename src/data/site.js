@@ -5,9 +5,12 @@ export const SITE_URL = 'https://kazadi-mukendi-portfolio.vercel.app';
 export const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/projects', label: 'Projects' },
+  { href: '/projects', label: 'Work' },
   { href: '/contact', label: 'Contact' },
 ];
+
+// Name shown on the page-transition curtain for each route.
+export const PAGE_NAMES = { '/': 'Home', '/about': 'About', '/projects': 'Work', '/contact': 'Contact' };
 
 export const CONTACT = {
   email: 'kazadishadrackmukendi@gmail.com',
@@ -18,67 +21,24 @@ export const CONTACT = {
 };
 
 export const SOCIALS = [
-  { href: 'https://github.com/KMukendi10', icon: 'fab fa-github', label: 'GitHub' },
-  { href: 'https://linkedin.com/in/kazadi-mukendi-a69122371', icon: 'fab fa-linkedin', label: 'LinkedIn' },
-  { href: 'https://x.com/skm_shad00', icon: 'fab fa-twitter', label: 'X (Twitter)' },
-  { href: 'http://instagram.com/skm_shad', icon: 'fab fa-instagram', label: 'Instagram' },
+  { href: 'https://github.com/KMukendi10', icon: 'github', label: 'GitHub' },
+  { href: 'https://linkedin.com/in/kazadi-mukendi-a69122371', icon: 'linkedin', label: 'LinkedIn' },
+  { href: 'https://x.com/skm_shad00', icon: 'x', label: 'X (Twitter)' },
+  { href: 'https://instagram.com/skm_shad', icon: 'instagram', label: 'Instagram' },
 ];
 
+// Grouped skills (About page "Toolbox"). Keep in step with the CV.
 export const SKILL_GROUPS = [
-  {
-    title: 'Programming Languages',
-    icon: 'fa-solid fa-code',
-    items: [
-      ['fa-brands fa-html5', 'HTML'],
-      ['fa-brands fa-css3-alt', 'CSS'],
-      ['fa-brands fa-square-js', 'JavaScript'],
-      ['fa-solid fa-code', 'Python'],
-    ],
-  },
-  {
-    title: 'Front-End Development',
-    icon: 'fa-solid fa-window-maximize',
-    items: [
-      ['fa-brands fa-react', 'React'],
-      ['fa-solid fa-bolt', 'Vite'],
-      ['fa-solid fa-mobile-screen', 'Responsive Design'],
-      ['fa-brands fa-bootstrap', 'Bootstrap'],
-    ],
-  },
-  {
-    title: 'Back-End Development',
-    icon: 'fa-solid fa-server',
-    items: [
-      ['fa-solid fa-plug', 'REST APIs'],
-      ['fa-solid fa-layer-group', 'Backend Structure'],
-      ['fa-solid fa-arrows-rotate', 'State & Persistence'],
-      ['fa-solid fa-database', 'MongoDB'],
-      ['fa-solid fa-fire', 'Firestore'],
-      ['fa-solid fa-cloud', 'Supabase'],
-    ],
-  },
-  {
-    title: 'Version Control & Deployment',
-    icon: 'fa-solid fa-code-branch',
-    items: [
-      ['fa-brands fa-git-alt', 'Git'],
-      ['fa-brands fa-github', 'GitHub'],
-      ['fa-brands fa-git-alt', 'GitLab'],
-      ['fa-solid fa-triangle', 'Vercel'],
-      ['fa-solid fa-cloud-arrow-up', 'Netlify'],
-      ['fa-solid fa-cloud', 'Render'],
-    ],
-  },
-  {
-    title: 'Tools & Practices',
-    icon: 'fa-solid fa-screwdriver-wrench',
-    items: [
-      ['fa-solid fa-code', 'VS Code'],
-      ['fa-solid fa-wand-magic-sparkles', 'Cursor'],
-      ['fa-solid fa-bolt', 'Kiro'],
-      ['fa-solid fa-palette', 'Canva'],
-      ['fa-solid fa-pen-ruler', 'Figma'],
-      ['fa-solid fa-code-pull-request', 'Pull Requests'],
-    ],
-  },
+  { title: 'Languages', items: ['HTML', 'CSS', 'JavaScript', 'Python', 'C++'] },
+  { title: 'Front end', items: ['React', 'Next.js', 'Vite', 'Responsive design', 'Bootstrap'] },
+  { title: 'Back end and data', items: ['Node.js', 'Express', 'REST APIs', 'MongoDB', 'Firebase', 'Firestore', 'PostgreSQL (Supabase)'] },
+  { title: 'Version control and deployment', items: ['Git', 'GitHub', 'GitLab', 'Vercel', 'Netlify', 'Render'] },
+  { title: 'Tools', items: ['VS Code', 'Cursor', 'Figma', 'Canva', 'Pull requests and code review'] },
+  { title: 'Engineering', items: ['AutoCAD', 'Autodesk Inventor', 'G-Code programming'] },
+];
+
+// One flat list for the scrolling skills band on the home page.
+export const MARQUEE_SKILLS = [
+  'React', 'Next.js', 'Node.js', 'Express', 'JavaScript', 'MongoDB', 'PostgreSQL',
+  'Firebase', 'REST APIs', 'Git and GitHub', 'Responsive design', 'Vercel',
 ];

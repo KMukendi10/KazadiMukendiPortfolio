@@ -1,31 +1,24 @@
-import Asset from '@/components/Asset';
-import ProjectsSection from '@/components/ProjectsSection';
-import ScrollButton from '@/components/ScrollButton';
+import ProjectIndex from '@/components/ProjectIndex';
 
-export const metadata = { title: 'Projects' };
+export const metadata = {
+  title: 'Work',
+  description:
+    'Case studies for every project: a full-stack Airbnb clone, a Firebase store, React apps, API work and a six-person team capstone. Each one covers the problem, the trade-off and the result.',
+  alternates: { canonical: '/projects' },
+};
 
 export default function Projects() {
   return (
-    <main>
-      <section className="programs-hero">
-        <div className="program-text">
-          <h1>Projects</h1>
-          <p>
-            A collection of everything I&apos;ve built and deployed so far — from a full-stack Airbnb architecture and
-            Firebase e-commerce app to React builds, API integrations, browser state work, and a team capstone project.
-            Each case study explains the technical problem, the trade-off, and what I would improve next.
-          </p>
-          <ScrollButton targetId="project-grid" className="hero-btn">
-            Browse My Work
-          </ScrollButton>
-        </div>
-
-        <div className="programs-image">
-          <Asset src="iHubWebsite.png" alt="iHub website preview" sizes="(max-width: 768px) 100vw, 560px" priority />
-        </div>
-      </section>
-
-      <ProjectsSection />
-    </main>
+    <section className="w-page">
+      <header className="w-page__head">
+        <h1>Work</h1>
+        <p>
+          Everything I&apos;ve built and deployed so far, from a full-stack Airbnb architecture and a Firebase store to
+          React builds, API work, browser state, a team capstone and campaign sites for agencies. Each case study covers the problem, the trade-off
+          and what I would improve next.
+        </p>
+      </header>
+      <ProjectIndex />
+    </section>
   );
 }

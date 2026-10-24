@@ -69,29 +69,29 @@ export default function ContactForm() {
   };
 
   return (
-    <form className="contact-form" id="contactForm" noValidate action={FORMSPREE_URL} method="POST" onSubmit={handleSubmit}>
-      <label htmlFor="name">Full Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" />
-      <small className="error-message" id="nameError">
-        {errors.name}
-      </small>
+    <form className="form" id="contactForm" noValidate action={FORMSPREE_URL} method="POST" onSubmit={handleSubmit}>
+      <div className="field">
+        <input type="text" id="name" name="name" placeholder=" " autoComplete="name" aria-describedby="nameError" />
+        <label htmlFor="name">Full name</label>
+        <small className="field__error" id="nameError">{errors.name}</small>
+      </div>
 
-      <label htmlFor="email">Email Address</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" />
-      <small className="error-message" id="emailError">
-        {errors.email}
-      </small>
+      <div className="field">
+        <input type="email" id="email" name="email" placeholder=" " autoComplete="email" aria-describedby="emailError" />
+        <label htmlFor="email">Email address</label>
+        <small className="field__error" id="emailError">{errors.email}</small>
+      </div>
 
-      <label htmlFor="message">Message</label>
-      <textarea id="message" name="message" rows={5} placeholder="Write your message"></textarea>
-      <small className="error-message" id="messageError">
-        {errors.message}
-      </small>
+      <div className="field">
+        <textarea id="message" name="message" rows={5} placeholder=" " aria-describedby="messageError"></textarea>
+        <label htmlFor="message">Message</label>
+        <small className="field__error" id="messageError">{errors.message}</small>
+      </div>
 
-      <button type="submit" className="primary-btn" disabled={sending}>
-        {sending ? 'Sending...' : 'Send Message'}
+      <button type="submit" className="btn btn--solid-ink" disabled={sending} data-cursor="Send">
+        {sending ? 'Sending...' : 'Send message'}
       </button>
-      <p className={`success-message${status.isError ? ' error' : ''}`} id="successMessage">
+      <p className={`form__status${status.isError ? ' form__status--error' : ''}`} id="successMessage" role="status">
         {status.text}
       </p>
     </form>

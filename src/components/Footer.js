@@ -1,55 +1,55 @@
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import Asset from '@/components/Asset';
+import Clock from '@/components/Clock';
+import Magnetic from '@/components/Magnetic';
 import SocialRow from '@/components/SocialRow';
+import TLink from '@/components/TLink';
 import { CONTACT, NAV_LINKS } from '@/data/site';
+import Icon from '@/components/Icon';
 
 export default function Footer() {
   const pathname = usePathname();
-  const linkStyle = { color: '#c7c7e6' };
+  const onContact = pathname === '/contact';
 
   return (
-    <footer>
-      <div className="footer-container">
-        <div className="footer-column">
-          <div className="footer-brand">
-            <Asset src="Favicon.png" alt="Kazadi Mukendi logo" sizes="44px" />
-            <h2>Kazadi Mukendi</h2>
-          </div>
-          <p>Full Stack Web Developer, building from the ground up.</p>
-          <small>© 2026 Kazadi Mukendi. All rights reserved.</small>
+    <footer className="site-footer">
+      {!onContact && (
+        <div className="site-footer__cta">
+          <p className="site-footer__ask">Have a role or a project in mind?</p>
+          <Magnetic strength={0.2}>
+            <TLink href="/contact" className="site-footer__big" data-cursor="Write">
+              Let&apos;s talk
+            </TLink>
+          </Magnetic>
         </div>
+      )}
 
-        <div className="footer-column">
-          <h3>Quick Links</h3>
-          <ul>
-            {NAV_LINKS.map(({ href, label }) => (
-              <li key={href}>
-                <Link href={href} className={pathname === href ? 'active' : undefined}>
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+      <div className="site-footer__grid">
+        <div>
+          <p className="site-footer__label">Contact</p>
+          <a href={CONTACT.emailHref} target="_blank" rel="noopener noreferrer">{CONTACT.email}</a>
+          <a href={CONTACT.phoneHref}>{CONTACT.phone}</a>
+          <Clock />
         </div>
+        <div>
+          <p className="site-footer__label">Pages</p>
+          {NAV_LINKS.map(({ href, label }) => (
+            <TLink key={href} href={href}>{label}</TLink>
+          ))}
+        </div>
+        <div>
+          <p className="site-footer__label">Elsewhere</p>
+          <SocialRow />
+          <a href="/Assets/KazadiMukendi-CV.pdf" download>Download CV</a>
+        </div>
+      </div>
 
-        <div className="footer-column">
-          <h3>Contact</h3>
-          <p>
-            <a href={CONTACT.emailHref} style={linkStyle}>
-              <i className="fas fa-envelope"></i> {CONTACT.email}
-            </a>
-          </p>
-          <p>
-            <a href={CONTACT.phoneHref} style={linkStyle}>
-              <i className="fas fa-phone"></i> {CONTACT.phone}
-            </a>
-          </p>
-          {/* The old contact page footer had no social icons (they're already on the page). */}
-          {pathname !== '/contact' && <SocialRow />}
-        </div>
+      <div className="site-footer__base">
+        <small>© 2026 Kazadi Mukendi. Built with Next.js.</small>
+        <button type="button" className="to-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          Back to top <Icon name="arrow-up" />
+        </button>
       </div>
     </footer>
   );

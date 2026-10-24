@@ -1,50 +1,45 @@
 import ContactForm from '@/components/ContactForm';
-import FadeIn from '@/components/FadeIn';
 import SocialRow from '@/components/SocialRow';
 import { CONTACT } from '@/data/site';
 
-export const metadata = { title: 'Contact' };
+export const metadata = {
+  title: 'Contact',
+  description: 'Have a role, project or opportunity in mind? Send Kazadi Mukendi a message.',
+  alternates: { canonical: '/contact' },
+};
 
 export default function Contact() {
   return (
-    <main>
-      <section className="contact-hero">
-        <div className="contact-hero-content">
-          <h1>Let&apos;s get in touch</h1>
-          <p>
-            Have a role, project, or opportunity in mind? Send a message and I&apos;ll get back to you as soon as I can.
-          </p>
-        </div>
-      </section>
+    <section className="c-page">
+      <header className="c-page__head">
+        <h1>Let&apos;s get in touch</h1>
+        <p>Have a role, project, or opportunity in mind? Send a message and I&apos;ll get back to you as soon as I can.</p>
+      </header>
 
-      <FadeIn className="contact-section">
+      <div className="c-page__grid">
         <ContactForm />
 
-        <div className="contact-info">
-          <h2>Contact Details</h2>
-          <p>
-            <strong>Email: </strong>
-            <a href={CONTACT.emailHref} style={{ color: '#646464' }}>
-              <i className="fas fa-envelope"></i> {CONTACT.email}
-            </a>
-          </p>
-          <p>
-            <strong>Phone: </strong>
-            <a href={CONTACT.phoneHref} style={{ color: '#646464' }}>
-              <i className="fas fa-phone"></i> {CONTACT.phone}
-            </a>
-          </p>
-          <p>
-            <strong>Location:</strong> {CONTACT.location}
-          </p>
-          <p>
-            <strong>Focus:</strong> Full-stack applications, React, APIs, Firebase, backend structure, admin workflows,
-            and collaborative Git projects.
-          </p>
-
+        <aside className="c-info">
+          <h2>Contact details</h2>
+          <dl>
+            <dt>Email</dt>
+            <dd>
+              <a href={CONTACT.emailHref} target="_blank" rel="noopener noreferrer">{CONTACT.email}</a>
+            </dd>
+            <dt>Phone</dt>
+            <dd>
+              <a href={CONTACT.phoneHref}>{CONTACT.phone}</a>
+            </dd>
+            <dt>Location</dt>
+            <dd>{CONTACT.location}</dd>
+            <dt>Focus</dt>
+            <dd>
+              Full-stack applications, React, APIs, Firebase, backend structure, admin workflows, and collaborative Git projects.
+            </dd>
+          </dl>
           <SocialRow />
-        </div>
-      </FadeIn>
-    </main>
+        </aside>
+      </div>
+    </section>
   );
 }

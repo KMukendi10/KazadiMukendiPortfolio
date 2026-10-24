@@ -1,6 +1,5 @@
-// Project cards + case studies for /projects (extracted verbatim from the old projects.html).
-// Order of `projectCards` = order on the grid AND the Previous/Next order inside the drawer.
-// `caseStudies['portfolio-website']` has no card on purpose (same as the old site) but opens via /projects#portfolio-website.
+// Project cards + case studies. Order of `projectCards` = order on the grid AND the Previous/Next order inside the drawer.
+// `outcome` is the one-line "what this does for a business" shown under each project title.
 
 export const projectCards = [
   {
@@ -15,7 +14,23 @@ export const projectCards = [
     "visit": "https://airbnb-clone-frontend-46hl.onrender.com",
     "description": "A full-stack Airbnb-inspired platform organized into separate guest frontend, backend, and admin applications.",
     "image": "Airbnb.png",
-    "imageAlt": "Airbnb Clone frontend screenshot"
+    "imageAlt": "Airbnb Clone frontend screenshot",
+    "outcome": "Guest site, admin dashboard and API are separate apps, so each can be deployed, secured and changed on its own."
+  },
+  {
+    "id": "portfolio-website",
+    "title": "Portfolio Website",
+    "icon": "Favicon.png",
+    "tags": [
+      "Next.js",
+      "React",
+      "CSS"
+    ],
+    "visit": "https://kazadi-mukendi-portfolio.vercel.app",
+    "description": "This site: rebuilt from plain HTML, CSS and JavaScript into a Next.js app with shared layouts, prerendered pages and a case study for every project.",
+    "image": "Portfolio.png",
+    "imageAlt": "Portfolio website home page",
+    "outcome": "Header, footer and content live in one place, so adding a project is one entry. Pages are prerendered for fast loads and readable link previews."
   },
   {
     "id": "tic-tac-toe",
@@ -29,7 +44,8 @@ export const projectCards = [
     "visit": "https://kazadi-tic-tac-toe.vercel.app/",
     "description": "A reducer-driven 3x3 Tic Tac Toe with a persistent scoreboard and a move-history panel that lets you jump back to any past turn.",
     "image": "TicTacToe.png",
-    "imageAlt": "Tic Tac Toe game screenshot"
+    "imageAlt": "Tic Tac Toe game screenshot",
+    "outcome": "Every change goes through one reducer, so a bug traces to a single action and new features don't break old ones."
   },
   {
     "id": "urban-threads",
@@ -44,7 +60,8 @@ export const projectCards = [
     "visit": "https://urban-threads-online-store-puce.vercel.app/",
     "description": "A full e-commerce app for a fictional streetwear brand with Firebase Authentication, a real product catalog, and a persistent cart.",
     "image": "UrbanThreads.png",
-    "imageAlt": "Urban Threads e-commerce app screenshot"
+    "imageAlt": "Urban Threads e-commerce app screenshot",
+    "outcome": "The cart follows the shopper's account and login only appears at Add to Cart: less friction, fewer carts lost."
   },
   {
     "id": "pinboard",
@@ -58,7 +75,8 @@ export const projectCards = [
     "visit": "https://pin-board-navy.vercel.app/",
     "description": "A responsive note board with search, editing, colors, archive and restore flows, delete undo, and localStorage persistence.",
     "image": "PinBoard.png",
-    "imageAlt": "PinBoard note-taking app preview"
+    "imageAlt": "PinBoard note-taking app preview",
+    "outcome": "Notes persist in the browser, with undo for deletes and restore from the archive, so nothing is lost by accident."
   },
   {
     "id": "book-library",
@@ -72,7 +90,8 @@ export const projectCards = [
     "visit": "https://kmukendi10.github.io/API-Intergratio-Book-Library/",
     "description": "A book search app built on the Open Library API, with proper loading and error states instead of assuming every request succeeds.",
     "image": "BookLibrary.png",
-    "imageAlt": "Book Library app screenshot"
+    "imageAlt": "Book Library app screenshot",
+    "outcome": "Loading and error states mean users never meet a blank screen when the API is slow or down."
   },
   {
     "id": "shopping-clone",
@@ -86,7 +105,8 @@ export const projectCards = [
     "visit": "https://studentzero68-collab.github.io/Shopping-clone/",
     "description": "A group-built React shopping app with shared product and cart state, search, category filtering, pagination, and a complete checkout flow.",
     "image": "ShoppingClone.png",
-    "imageAlt": "Online Mall shopping app preview"
+    "imageAlt": "Online Mall shopping app preview",
+    "outcome": "Shared cart and product state with search, filters and checkout: the whole path from browsing to buying."
   },
   {
     "id": "ihub-capstone",
@@ -101,7 +121,8 @@ export const projectCards = [
     "visit": "https://client-website-prototype-i-hub.vercel.app/",
     "description": "A responsive multi-page website built by a six-person team, with communication, Git workflow, and pull-request coordination managed by me.",
     "image": "iHubWebsite.png",
-    "imageAlt": "iHub Africa website prototype screenshot"
+    "imageAlt": "iHub Africa website prototype screenshot",
+    "outcome": "Six people, one codebase, no unresolved merge conflicts reaching main: every pull request was reviewed first."
   },
   {
     "id": "google-keep-react",
@@ -115,7 +136,8 @@ export const projectCards = [
     "visit": "https://google-keep-clone-react-gamma.vercel.app/",
     "description": "A React rebuild of Google Keep with a masonry note grid, labels, dark mode, and drag-and-drop reordering.",
     "image": "GoogleKeepReact.png",
-    "imageAlt": "Google Keep Clone React app screenshot"
+    "imageAlt": "Google Keep Clone React app screenshot",
+    "outcome": "Labels and drag-and-drop let people organise their notes their own way."
   },
   {
     "id": "error404",
@@ -129,7 +151,8 @@ export const projectCards = [
     "visit": "https://error404-jade.vercel.app/",
     "description": "A responsive group project turning a standard 404 state into an animated experience with a flying paper plane and glowing typography.",
     "image": "Error404.png",
-    "imageAlt": "Animated 404 Error Page project preview"
+    "imageAlt": "Animated 404 Error Page project preview",
+    "outcome": "A broken link becomes a branded moment instead of a dead end."
   },
   {
     "id": "button-wave-style",
@@ -142,7 +165,8 @@ export const projectCards = [
     "visit": "https://button-wave-style.vercel.app/",
     "description": "A collaborative CSS interaction project exploring a wave-style button animation with a clean, responsive presentation.",
     "image": "ButtonWave.png",
-    "imageAlt": "Button Wave Style project preview"
+    "imageAlt": "Button Wave Style project preview",
+    "outcome": "A CSS-only interaction effect, so it adds no JavaScript to load or maintain."
   },
   {
     "id": "twitter-clone",
@@ -156,7 +180,8 @@ export const projectCards = [
     "visit": "https://twitter-landing-page-three.vercel.app/",
     "description": "A Twitter/X feed clone with real interactivity — composing posts and updating state live in the browser.",
     "image": "Twitter.png",
-    "imageAlt": "Twitter/X clone project screenshot"
+    "imageAlt": "Twitter/X clone project screenshot",
+    "outcome": "New posts appear on screen instantly, with state handled in the browser and no page reloads."
   },
   {
     "id": "quiz-widget",
@@ -170,18 +195,144 @@ export const projectCards = [
     "visit": "https://kmukendi10.github.io/quiz-widget-project/",
     "description": "An interactive quiz with instant feedback, built to focus purely on JavaScript scoring logic rather than layout.",
     "image": "QuizWidget.png",
-    "imageAlt": "Interactive quiz widget project screenshot"
+    "imageAlt": "Interactive quiz widget project screenshot",
+    "outcome": "Instant feedback and a running score after every answer."
+  },
+  {
+    "id": "mtv-base-brands-live-here",
+    "title": "Brands Live Here",
+    "icon": "Favicon.png",
+    "tags": [
+      "Campaign",
+      "HTML",
+      "CSS"
+    ],
+    "visit": "https://brandslivehere.vercel.app",
+    "description": "A case study site for the MTV Base \"Brands Live Here\" street campaign by Viacom Africa, shown from sketches to murals in Maboneng and Soweto.",
+    "image": "MTVBase-BrandsLiveHere.png",
+    "imageAlt": "Brands Live Here case study site",
+    "outcome": "Gives an agency a shareable page that shows a street campaign from concept to rollout, not just a photo dump."
+  },
+  {
+    "id": "corona-log-off-lime-in",
+    "title": "Corona: Log Off. Lime In.",
+    "icon": "Favicon.png",
+    "tags": [
+      "Campaign",
+      "HTML",
+      "CSS"
+    ],
+    "visit": "https://coronalogofflimeon.vercel.app",
+    "description": "A case study site for Corona's \"This Is Living\" public art installation and urban billboard in Braamfontein Square, Johannesburg.",
+    "image": "Corona-LogOffLimeIn.png",
+    "imageAlt": "Corona: Log Off. Lime In. case study site",
+    "outcome": "Shows a brand how a mural reads as a story: the brief, the idea and the build, in one scrollable page."
+  },
+  {
+    "id": "standard-bank-happinext",
+    "title": "Standard Bank: Happinext",
+    "icon": "Favicon.png",
+    "tags": [
+      "Campaign",
+      "HTML",
+      "CSS"
+    ],
+    "visit": "https://standardbankhanddrawnooh.vercel.app",
+    "description": "A case study site for Standard Bank's \"Enjoy Your Happinext\" hand-drawn out-of-home campaign in Johannesburg.",
+    "image": "StandardBank-Happinext.png",
+    "imageAlt": "Standard Bank: Happinext case study site",
+    "outcome": "Walks a client from sketch to mural to bus, so the hand-drawn craft is visible and not just the final wall."
+  },
+  {
+    "id": "famiglia-caruso",
+    "title": "Famiglia Caruso",
+    "icon": "Favicon.png",
+    "tags": [
+      "Campaign",
+      "HTML",
+      "CSS"
+    ],
+    "visit": "https://famigliacaruso.vercel.app",
+    "description": "A case study site for the \"Brigade du Kiff\" T-shirt illustration made for Famiglia Caruso, a Neapolitan pizzeria in Nantes.",
+    "image": "FamigliaCaruso-BrigadeDuKiff.png",
+    "imageAlt": "Famiglia Caruso case study site",
+    "outcome": "Shows how a small local business can stretch its brand into the community through merchandise, with the proof on one page."
+  },
+  {
+    "id": "lucky-portfolio",
+    "title": "Lucky Mqedlana Portfolio",
+    "icon": "Favicon.png",
+    "tags": [
+      "Campaign",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "visit": "https://luckyportfolio-ten.vercel.app",
+    "description": "A creative portfolio site for Lucky Nhlanhla Mqedlana, a multimedia creative and graphic designer, with filters, a day/night toggle and links to full case studies.",
+    "image": "LuckyPortfolio.png",
+    "imageAlt": "Lucky Mqedlana Portfolio case study site",
+    "outcome": "Gives a freelance creative one link for his campaigns, murals and illustration, so a client can see the range and get in touch."
   }
 ];
 
 export const caseStudies = {
+  "airbnb-clone": {
+    "id": "airbnb-clone",
+    "ariaLabel": "Airbnb Clone case study",
+    "image": "Airbnb.png",
+    "imageAlt": "Airbnb Clone frontend screenshot",
+    "tag": "JavaScript, CSS & full-stack architecture",
+    "title": "A Platform in Three Parts: Airbnb Clone",
+    "sections": {
+      "problem": {
+        "heading": "The Brief",
+        "body": "A short-term rental marketplace serves three different people at once: guests who want to find and book a place, hosts who list it, and operators who keep the platform running. A single landing page can't serve any of them. This project addresses what it takes to build a product where each group gets its own experience and only the right people can do the right things, such as an admin managing listings that guests should never be able to touch."
+      },
+      "approach": {
+        "heading": "The Build",
+        "body": "I organised the repository into independent frontend, backend, and admin applications so each part of the product has a clear responsibility and can evolve without turning the project into one large codebase. The guest frontend and the admin dashboard are React apps built to match Figma designs, including filter pills that filter listings on the client, and they talk to a Node.js/Express backend with MongoDB for the data. The backend handles authentication with user roles and image uploads, so what a person sees and can do depends on who they are."
+      },
+      "tradeoffs": {
+        "heading": "The Trade-off",
+        "body": "Separating the applications adds setup and coordination overhead: three things to run locally, separate environment variables, and cross-origin configuration (I had to resolve CORS issues to get the apps talking to each other). In return it reflects a more realistic product structure and keeps guest-facing, server, and administrative concerns isolated, so each can be deployed and secured on its own terms."
+      },
+      "outcome": {
+        "heading": "The Result",
+        "body": "The repository now provides a foundation for a full Airbnb-style platform with guest, host, and admin flows. For a marketplace business, that separation is what lets the public booking experience, the management tools, and the data layer each be owned, scaled, and secured independently. The guest frontend is deployed on Render; backend and admin deployment links will be added once those services are hosted and their environment variables are configured."
+      }
+    },
+    "tools": [
+      "JavaScript",
+      "CSS",
+      "Backend",
+      "Admin Dashboard",
+      "Git",
+      "GitHub"
+    ],
+    "team": null,
+    "links": [
+      {
+        "label": "View Website",
+        "href": "https://airbnb-clone-frontend-46hl.onrender.com",
+        "kind": "primary",
+        "internal": false
+      },
+      {
+        "label": "View Code",
+        "href": "https://github.com/KMukendi10/Airbnb-Clone",
+        "kind": "outline",
+        "internal": false
+      }
+    ]
+  },
   "portfolio-website": {
     "id": "portfolio-website",
     "ariaLabel": "Portfolio Website case study",
-    "image": "KazadiProfile.png",
-    "imageAlt": "Portfolio site preview",
-    "tag": "HTML, CSS & JavaScript",
-    "title": "Built to Grow: My Portfolio System",
+    "image": "Portfolio.png",
+    "imageAlt": "Portfolio website home page",
+    "tag": "Next.js, React & CSS",
+    "title": "Built to Grow: My Portfolio, Rebuilt in Next.js",
     "sections": {
       "problem": {
         "heading": "The Brief",
@@ -189,36 +340,84 @@ export const caseStudies = {
       },
       "approach": {
         "heading": "The Build",
-        "body": "I split the site into independent pages (home, about, projects, contact) instead of one long scroll, so each visitor goes straight to what they came for. The projects page is a visual grid for quick scanning, and every project opens its own case study in this slide-in panel, organised as the problem, the build, the trade-off, and the result, so the thinking behind the work is visible and not just the finished screen. A dark/light theme, a responsive layout, and a contact form connected to a real form service round it out."
+        "body": "I rebuilt the portfolio from plain HTML, CSS and JavaScript into a Next.js (App Router) app. Home, About, Work and Contact are routes, the header, footer and intro live once in the shared layout, and every case study opens in the same slide-in panel from one data file, so adding a project means adding an entry, not editing four pages. Images go through Next's image component, the dark/light theme is applied before first paint so it never flashes, and the contact form still posts to a real form service."
       },
       "tradeoffs": {
         "heading": "The Trade-off",
-        "body": "I chose plain HTML, CSS, and JavaScript over a framework or static site generator. That kept the build dependency-free and let me focus on fundamentals, and the site deploys to Vercel with no build step. The cost is duplicated markup: the header and footer are repeated on every page, so changing the navigation means editing every file and risks the pages drifting apart."
+        "body": "A framework adds a build step and new concepts, like Server and Client Components, where plain HTML had none. I accepted that because the old site copied the header and footer into every file and the pages had started to drift apart. The cost is real: the site is harder to change than a static page, and it has to be built and deployed rather than just uploaded."
       },
       "outcome": {
         "heading": "The Result",
-        "body": "The site now works as a live record of my progress. The structure has held up across three terms of new content without a rewrite, and every project is reachable, explained, and linked to its code. For anyone evaluating me, that turns “trust me, I can build” into something they can open and check for themselves. The next improvement is removing the markup duplication, likely with a build tool or JS-rendered includes for the shared header and footer."
+        "body": "The shared parts now exist once, the pages are prerendered so they load fast and search engines and link previews can read them, and old .html links redirect to the new routes. For anyone evaluating me, the site is also working proof of Next.js, not just a line on a CV. The next step is measuring it with Lighthouse and keeping this data file in step with my CV."
       }
     },
     "tools": [
-      "HTML",
-      "CSS",
+      "Next.js",
+      "React",
       "JavaScript",
+      "CSS",
       "Git",
       "GitHub",
-      "Chrome DevTools"
+      "Vercel"
     ],
     "team": null,
     "links": [
       {
         "label": "View Website",
-        "href": "/",
+        "href": "https://kazadi-mukendi-portfolio.vercel.app",
         "kind": "primary",
-        "internal": true
+        "internal": false
       },
       {
         "label": "View Code",
         "href": "https://github.com/KMukendi10/KazadiMukendiPortfolio",
+        "kind": "outline",
+        "internal": false
+      }
+    ]
+  },
+  "tic-tac-toe": {
+    "id": "tic-tac-toe",
+    "ariaLabel": "Tic Tac Toe case study",
+    "image": "TicTacToe.png",
+    "imageAlt": "Tic Tac Toe game screenshot",
+    "tag": "React & useReducer",
+    "title": "One Reducer, Every Move: Tic Tac Toe",
+    "sections": {
+      "problem": {
+        "heading": "The Brief",
+        "body": "Most bugs in interactive apps come from state that is changed in many places at once, so nobody can say how the screen got into its current condition. The same problem shows up in shopping carts, forms, and dashboards, and it gets worse with every feature added. This project uses a simple game to practise the fix: all state in one place, and every change going through one predictable path. The requirements were a 3x3 Tic Tac Toe with clean win/draw detection, one manual feature built without AI assistance, and one advanced feature on top."
+      },
+      "approach": {
+        "heading": "The Build",
+        "body": "All game state lives in one <code>useReducer</code> hook with four actions (MAKE_MOVE, JUMP_TO_MOVE, NEW_GAME, and RESET_SCORES), so every change to the board, scoreboard, or history runs through the same predictable path. Because every change is a named action, any bug can be traced back to the exact action that caused it, and adding a feature means adding an action instead of touching logic scattered across components."
+      },
+      "tradeoffs": {
+        "heading": "The Trade-off",
+        "body": "Routing every interaction through one reducer took more upfront action-design work than scattering useState calls across components. The payoff is that it kept the scoreboard, move history, and board state consistent as features were added, which is the trade that matters in any app expected to keep growing."
+      },
+      "outcome": {
+        "heading": "The Result",
+        "body": "A scoreboard that persists across new games and resets on demand, plus a move-history panel where clicking any past move jumps the board back to that state. Making a new move from a jumped-back point branches off and discards the old future, matching the official React tutorial's time-travel behaviour. Beyond the game, it is a small proof that I can design state so it stays debuggable as an app grows, which is what keeps maintenance costs down in real product work."
+      }
+    },
+    "tools": [
+      "React",
+      "Vite",
+      "useReducer",
+      "State Management"
+    ],
+    "team": null,
+    "links": [
+      {
+        "label": "View Website",
+        "href": "https://kazadi-tic-tac-toe.vercel.app/",
+        "kind": "primary",
+        "internal": false
+      },
+      {
+        "label": "View Code",
+        "href": "https://github.com/KMukendi10/KazadiTicTacToe",
         "kind": "outline",
         "internal": false
       }
@@ -273,50 +472,49 @@ export const caseStudies = {
       }
     ]
   },
-  "google-keep-react": {
-    "id": "google-keep-react",
-    "ariaLabel": "Google Keep Clone React case study",
-    "image": "GoogleKeepReact.png",
-    "imageAlt": "Google Keep Clone React preview",
-    "tag": "React, JavaScript & Vite",
-    "title": "Notes, Labels & State: Google Keep Rebuilt",
+  "pinboard": {
+    "id": "pinboard",
+    "ariaLabel": "PinBoard case study",
+    "image": "PinBoard.png",
+    "imageAlt": "PinBoard note-taking app preview",
+    "tag": "HTML, CSS & JavaScript",
+    "title": "A Board That Remembers: PinBoard",
     "sections": {
       "problem": {
         "heading": "The Brief",
-        "body": "People capture ideas faster than they organise them. Quick thoughts, to-dos, and reminders pile up in one place until nothing can be found, so a notes app has to make capture instant and finding things later easy, through labels, archiving, reminders, and a trash that forgives mistakes. I'd already built this as a vanilla JS clone, so the question this time was whether the same product could be structured so it keeps growing features without turning into one tangled script. The assignment also required one manual feature and one AI-assisted feature, and honesty about which was which."
+        "body": "People jot things down constantly, whether tasks, ideas, or things to remember, and a notes tool that is awkward or that loses what you wrote quickly stops being used. A useful board has to cover the everyday actions of creating, editing, searching, archiving, restoring, and deleting notes, and it should forgive mistakes. The project needed to go beyond a static note layout and support that whole lifecycle without an account, a server, or an install."
       },
       "approach": {
         "heading": "The Build",
-        "body": "Every piece of shared state (notes, labels, theme, and reminders) lives in one hook, <code>useKeepStore</code>, instead of being scattered across components, so every component reads and updates the same source of truth. The interface is split into focused components, including a masonry note grid. Labels were the manual build; dark mode and drag-and-drop reordering were the AI-assisted features, where I used AI to help scaffold the logic and then verified every interaction by hand in the browser."
+        "body": "I built the note board in vanilla HTML, CSS, and JavaScript, with a single state model rendered into the board and persisted to localStorage. The interface also includes colour selection so notes can be told apart at a glance, tooltips, a responsive sidebar, and an undo window after deletion so an accidental delete isn't permanent."
       },
       "tradeoffs": {
         "heading": "The Trade-off",
-        "body": "Notes still persist to localStorage rather than a backend. That kept the project focused on component structure and state management instead of infrastructure, but it means notes live in one browser and don't sync between devices, which is something a real notes app can't get away with. Urban Threads' cart already shows the fix, and it is the obvious next step."
+        "body": "Keeping the app fully static makes it simple to deploy and run without a backend, but localStorage means notes remain tied to the current browser instead of syncing across devices. That is acceptable for a lightweight personal tool, and it is the first thing I would change if more than one device mattered."
       },
       "outcome": {
         "heading": "The Result",
-        "body": "A fully working notes app with a masonry grid, label filtering, archive and trash with a 7-day auto-purge, reminders sorted by due date, dark mode, and drag-to-reorder. The lesson for a real product is that a productivity tool lives or dies on trust: people only keep using a notes app if they believe it won't lose their notes, which is why archive, trash, and reminders matter as much as the editor itself. The next step is swapping localStorage for Firebase, the same pattern I already proved out on Urban Threads, so notes follow the user across devices."
+        "body": "A live, responsive note-taking app that covers the whole note lifecycle and demonstrates practical state management, persistence, filtering, and interaction design without a framework or build step. Because it needs no backend or sign-up, it is usable the moment it loads, which is a real advantage for lightweight tools where friction kills adoption. The obvious improvement is syncing notes across devices."
       }
     },
     "tools": [
-      "React",
-      "JavaScript",
-      "Vite",
+      "HTML",
       "CSS",
-      "Git",
-      "GitHub"
+      "JavaScript",
+      "localStorage",
+      "Responsive Design"
     ],
     "team": null,
     "links": [
       {
         "label": "View Website",
-        "href": "https://google-keep-clone-react-gamma.vercel.app/",
+        "href": "https://pin-board-navy.vercel.app/",
         "kind": "primary",
         "internal": false
       },
       {
         "label": "View Code",
-        "href": "https://github.com/KMukendi10/GoogleKeepCloneReact.git",
+        "href": "https://github.com/KMukendi10/PinBoard",
         "kind": "outline",
         "internal": false
       }
@@ -371,98 +569,50 @@ export const caseStudies = {
       }
     ]
   },
-  "quiz-widget": {
-    "id": "quiz-widget",
-    "ariaLabel": "Quiz Widget case study",
-    "image": "QuizWidget.png",
-    "imageAlt": "Quiz Widget preview",
-    "tag": "HTML, CSS & JavaScript",
-    "title": "Making Every Answer Count: Quiz Widget",
+  "shopping-clone": {
+    "id": "shopping-clone",
+    "ariaLabel": "Online Mall case study",
+    "image": "ShoppingClone.png",
+    "imageAlt": "Online Mall shopping app preview",
+    "tag": "React, Context API & Vite — 6-person group",
+    "title": "One Cart, Shared State: Online Mall",
     "sections": {
       "problem": {
         "heading": "The Brief",
-        "body": "Quizzes are how schools, trainers, and onboarding programmes check that people have actually understood something, so the scoring has to be trustworthy. If a score can be thrown off by a double-click or a re-render, the result means nothing. I wanted a small project focused purely on that logic, tracking which question you're on and how many you've got right, correctly every time, without layout work getting in the way, since every earlier project had already covered layout."
+        "body": "Online shoppers abandon purchases when the experience feels disjointed: the cart doesn't match what they picked, the price changes at checkout, or there's no clear view of the total. For a South African audience there is extra complexity, because prices involve VAT, delivery costs, different payment methods, and instalment plans. Our group needed to build a responsive shopping experience (a live product catalogue, filtering, pagination, a cart, and checkout) that behaves like one connected application and shows honest, local pricing."
       },
       "approach": {
         "heading": "The Build",
-        "body": "Score and question index are tracked in JavaScript variables, not read back from the DOM, so the result is always computed instead of counted off whatever happens to be on screen. Answer buttons use event delegation on the container instead of a separate listener per button, which keeps the code short and works no matter how many answers a question has. Each answer gets instant feedback, and a final screen reports the score."
+        "body": "We used React Context providers to share product and cart state across the navigation, catalogue, product cards, pagination, and checkout drawer, so every part of the app agrees on what's in the cart. Products come from DummyJSON, with a fallback list for failed requests so the shop never shows an empty page. Pricing handles South African VAT, delivery, payment methods, and instalment plans inside a multi-step checkout."
       },
       "tradeoffs": {
         "heading": "The Trade-off",
-        "body": "Questions are hardcoded directly in the JS file rather than loaded from a separate JSON file or API. For a quiz this size that is the right call, because pulling in a fetch layer for a dozen static questions would add complexity with no real payoff. The cost is that adding or editing a question means editing the JavaScript, which a non-developer such as a teacher or trainer couldn't do."
+        "body": "Context kept the shared state understandable for a six-person group and avoided adding Redux setup, but the growing application still depends on clear provider boundaries and disciplined component responsibilities. If components start reaching into state they don't own, re-renders spread and bugs get harder to trace, so the group had to agree on who owns what."
       },
       "outcome": {
         "heading": "The Result",
-        "body": "A self-contained quiz with instant feedback per question and a final score screen. Because the scoring logic is separate from the content, it is the core of something a school, trainer, or onboarding programme could reuse with their own questions. The next step is moving the question set into its own JSON file so questions can be added without touching the scoring logic at all, which is the change that would let a non-developer maintain it."
+        "body": "A deployed, responsive online mall with catalogue search, categories, pagination, theme persistence, cart calculations, and a multi-step checkout, built as a group. For a retailer, the value is a storefront where customers can see the real cost of an order before they commit, including VAT and delivery, which removes a common reason shoppers abandon a cart at the last step. Building it in a six-person team also meant sharing one codebase and agreeing on structure."
       }
     },
     "tools": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Git",
-      "GitHub"
+      "React",
+      "React Router",
+      "Context API",
+      "Vite",
+      "DummyJSON API",
+      "Group Collaboration"
     ],
-    "team": null,
+    "team": "<strong>Contributors:</strong> Kazadi Mukendi, studentzero68-collab, naledimathebula, Ayandarrrr, cursoragent, and Ricardo-ngozo.",
     "links": [
       {
         "label": "View Website",
-        "href": "https://kmukendi10.github.io/quiz-widget-project/",
+        "href": "https://studentzero68-collab.github.io/Shopping-clone/",
         "kind": "primary",
         "internal": false
       },
       {
         "label": "View Code",
-        "href": "https://github.com/KMukendi10/quiz-widget-project.git",
-        "kind": "outline",
-        "internal": false
-      }
-    ]
-  },
-  "twitter-clone": {
-    "id": "twitter-clone",
-    "ariaLabel": "Twitter/X Clone case study",
-    "image": "Twitter.png",
-    "imageAlt": "Twitter/X clone preview",
-    "tag": "HTML, CSS & JavaScript",
-    "title": "A Feed That Remembers: Twitter/X Clone",
-    "sections": {
-      "problem": {
-        "heading": "The Brief",
-        "body": "Social products succeed or fail on how immediate they feel: you post, the feed updates, the like count moves, and nothing reloads. A static mock-up hides the hard part, which is keeping what's on screen in sync with what the user just did. Every project I'd built before this was a static layout clone, good for CSS practice but none of them needed to remember anything. I wanted a build that had to track state and respond to user actions in real time, closer to how a real product behaves."
-      },
-      "approach": {
-        "heading": "The Build",
-        "body": "I rebuilt the core Twitter/X feed interface with HTML and CSS for the layout, then used JavaScript to handle interactions: composing a post, updating counts, and reflecting every state change in the DOM immediately instead of reloading anything. Around the feed I added a compose modal, a trending sidebar, an Explore page, and dark mode so it behaves like a small product and not a single screen."
-      },
-      "tradeoffs": {
-        "heading": "The Trade-off",
-        "body": "I kept state in memory in the browser instead of wiring up a backend or persistence layer. That let me focus on getting the interaction logic and DOM updates right first, but nothing is saved between page reloads, and a real social product would lose every post on refresh. This is a prototype of the interface, not of the data layer."
-      },
-      "outcome": {
-        "heading": "The Result",
-        "body": "It is my most functionally complete project so far: a feed that responds instantly to what the user does, which is the core experience any social or community product has to get right before anything else matters. It shows I can manage interface state without a framework. The next step is adding persistence, likely local storage first and an API later, so state survives a refresh."
-      }
-    },
-    "tools": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Git",
-      "GitHub",
-      "Chrome DevTools"
-    ],
-    "team": null,
-    "links": [
-      {
-        "label": "View Website",
-        "href": "https://twitter-landing-page-three.vercel.app/",
-        "kind": "primary",
-        "internal": false
-      },
-      {
-        "label": "View Code",
-        "href": "https://github.com/KMukendi10/TwitterLandingPage.git",
+        "href": "https://github.com/studentzero68-collab/Shopping-clone.git",
         "kind": "outline",
         "internal": false
       }
@@ -518,48 +668,50 @@ export const caseStudies = {
       }
     ]
   },
-  "button-wave-style": {
-    "id": "button-wave-style",
-    "ariaLabel": "Button Wave Style case study",
-    "image": "ButtonWave.png",
-    "imageAlt": "Button Wave Style preview",
-    "tag": "HTML & CSS",
-    "title": "Making Motion Visible: Button Wave Style",
+  "google-keep-react": {
+    "id": "google-keep-react",
+    "ariaLabel": "Google Keep Clone React case study",
+    "image": "GoogleKeepReact.png",
+    "imageAlt": "Google Keep Clone React preview",
+    "tag": "React, JavaScript & Vite",
+    "title": "Notes, Labels & State: Google Keep Rebuilt",
     "sections": {
       "problem": {
         "heading": "The Brief",
-        "body": "Buttons are where a website asks for something: sign up, buy, send. When a button gives no feedback, users hesitate and wonder whether they clicked it. The problem was to make a button feel responsive and worth clicking using only CSS, with no JavaScript and no heavy component library to slow the page down or get in the way of reuse. As a group project, we aimed for a component small enough that any team could drop it into their own site."
+        "body": "People capture ideas faster than they organise them. Quick thoughts, to-dos, and reminders pile up in one place until nothing can be found, so a notes app has to make capture instant and finding things later easy, through labels, archiving, reminders, and a trash that forgives mistakes. I'd already built this as a vanilla JS clone, so the question this time was whether the same product could be structured so it keeps growing features without turning into one tangled script. The assignment also required one manual feature and one AI-assisted feature, and honesty about which was which."
       },
       "approach": {
         "heading": "The Build",
-        "body": "Our group used layered CSS shapes and hover transitions to create the wave effect, keeping the markup small and the interaction easy to reuse. Because the motion is pure CSS, the button works anywhere plain HTML does with nothing to install, and the live demo is responsive across screen sizes."
+        "body": "Every piece of shared state (notes, labels, theme, and reminders) lives in one hook, <code>useKeepStore</code>, instead of being scattered across components, so every component reads and updates the same source of truth. The interface is split into focused components, including a masonry note grid. Labels were the manual build; dark mode and drag-and-drop reordering were the AI-assisted features, where I used AI to help scaffold the logic and then verified every interaction by hand in the browser."
       },
       "tradeoffs": {
         "heading": "The Trade-off",
-        "body": "A focused animation keeps the component fast and portable, but motion has to earn its place. A wave that is too slow or too busy becomes an annoyance, and low-contrast text on a moving background is hard to read. It needs careful timing and contrast choices to stay readable across themes and screen sizes."
+        "body": "Notes still persist to localStorage rather than a backend. That kept the project focused on component structure and state management instead of infrastructure, but it means notes live in one browser and don't sync between devices, which is something a real notes app can't get away with. Urban Threads' cart already shows the fix, and it is the obvious next step."
       },
       "outcome": {
         "heading": "The Result",
-        "body": "A live, responsive button experiment that shows how much personality and feedback a call-to-action can carry with core CSS alone. For a business, small interaction details like this are what make a site feel polished and trustworthy, at almost no cost in page weight or dependencies. It also demonstrated collaborative delivery: several people contributing to one small, well-scoped component."
+        "body": "A fully working notes app with a masonry grid, label filtering, archive and trash with a 7-day auto-purge, reminders sorted by due date, dark mode, and drag-to-reorder. The lesson for a real product is that a productivity tool lives or dies on trust: people only keep using a notes app if they believe it won't lose their notes, which is why archive, trash, and reminders matter as much as the editor itself. The next step is swapping localStorage for Firebase, the same pattern I already proved out on Urban Threads, so notes follow the user across devices."
       }
     },
     "tools": [
-      "HTML",
+      "React",
+      "JavaScript",
+      "Vite",
       "CSS",
-      "Animations",
-      "Responsive Design"
+      "Git",
+      "GitHub"
     ],
     "team": null,
     "links": [
       {
         "label": "View Website",
-        "href": "https://button-wave-style.vercel.app/",
+        "href": "https://google-keep-clone-react-gamma.vercel.app/",
         "kind": "primary",
         "internal": false
       },
       {
         "label": "View Code",
-        "href": "https://github.com/KMukendi10/Button-Wave--Style",
+        "href": "https://github.com/KMukendi10/GoogleKeepCloneReact.git",
         "kind": "outline",
         "internal": false
       }
@@ -614,180 +766,131 @@ export const caseStudies = {
       }
     ]
   },
-  "tic-tac-toe": {
-    "id": "tic-tac-toe",
-    "ariaLabel": "Tic Tac Toe case study",
-    "image": "TicTacToe.png",
-    "imageAlt": "Tic Tac Toe game screenshot",
-    "tag": "React & useReducer",
-    "title": "One Reducer, Every Move: Tic Tac Toe",
+  "button-wave-style": {
+    "id": "button-wave-style",
+    "ariaLabel": "Button Wave Style case study",
+    "image": "ButtonWave.png",
+    "imageAlt": "Button Wave Style preview",
+    "tag": "HTML & CSS",
+    "title": "Making Motion Visible: Button Wave Style",
     "sections": {
       "problem": {
         "heading": "The Brief",
-        "body": "Most bugs in interactive apps come from state that is changed in many places at once, so nobody can say how the screen got into its current condition. The same problem shows up in shopping carts, forms, and dashboards, and it gets worse with every feature added. This project uses a simple game to practise the fix: all state in one place, and every change going through one predictable path. The requirements were a 3x3 Tic Tac Toe with clean win/draw detection, one manual feature built without AI assistance, and one advanced feature on top."
+        "body": "Buttons are where a website asks for something: sign up, buy, send. When a button gives no feedback, users hesitate and wonder whether they clicked it. The problem was to make a button feel responsive and worth clicking using only CSS, with no JavaScript and no heavy component library to slow the page down or get in the way of reuse. As a group project, we aimed for a component small enough that any team could drop it into their own site."
       },
       "approach": {
         "heading": "The Build",
-        "body": "All game state lives in one <code>useReducer</code> hook with four actions (MAKE_MOVE, JUMP_TO_MOVE, NEW_GAME, and RESET_SCORES), so every change to the board, scoreboard, or history runs through the same predictable path. Because every change is a named action, any bug can be traced back to the exact action that caused it, and adding a feature means adding an action instead of touching logic scattered across components."
+        "body": "Our group used layered CSS shapes and hover transitions to create the wave effect, keeping the markup small and the interaction easy to reuse. Because the motion is pure CSS, the button works anywhere plain HTML does with nothing to install, and the live demo is responsive across screen sizes."
       },
       "tradeoffs": {
         "heading": "The Trade-off",
-        "body": "Routing every interaction through one reducer took more upfront action-design work than scattering useState calls across components. The payoff is that it kept the scoreboard, move history, and board state consistent as features were added, which is the trade that matters in any app expected to keep growing."
+        "body": "A focused animation keeps the component fast and portable, but motion has to earn its place. A wave that is too slow or too busy becomes an annoyance, and low-contrast text on a moving background is hard to read. It needs careful timing and contrast choices to stay readable across themes and screen sizes."
       },
       "outcome": {
         "heading": "The Result",
-        "body": "A scoreboard that persists across new games and resets on demand, plus a move-history panel where clicking any past move jumps the board back to that state. Making a new move from a jumped-back point branches off and discards the old future, matching the official React tutorial's time-travel behaviour. Beyond the game, it is a small proof that I can design state so it stays debuggable as an app grows, which is what keeps maintenance costs down in real product work."
-      }
-    },
-    "tools": [
-      "React",
-      "Vite",
-      "useReducer",
-      "State Management"
-    ],
-    "team": null,
-    "links": [
-      {
-        "label": "View Website",
-        "href": "https://kazadi-tic-tac-toe.vercel.app/",
-        "kind": "primary",
-        "internal": false
-      },
-      {
-        "label": "View Code",
-        "href": "https://github.com/KMukendi10/KazadiTicTacToe",
-        "kind": "outline",
-        "internal": false
-      }
-    ]
-  },
-  "shopping-clone": {
-    "id": "shopping-clone",
-    "ariaLabel": "Online Mall case study",
-    "image": "ShoppingClone.png",
-    "imageAlt": "Online Mall shopping app preview",
-    "tag": "React, Context API & Vite — 6-person group",
-    "title": "One Cart, Shared State: Online Mall",
-    "sections": {
-      "problem": {
-        "heading": "The Brief",
-        "body": "Online shoppers abandon purchases when the experience feels disjointed: the cart doesn't match what they picked, the price changes at checkout, or there's no clear view of the total. For a South African audience there is extra complexity, because prices involve VAT, delivery costs, different payment methods, and instalment plans. Our group needed to build a responsive shopping experience (a live product catalogue, filtering, pagination, a cart, and checkout) that behaves like one connected application and shows honest, local pricing."
-      },
-      "approach": {
-        "heading": "The Build",
-        "body": "We used React Context providers to share product and cart state across the navigation, catalogue, product cards, pagination, and checkout drawer, so every part of the app agrees on what's in the cart. Products come from DummyJSON, with a fallback list for failed requests so the shop never shows an empty page. Pricing handles South African VAT, delivery, payment methods, and instalment plans inside a multi-step checkout."
-      },
-      "tradeoffs": {
-        "heading": "The Trade-off",
-        "body": "Context kept the shared state understandable for a six-person group and avoided adding Redux setup, but the growing application still depends on clear provider boundaries and disciplined component responsibilities. If components start reaching into state they don't own, re-renders spread and bugs get harder to trace, so the group had to agree on who owns what."
-      },
-      "outcome": {
-        "heading": "The Result",
-        "body": "A deployed, responsive online mall with catalogue search, categories, pagination, theme persistence, cart calculations, and a multi-step checkout, built as a group. For a retailer, the value is a storefront where customers can see the real cost of an order before they commit, including VAT and delivery, which removes a common reason shoppers abandon a cart at the last step. Building it in a six-person team also meant sharing one codebase and agreeing on structure."
-      }
-    },
-    "tools": [
-      "React",
-      "React Router",
-      "Context API",
-      "Vite",
-      "DummyJSON API",
-      "Group Collaboration"
-    ],
-    "team": "<strong>Contributors:</strong> Kazadi Mukendi, studentzero68-collab, naledimathebula, Ayandarrrr, cursoragent, and Ricardo-ngozo.",
-    "links": [
-      {
-        "label": "View Website",
-        "href": "https://studentzero68-collab.github.io/Shopping-clone/",
-        "kind": "primary",
-        "internal": false
-      },
-      {
-        "label": "View Code",
-        "href": "https://github.com/studentzero68-collab/Shopping-clone.git",
-        "kind": "outline",
-        "internal": false
-      }
-    ]
-  },
-  "pinboard": {
-    "id": "pinboard",
-    "ariaLabel": "PinBoard case study",
-    "image": "PinBoard.png",
-    "imageAlt": "PinBoard note-taking app preview",
-    "tag": "HTML, CSS & JavaScript",
-    "title": "A Board That Remembers: PinBoard",
-    "sections": {
-      "problem": {
-        "heading": "The Brief",
-        "body": "People jot things down constantly, whether tasks, ideas, or things to remember, and a notes tool that is awkward or that loses what you wrote quickly stops being used. A useful board has to cover the everyday actions of creating, editing, searching, archiving, restoring, and deleting notes, and it should forgive mistakes. The project needed to go beyond a static note layout and support that whole lifecycle without an account, a server, or an install."
-      },
-      "approach": {
-        "heading": "The Build",
-        "body": "I built the note board in vanilla HTML, CSS, and JavaScript, with a single state model rendered into the board and persisted to localStorage. The interface also includes colour selection so notes can be told apart at a glance, tooltips, a responsive sidebar, and an undo window after deletion so an accidental delete isn't permanent."
-      },
-      "tradeoffs": {
-        "heading": "The Trade-off",
-        "body": "Keeping the app fully static makes it simple to deploy and run without a backend, but localStorage means notes remain tied to the current browser instead of syncing across devices. That is acceptable for a lightweight personal tool, and it is the first thing I would change if more than one device mattered."
-      },
-      "outcome": {
-        "heading": "The Result",
-        "body": "A live, responsive note-taking app that covers the whole note lifecycle and demonstrates practical state management, persistence, filtering, and interaction design without a framework or build step. Because it needs no backend or sign-up, it is usable the moment it loads, which is a real advantage for lightweight tools where friction kills adoption. The obvious improvement is syncing notes across devices."
+        "body": "A live, responsive button experiment that shows how much personality and feedback a call-to-action can carry with core CSS alone. For a business, small interaction details like this are what make a site feel polished and trustworthy, at almost no cost in page weight or dependencies. It also demonstrated collaborative delivery: several people contributing to one small, well-scoped component."
       }
     },
     "tools": [
       "HTML",
       "CSS",
-      "JavaScript",
-      "localStorage",
+      "Animations",
       "Responsive Design"
     ],
     "team": null,
     "links": [
       {
         "label": "View Website",
-        "href": "https://pin-board-navy.vercel.app/",
+        "href": "https://button-wave-style.vercel.app/",
         "kind": "primary",
         "internal": false
       },
       {
         "label": "View Code",
-        "href": "https://github.com/KMukendi10/PinBoard",
+        "href": "https://github.com/KMukendi10/Button-Wave--Style",
         "kind": "outline",
         "internal": false
       }
     ]
   },
-  "airbnb-clone": {
-    "id": "airbnb-clone",
-    "ariaLabel": "Airbnb Clone case study",
-    "image": "Airbnb.png",
-    "imageAlt": "Airbnb Clone frontend screenshot",
-    "tag": "JavaScript, CSS & full-stack architecture",
-    "title": "A Platform in Three Parts: Airbnb Clone",
+  "twitter-clone": {
+    "id": "twitter-clone",
+    "ariaLabel": "Twitter/X Clone case study",
+    "image": "Twitter.png",
+    "imageAlt": "Twitter/X clone preview",
+    "tag": "HTML, CSS & JavaScript",
+    "title": "A Feed That Remembers: Twitter/X Clone",
     "sections": {
       "problem": {
         "heading": "The Brief",
-        "body": "A short-term rental marketplace serves three different people at once: guests who want to find and book a place, hosts who list it, and operators who keep the platform running. A single landing page can't serve any of them. This project addresses what it takes to build a product where each group gets its own experience and only the right people can do the right things, such as an admin managing listings that guests should never be able to touch."
+        "body": "Social products succeed or fail on how immediate they feel: you post, the feed updates, the like count moves, and nothing reloads. A static mock-up hides the hard part, which is keeping what's on screen in sync with what the user just did. Every project I'd built before this was a static layout clone, good for CSS practice but none of them needed to remember anything. I wanted a build that had to track state and respond to user actions in real time, closer to how a real product behaves."
       },
       "approach": {
         "heading": "The Build",
-        "body": "I organised the repository into independent frontend, backend, and admin applications so each part of the product has a clear responsibility and can evolve without turning the project into one large codebase. The guest frontend and the admin dashboard are React apps built to match Figma designs, including filter pills that filter listings on the client, and they talk to a Node.js/Express backend with MongoDB for the data. The backend handles authentication with user roles and image uploads, so what a person sees and can do depends on who they are."
+        "body": "I rebuilt the core Twitter/X feed interface with HTML and CSS for the layout, then used JavaScript to handle interactions: composing a post, updating counts, and reflecting every state change in the DOM immediately instead of reloading anything. Around the feed I added a compose modal, a trending sidebar, an Explore page, and dark mode so it behaves like a small product and not a single screen."
       },
       "tradeoffs": {
         "heading": "The Trade-off",
-        "body": "Separating the applications adds setup and coordination overhead: three things to run locally, separate environment variables, and cross-origin configuration (I had to resolve CORS issues to get the apps talking to each other). In return it reflects a more realistic product structure and keeps guest-facing, server, and administrative concerns isolated, so each can be deployed and secured on its own terms."
+        "body": "I kept state in memory in the browser instead of wiring up a backend or persistence layer. That let me focus on getting the interaction logic and DOM updates right first, but nothing is saved between page reloads, and a real social product would lose every post on refresh. This is a prototype of the interface, not of the data layer."
       },
       "outcome": {
         "heading": "The Result",
-        "body": "The repository now provides a foundation for a full Airbnb-style platform with guest, host, and admin flows. For a marketplace business, that separation is what lets the public booking experience, the management tools, and the data layer each be owned, scaled, and secured independently. The guest frontend is deployed on Render; backend and admin deployment links will be added once those services are hosted and their environment variables are configured."
+        "body": "It is my most functionally complete project so far: a feed that responds instantly to what the user does, which is the core experience any social or community product has to get right before anything else matters. It shows I can manage interface state without a framework. The next step is adding persistence, likely local storage first and an API later, so state survives a refresh."
       }
     },
     "tools": [
-      "JavaScript",
+      "HTML",
       "CSS",
-      "Backend",
-      "Admin Dashboard",
+      "JavaScript",
+      "Git",
+      "GitHub",
+      "Chrome DevTools"
+    ],
+    "team": null,
+    "links": [
+      {
+        "label": "View Website",
+        "href": "https://twitter-landing-page-three.vercel.app/",
+        "kind": "primary",
+        "internal": false
+      },
+      {
+        "label": "View Code",
+        "href": "https://github.com/KMukendi10/TwitterLandingPage.git",
+        "kind": "outline",
+        "internal": false
+      }
+    ]
+  },
+  "quiz-widget": {
+    "id": "quiz-widget",
+    "ariaLabel": "Quiz Widget case study",
+    "image": "QuizWidget.png",
+    "imageAlt": "Quiz Widget preview",
+    "tag": "HTML, CSS & JavaScript",
+    "title": "Making Every Answer Count: Quiz Widget",
+    "sections": {
+      "problem": {
+        "heading": "The Brief",
+        "body": "Quizzes are how schools, trainers, and onboarding programmes check that people have actually understood something, so the scoring has to be trustworthy. If a score can be thrown off by a double-click or a re-render, the result means nothing. I wanted a small project focused purely on that logic, tracking which question you're on and how many you've got right, correctly every time, without layout work getting in the way, since every earlier project had already covered layout."
+      },
+      "approach": {
+        "heading": "The Build",
+        "body": "Score and question index are tracked in JavaScript variables, not read back from the DOM, so the result is always computed instead of counted off whatever happens to be on screen. Answer buttons use event delegation on the container instead of a separate listener per button, which keeps the code short and works no matter how many answers a question has. Each answer gets instant feedback, and a final screen reports the score."
+      },
+      "tradeoffs": {
+        "heading": "The Trade-off",
+        "body": "Questions are hardcoded directly in the JS file rather than loaded from a separate JSON file or API. For a quiz this size that is the right call, because pulling in a fetch layer for a dozen static questions would add complexity with no real payoff. The cost is that adding or editing a question means editing the JavaScript, which a non-developer such as a teacher or trainer couldn't do."
+      },
+      "outcome": {
+        "heading": "The Result",
+        "body": "A self-contained quiz with instant feedback per question and a final score screen. Because the scoring logic is separate from the content, it is the core of something a school, trainer, or onboarding programme could reuse with their own questions. The next step is moving the question set into its own JSON file so questions can be added without touching the scoring logic at all, which is the change that would let a non-developer maintain it."
+      }
+    },
+    "tools": [
+      "HTML",
+      "CSS",
+      "JavaScript",
       "Git",
       "GitHub"
     ],
@@ -795,13 +898,258 @@ export const caseStudies = {
     "links": [
       {
         "label": "View Website",
-        "href": "https://airbnb-clone-frontend-46hl.onrender.com",
+        "href": "https://kmukendi10.github.io/quiz-widget-project/",
         "kind": "primary",
         "internal": false
       },
       {
         "label": "View Code",
-        "href": "https://github.com/KMukendi10/Airbnb-Clone",
+        "href": "https://github.com/KMukendi10/quiz-widget-project.git",
+        "kind": "outline",
+        "internal": false
+      }
+    ]
+  },
+  "mtv-base-brands-live-here": {
+    "id": "mtv-base-brands-live-here",
+    "ariaLabel": "Brands Live Here case study",
+    "image": "MTVBase-BrandsLiveHere.png",
+    "imageAlt": "Brands Live Here case study site",
+    "tag": "Campaign case study",
+    "title": "Brands Live Here: MTV Base Street Campaign as a Case Study Site",
+    "sections": {
+      "problem": {
+        "heading": "The Brief",
+        "body": "Out-of-home campaigns live on walls and pillars, so most of the story disappears once the paint dries. The creative behind the MTV Base \"Brands Live Here\" work in Maboneng and Soweto needed a page an agency could open, scroll and understand: what the campaign was, how it was made and what it achieved."
+      },
+      "approach": {
+        "heading": "The Build",
+        "body": "I built it as a single scroll-through page in plain HTML, CSS and JavaScript. It opens with the title and credits, then a campaign overview, a gallery of pillar wraps and murals, a four-step creative process (concept and sketches, artwork, street rollout, final execution), the custom illustration motifs, and an impact section."
+      },
+      "tradeoffs": {
+        "heading": "The Trade-off",
+        "body": "Static HTML, CSS and JavaScript means no CMS and no backend, so changing copy or images means editing the files and redeploying. I accepted that because a campaign case study is written once and shown, and a static page loads fast and has nothing to break or secure."
+      },
+      "outcome": {
+        "heading": "The Result",
+        "body": "The campaign now has one link that tells its whole story in a few minutes of scrolling, in a structure other case studies can reuse. It is one of four campaign pages built to the same pattern."
+      }
+    },
+    "tools": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git",
+      "GitHub",
+      "Vercel"
+    ],
+    "team": null,
+    "links": [
+      {
+        "label": "View Website",
+        "href": "https://brandslivehere.vercel.app",
+        "kind": "primary",
+        "internal": false
+      },
+      {
+        "label": "View Code",
+        "href": "https://github.com/KMukendi10/brands-live-here",
+        "kind": "outline",
+        "internal": false
+      }
+    ]
+  },
+  "corona-log-off-lime-in": {
+    "id": "corona-log-off-lime-in",
+    "ariaLabel": "Corona: Log Off. Lime In. case study",
+    "image": "Corona-LogOffLimeIn.png",
+    "imageAlt": "Corona: Log Off. Lime In. case study site",
+    "tag": "Campaign case study",
+    "title": "Log Off. Lime In.: Corona's Braamfontein Mural as a Case Study Site",
+    "sections": {
+      "problem": {
+        "heading": "The Brief",
+        "body": "A mural is one of the hardest campaign formats to present, because a photo shows the wall but not the thinking behind it. The Corona installation in Braamfontein Square was designed to carry the \"This Is Living\" and \"Log Off. Lime In.\" messages, and it needed a page that explained the brief and the idea as well as showing the result."
+      },
+      "approach": {
+        "heading": "The Build",
+        "body": "I built the page in plain HTML, CSS and JavaScript with a top navigation that jumps to each section, a hero, and three numbered sections: the project overview, the idea, and the execution. Icon-based stats call out the location, the 180-degree visibility and the three-year installation."
+      },
+      "tradeoffs": {
+        "heading": "The Trade-off",
+        "body": "Static HTML, CSS and JavaScript means no CMS and no backend, so changing copy or images means editing the files and redeploying. I accepted that because a campaign case study is written once and shown, and a static page loads fast and has nothing to break or secure."
+      },
+      "outcome": {
+        "heading": "The Result",
+        "body": "Anyone reviewing the work gets the brief, the concept and the build in one pass, on a page that fits the campaign's tone. It sits alongside the other campaign pages as proof that I can present creative work digitally."
+      }
+    },
+    "tools": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git",
+      "GitHub",
+      "Vercel"
+    ],
+    "team": null,
+    "links": [
+      {
+        "label": "View Website",
+        "href": "https://coronalogofflimeon.vercel.app",
+        "kind": "primary",
+        "internal": false
+      },
+      {
+        "label": "View Code",
+        "href": "https://github.com/KMukendi10/Corona_",
+        "kind": "outline",
+        "internal": false
+      }
+    ]
+  },
+  "standard-bank-happinext": {
+    "id": "standard-bank-happinext",
+    "ariaLabel": "Standard Bank: Happinext case study",
+    "image": "StandardBank-Happinext.png",
+    "imageAlt": "Standard Bank: Happinext case study site",
+    "tag": "Campaign case study",
+    "title": "Enjoy Your Happinext: Standard Bank's Hand-Drawn OOH as a Case Study Site",
+    "sections": {
+      "problem": {
+        "heading": "The Brief",
+        "body": "The Standard Bank \"Enjoy Your Happinext\" campaign is built on hand-drawn typography and illustration, and the craft is the point. A flat image of the finished mural hides the sketches, lettering and illustration steps behind it, so the work needed a page that shows the process."
+      },
+      "approach": {
+        "heading": "The Build",
+        "body": "I built it in plain HTML, CSS and JavaScript as a guided sequence: the hero and credits, the project rationale, the creative approach, four process stages (concept sketches, hand-lettering, illustration, final artwork), execution on murals and buses, and a six-image detail gallery that closes on the impact."
+      },
+      "tradeoffs": {
+        "heading": "The Trade-off",
+        "body": "Static HTML, CSS and JavaScript means no CMS and no backend, so changing copy or images means editing the files and redeploying. I accepted that because a campaign case study is written once and shown, and a static page loads fast and has nothing to break or secure."
+      },
+      "outcome": {
+        "heading": "The Result",
+        "body": "The campaign reads as a story that moves from sketch to street, and the brand attributes (hand-drawn, purposeful, proudly South African) are backed by the process on the page. It is one of four campaign pages built to the same pattern."
+      }
+    },
+    "tools": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git",
+      "GitHub",
+      "Vercel"
+    ],
+    "team": null,
+    "links": [
+      {
+        "label": "View Website",
+        "href": "https://standardbankhanddrawnooh.vercel.app",
+        "kind": "primary",
+        "internal": false
+      },
+      {
+        "label": "View Code",
+        "href": "https://github.com/KMukendi10/StandardBank_HandDrawnOOH",
+        "kind": "outline",
+        "internal": false
+      }
+    ]
+  },
+  "famiglia-caruso": {
+    "id": "famiglia-caruso",
+    "ariaLabel": "Famiglia Caruso case study",
+    "image": "FamigliaCaruso-BrigadeDuKiff.png",
+    "imageAlt": "Famiglia Caruso case study site",
+    "tag": "Case study",
+    "title": "You. Me. Pizza date?: A T-shirt Story for a Pizzeria in Nantes",
+    "sections": {
+      "problem": {
+        "heading": "The Brief",
+        "body": "Famiglia Caruso is a Neapolitan pizzeria in Nantes that wanted a T-shirt celebrating fresh ingredients, pizza and community. The finished shirt needed a case study that explained the idea and showed it in use, because its value lies in how people wore it."
+      },
+      "approach": {
+        "heading": "The Build",
+        "body": "I built a scroll-based page in plain HTML, CSS and JavaScript with six numbered sections: the brief, the idea, the process sketches, the final artwork, the T-shirt mockups and print close-ups, and photos of the team and customers wearing it, with a testimonial from the pizzeria."
+      },
+      "tradeoffs": {
+        "heading": "The Trade-off",
+        "body": "Static HTML, CSS and JavaScript means no CMS and no backend, so changing copy or images means editing the files and redeploying. I accepted that because a campaign case study is written once and shown, and a static page loads fast and has nothing to break or secure."
+      },
+      "outcome": {
+        "heading": "The Result",
+        "body": "The page makes the case for the shirt as brand-building, with the testimonial and in-the-wild photos as evidence, and it ends on the pizzeria's own line: \"Good pizza brings people together.\""
+      }
+    },
+    "tools": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git",
+      "GitHub",
+      "Vercel"
+    ],
+    "team": null,
+    "links": [
+      {
+        "label": "View Website",
+        "href": "https://famigliacaruso.vercel.app",
+        "kind": "primary",
+        "internal": false
+      },
+      {
+        "label": "View Code",
+        "href": "https://github.com/KMukendi10/famiglia-caruso",
+        "kind": "outline",
+        "internal": false
+      }
+    ]
+  },
+  "lucky-portfolio": {
+    "id": "lucky-portfolio",
+    "ariaLabel": "Lucky Mqedlana Portfolio case study",
+    "image": "LuckyPortfolio.png",
+    "imageAlt": "Lucky Mqedlana Portfolio case study site",
+    "tag": "Creative portfolio",
+    "title": "A Creative Portfolio for a Visual Storyteller",
+    "sections": {
+      "problem": {
+        "heading": "The Brief",
+        "body": "Lucky Nhlanhla Mqedlana is a graphic designer and township media consultant whose work spans campaigns, murals, typography, illustration, UI/UX and logos. His portfolio was a PDF, which is hard to share, hard to skim and gives a client no direct way to get in touch. The site needed to turn that range into something a client could browse and act on."
+      },
+      "approach": {
+        "heading": "The Build",
+        "body": "I built it in plain HTML, CSS and JavaScript with a skip link and anchor navigation across eleven sections. Murals can be filtered by category, the Corona work has a day/night toggle to show the LED integration, sketches reveal the finished artwork on hover or tap, and each contact detail has a copy button. The Corona, Standard Bank, MTV Base and Famiglia Caruso pieces link out to full case studies."
+      },
+      "tradeoffs": {
+        "heading": "The Trade-off",
+        "body": "I kept it to plain HTML, CSS and JavaScript rather than a framework, so there is nothing to install and it deploys by pushing to GitHub. The cost is that content lives in the markup, so every new piece means editing the page by hand."
+      },
+      "outcome": {
+        "heading": "The Result",
+        "body": "Lucky now has one link with his work, his stats and one-tap contact details, and the longer campaigns are separate case studies he can send on their own. It also gave me the template for the campaign pages in this portfolio."
+      }
+    },
+    "tools": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git",
+      "GitHub",
+      "Vercel"
+    ],
+    "team": null,
+    "links": [
+      {
+        "label": "View Website",
+        "href": "https://luckyportfolio-ten.vercel.app",
+        "kind": "primary",
+        "internal": false
+      },
+      {
+        "label": "View Code",
+        "href": "https://github.com/KMukendi10/Lucky-Portfolio",
         "kind": "outline",
         "internal": false
       }

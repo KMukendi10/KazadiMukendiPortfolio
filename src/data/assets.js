@@ -1,6 +1,30 @@
 // Intrinsic pixel sizes of everything in /public/Assets (used by <Asset /> so next/image can reserve space).
 // Regenerate if you add images.
 export const assetSizes = {
+  "MTVBase-BrandsLiveHere.png": [
+    1440,
+    810
+  ],
+  "Corona-LogOffLimeIn.png": [
+    1440,
+    810
+  ],
+  "StandardBank-Happinext.png": [
+    1440,
+    810
+  ],
+  "FamigliaCaruso-BrigadeDuKiff.png": [
+    1440,
+    810
+  ],
+  "LuckyPortfolio.png": [
+    1440,
+    810
+  ],
+  "Portfolio.png": [
+    1440,
+    810
+  ],
   "Airbnb.png": [
     1873,
     907

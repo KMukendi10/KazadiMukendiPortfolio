@@ -1,49 +1,92 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
-import { useEffect } from 'react';
-import CustomCursor from '@/components/CustomCursor';
+import { usePathname, useRouter } from 'next/navigation';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import CaseDrawer from '@/components/CaseDrawer';
+import Cursor from '@/components/Cursor';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import PageGlow from '@/components/PageGlow';
 import Preloader from '@/components/Preloader';
+import { CaseContext, NavContext, prefersReducedMotion } from '@/components/context';
+import { caseStudies } from '@/data/projects';
+import { PAGE_NAMES } from '@/data/site';
 
-// Everything that wraps every page: preloader, background blobs, header, footer, cursor effects.
+// Everything that wraps every page: preloader, page-transition curtain, header, footer,
+// cursor and the shared case study drawer.
 export default function Shell({ children }) {
   const pathname = usePathname();
+  const router = useRouter();
 
-  // CSS only hides .fade-in content once this class is present, so if JS fails
-  // the sections are never left permanently invisible.
-  useEffect(() => {
-    document.documentElement.classList.add('js-ready');
-  }, []);
+  // ---- page transition curtain ----
+  const [phase, setPhase] = useState('idle'); // idle | in | out
+  const [curtainLabel, setCurtainLabel] = useState('');
+  const phaseRef = useRef('idle');
+  const setPhaseBoth = (p) => {
+    phaseRef.current = p;
+    setPhase(p);
+  };
 
-  // Flash a highlight ring on the element a #anchor link points to.
+  const nav = useCallback(
+    (href) => {
+      const target = href.split('#')[0] || pathname;
+      if (target === pathname || prefersReducedMotion()) {
+        router.push(href);
+        return;
+      }
+      setCurtainLabel(PAGE_NAMES[target] ?? '');
+      setPhaseBoth('in');
+      setTimeout(() => router.push(href), 520);
+      setTimeout(() => phaseRef.current === 'in' && setPhaseBoth('idle'), 3500); // safety
+    },
+    [pathname, router]
+  );
+
   useEffect(() => {
-    const id = window.location.hash.slice(1);
-    const target = id ? document.getElementById(id) : null;
-    if (!target) return;
-    target.classList.add('anchor-highlight');
-    const remove = () => target.classList.remove('anchor-highlight');
-    target.addEventListener('animationend', remove, { once: true });
-    return () => target.removeEventListener('animationend', remove);
+    if (phaseRef.current !== 'in') return;
+    window.scrollTo(0, 0);
+    setPhaseBoth('out');
+    const t = setTimeout(() => setPhaseBoth('idle'), 750);
+    return () => clearTimeout(t);
   }, [pathname]);
 
-  // The old site loaded Bootstrap on the Projects page only. .bs-page scopes it the same way
-  // (see src/app/bootstrap-scoped.css).
+  // ---- case study drawer (also opens from /projects#some-id) ----
+  const [activeId, setActiveId] = useState(null);
+  const open = useCallback((id) => {
+    if (!caseStudies[id]) return;
+    setActiveId(id);
+    window.history.replaceState(null, '', `${window.location.pathname}#${id}`);
+  }, []);
+  const close = useCallback(() => {
+    setActiveId(null);
+    if (window.location.hash) window.history.replaceState(null, '', window.location.pathname);
+  }, []);
+
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (pathname === '/projects' && hash && caseStudies[hash]) setActiveId(hash);
+    else setActiveId(null);
+  }, [pathname]);
+
+  const caseValue = useMemo(() => ({ activeId, open, close }), [activeId, open, close]);
+
   return (
-    <div className={pathname === '/projects' ? 'bs-page' : undefined}>
-      <Preloader />
-      <div className="bg-fx">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <Header />
-      {children}
-      <Footer />
-      <PageGlow />
-      <CustomCursor />
-    </div>
+    <NavContext.Provider value={nav}>
+      <CaseContext.Provider value={caseValue}>
+        <a className="skip" href="#main">
+          Skip to content
+        </a>
+        <Preloader />
+        <Header />
+        <main id="main" className="page" tabIndex={-1}>
+          {children}
+        </main>
+        <Footer />
+        <CaseDrawer />
+        <Cursor />
+        <div className="curtain" data-phase={phase} aria-hidden="true">
+          <span className="curtain__label">{curtainLabel}</span>
+        </div>
+      </CaseContext.Provider>
+    </NavContext.Provider>
   );
 }

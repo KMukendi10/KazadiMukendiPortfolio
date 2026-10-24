@@ -2,77 +2,66 @@
 
 import { useEffect, useState } from 'react';
 
-const MESSAGES = [
-  '// booting portfolio.exe',
-  '// compiling good vibes',
-  '// linting the CSS',
-  '// waking up the servers',
-  '// npm install patience',
-  '// almost there...',
-];
-
-// Loading screen: percentage counter + rotating messages. Runs on every full page load
-// (not on client-side navigation between pages).
+// Intro once per browser session: counter, then the curtain lifts and the hero name rises in.
+// Adds html.intro-done when it finishes (the hero animation waits for that class).
 export default function Preloader() {
   const [percent, setPercent] = useState(0);
-  const [hidden, setHidden] = useState(false);
-  const [removed, setRemoved] = useState(false);
+  const [lifting, setLifting] = useState(false);
+  const [gone, setGone] = useState(false);
 
   useEffect(() => {
-    let done = false;
-    let interval;
-    let finishTimer;
-    let removeTimer;
-
-    const finish = () => {
-      if (done) return;
-      done = true;
-      clearInterval(interval);
-      clearTimeout(safetyTimer);
-      clearTimeout(finishTimer);
-      setHidden(true);
-      removeTimer = setTimeout(() => setRemoved(true), 600);
-    };
-
-    // Hard safety net: never let the preloader sit on screen for more than 4 seconds.
-    const safetyTimer = setTimeout(finish, 4000);
-
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      finish();
-    } else {
-      let p = 0;
-      interval = setInterval(() => {
-        p += Math.floor(Math.random() * 9) + 4; // +4 to +12 per tick
-        if (p >= 100) {
-          p = 100;
-          clearInterval(interval);
-          finishTimer = setTimeout(finish, 300);
-        }
-        setPercent(p);
-      }, 120);
+    const root = document.documentElement;
+    // Returning in the same browser session: the head script already skipped the intro.
+    if (root.classList.contains('intro-seen')) {
+      root.classList.add('intro-done');
+      setGone(true);
+      return;
     }
 
+    const done = () => {
+      try {
+        sessionStorage.setItem('intro', '1');
+      } catch {}
+      root.classList.add('intro-done');
+      setLifting(true);
+      setTimeout(() => setGone(true), 800);
+    };
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      root.classList.add('intro-done');
+      setGone(true);
+      return;
+    }
+
+    let p = 0;
+    let finished = false;
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      clearInterval(timer);
+      clearTimeout(safety);
+      setPercent(100);
+      setTimeout(done, 150);
+    };
+    const timer = setInterval(() => {
+      p = Math.min(100, p + Math.floor(Math.random() * 11) + 12);
+      setPercent(p);
+      if (p >= 100) finish();
+    }, 60);
+    const safety = setTimeout(finish, 1500); // never trap the visitor
+
     return () => {
-      clearInterval(interval);
-      clearTimeout(safetyTimer);
-      clearTimeout(finishTimer);
-      clearTimeout(removeTimer);
+      clearInterval(timer);
+      clearTimeout(safety);
     };
   }, []);
 
-  if (removed) return null;
-
-  const message = MESSAGES[Math.min(MESSAGES.length - 1, Math.floor((percent / 100) * MESSAGES.length))];
+  if (gone) return null;
 
   return (
-    <div id="preloader" className={hidden ? 'preloader-hidden' : undefined} aria-hidden="true">
-      <div className="preloader-inner">
-        <span className="preloader-percent">{percent}%</span>
-        <p className="preloader-msg">{message}</p>
-        <div className="preloader-bar">
-          <span style={{ width: `${percent}%` }}></span>
-        </div>
-      </div>
+    <div className={`preloader${lifting ? ' preloader--lift' : ''}`} aria-hidden="true">
+      <p className="preloader__name">Kazadi Mukendi</p>
+      <p className="preloader__count">{percent}</p>
     </div>
   );
 }
