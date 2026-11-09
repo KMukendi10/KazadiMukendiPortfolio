@@ -1,4 +1,4 @@
-# Kazadi Mukendi Portfolio
+# 🌐 Kazadi Mukendi Portfolio
 
 A personal portfolio website showcasing my skills, projects, certifications, and growth as a developer.
 
@@ -133,31 +133,20 @@ Install dependencies and start the dev server:
 
 ```bash
 npm install
-npm run dev      # http://localhost:3000
-npm run build && npm start
+npm run dev
 ```
 
-Deploy on Vercel with the framework preset set to **Next.js**.
+Open http://localhost:3000.
 
-## What's inside
+Production build:
 
-- Pages: Home, About, Work (`/projects`), Contact, custom 404
-- Work list with hover previews and a case-study drawer (13 projects, each with a one-line business outcome)
-- Interactive bits: gear hero, cursor-reactive name, magnetic buttons, marquee, page transitions, dark/light theme, intro (once per session)
-- SEO: per-page metadata + canonical, Open Graph image (`opengraph-image.js`), `sitemap.js`, `robots.js`, JSON-LD Person schema, favicons
-- Accessibility: skip link, `<main>` landmark, keyboard-friendly drawer, reduced-motion support
+```bash
+npm run build
+npm start
+```
 
-## Where to edit
+---
 
-| What | File |
-|---|---|
-| Projects and case studies | `src/data/projects.js` |
-| Per-project colours | `src/data/palette.js` |
-| Image sizes (add new images here) | `src/data/assets.js` |
-| Social links | `src/data/site.js` |
-| Styles | `src/app/globals.css` |
-| CV | `public/Assets/KazadiMukendi-CV.pdf` |
+## 👨‍💻 Author
 
-## Stack
-
-Next.js, React, CSS, fontsource-variable (Bricolage Grotesque, Instrument Sans), react-icons, Vercel.
+**Kazadi Mukendi**
